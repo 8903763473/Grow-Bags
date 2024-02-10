@@ -32,7 +32,25 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/b80cd6a5fw8efabb83pbabe92ddm0cb690eem.js",
+              "src/assets/js/cart-notification.js",
+              "src/assets/js/elevatezoom.js",
+              "src/assets/js/global.js",
+              "src/assets/js/includes.min.js",
+              "src/assets/js/lazysizes.js",
+              "src/assets/js/load_feature-87876fa245af19cbd14aa886ed59c6aa8a27c45d24dcd7a81cf2d2323506233e.js",
+              "src/assets/js/pickup-availability.js",
+              "src/assets/js/portable-wallets.en.js",
+              "src/assets/js/preview_bar_injector-a34ad71e81d817c255fe9239b1dfd13e3237cb01f8d44ceae72c50dddb398ae3.js",
+              "src/assets/js/product-form.js",
+              "src/assets/js/scripts.js",
+              "src/assets/js/shop.js",
+              "src/assets/js/shop_events_listener-a7c63dba65ccddc484f77541dc8ca437e60e1e9e297fe1c3faebf6523a0ede9b.js",
+              "src/assets/js/shopify-boomerang-1.0.0.min.js",
+              "src/assets/js/trekkie.storefront.7a4225caf9379fe42103e492053220a7195df1ae.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {

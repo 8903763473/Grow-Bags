@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('../src/assets/css/base.css');
+@import url('../src/assets/css/component-pickup-availability.css');
+@import url('../src/assets/css/includes.min.css');
+@import url('../src/assets/css/page-account.css');
+@import url('../src/assets/css/theme.css');
+
+
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+:root {
+    --brand-secondary: #518432;
+    --brand-modify-secondary: rgba(81, 132, 50, 0.3);
+    --button-bg-color: #518432;
+    --button-text-color: #ffffff;
+    --button-bg-hover-color: #232323;
+    --button-text-hover-color: #ffffff;
+    --button-text-hover-modify-color: rgba(255, 255, 255, 0.4);
+    --product-btn-bg-color: #ffffff;
+    --product-icon-color: #232323;
+    --product-btn-bg-hover-color: #518432;
+    --product-icon-hover-color: #ffffff;
+    --navbar-background-color: #518432;
+    --navbar-text-modify-color: rgba(255, 255, 255, 0.1);
+    --navbar-text-color: #ffffff;
+    --header-icon-modify-color: rgba(35, 35, 35, 0.1);
+    --header-icon-color: #232323;
+    --header-icon-hover-color: #518432;
+    --menu-bg-color: #ffffff;
+    --menu-text-modify-color: rgba(35, 35, 35, 0.1);
+    --menu-text-color: #232323;
+    --menu-text-hover-color: #518432;
+    --sale-bg-color: #7fbc1e;
+    --sale-text-color: #ffffff;
+    --soldout-bg-color: #c92c2c;
+    --soldout-text-color: #ffffff;
+    --footer-bg-color: #f0f6e8;
+    --footer-heading-color: #232323;
+    --footer-text-color: #666666;
+    --footer-text-hover-color: #518432;
+    --footer-bottom-bg-color: #f0f6e8;
+    --footer-bottom-text-color: #666666;
+    --password-color: #232323;
+    --password-textcolor: #FFFFFF;
+    --font-body-family: Poppins;
+    --font-title-family: Lora;
+    --bg-free-shipping-indicator: #fff3cd;
+    --bg-free-shipping-indicator-eligible: #d4edda;
+    --color-free-shipping-indicator: #856404;
+    --color-free-shipping-indicator-eligible: #155724;
+}

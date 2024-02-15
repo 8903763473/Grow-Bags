@@ -751,93 +751,36 @@
         </div>
         <div class="cart-overlay" [ngClass]="{'active':OpenCart==true}" (click)="OpenCart=false"></div>
       </div>
-
       <!-- </cart-notification> -->
-
-
-
-
     </header>
   </div>
-
-  <script type="application/ld+json">
-      {
-          "&#64;context": "http://schema.org",
-          "&#64;type": "Organization",
-          "name": "Sectioned Shopify Theme",
-
-          "url": "https:\/\/fashionist-ishi-2.myshopify.com"
-      }
-  </script>
-  <script>
-    jQuery(document).ready(function () {
-      //hide top bar
-      if (getTheCookie("showtopnavbar") != null && getTheCookie("showtopnavbar")) {
-        if (getTheCookie("showtopnavbar")) {
-          $("#header .nav-header").hide();
-        }
-      }
-      $(document).on("click", "#header .nav-header .close", function () {
-        $("#header .nav-header").slideUp();
-        setTheCookie("showtopnavbar", "true", 14);
-      });
-    });
-  </script>
-  <script type="application/ld+json">
-      {
-          "&#64;context": "http://schema.org",
-          "&#64;type": "WebSite",
-          "name": "Sectioned Shopify Theme",
-          "potentialAction": {
-              "&#64;type": "SearchAction",
-              "target": "https:\/\/fashionist-ishi-2.myshopify.com\/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-          },
-          "url": "https:\/\/fashionist-ishi-2.myshopify.com"
-      }
-  </script>
 </div>
 
 
 <div class="wrapper-nav hidden-lg-down">
-  <div class="navfullwidth">
+  <div class="navfullwidth" [class.fixed-header]="isScrolled">
     <div class="page-width">
       <div id="shopify-section-Ishi_megamenu" class="shopify-section">
         <div data-section-id="Ishi_megamenu" data-section-type="megamenu-header">
           <div id="_desktop_top_menu" class="menu js-top-menu hidden-sm-down" role="navigation">
 
             <ul class="top-menu" id="top-menu">
-
               <li class="category">
-
                 <span class="float-xs-right hidden-lg-up">
-
                 </span>
                 <a href="/blogs/sprouts" class="dropdown-item">
                   <h3 class="title">Home</h3>
-
-
-
                 </a>
-
-
-
               </li>
-
               <li class="category">
-
                 <span class="float-xs-right hidden-lg-up">
-
                 </span>
                 <a href="/pages/about-us" class="dropdown-item">
                   <h3 class="title">About Us</h3>
                 </a>
               </li>
-
               <li class="category menularge serviceMenu">
-
                 <span class="float-xs-right hidden-lg-up">
-
                   <span data-href="#_n_child-one1" data-toggle="collapse"
                     class="ishi-collapse in navbar-toggler ishi-collapsed rotate" aria-expanded="false">
 
@@ -1165,10 +1108,10 @@
                   value="customer" /><input type="hidden" name="utf8" value="✓" /><input type="hidden"
                   name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
-                  <div class="field">
+                  <div class="field" style="height: 49px !important;">
                     <input id="NewsletterForm--footer" type="email" name="contact[email]" class="field__input footInput"
                       value="" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email"
-                      placeholder="Your email" required>
+                      placeholder="Your email" required style="height: 55px !important;">
                     <label class="field__label" for="NewsletterForm--footer">
                       Your email
                     </label>
@@ -1582,3 +1525,126 @@
 </div>
 
 <!-- ***********FOOTER*********** -->
+
+
+<!-- *************INITIAL SUBSCRIBE POP*************** -->
+
+<div id="shopify-section-newsletterpopup" class="shopify-section newsletter-popup">
+
+  <!-- ***************************INITIAL POPUP******************* -->
+
+  <div class="newsletter-popup-overlay" [class.SubscribePop]="subscribe==false || subscribe==undefined"> </div>
+  <div id="PopupModal-newsletter" class="product-popup-modal toggle-dropdown"
+    [class.SubscribePop]="subscribe==false || subscribe==undefined">
+    <div role="dialog" aria-label="PopupModal-newsletter" aria-modal="true" class="newsletter-popup-modal__content"
+      tabindex="-1" data-timeout="4">
+      <div class="modal-content popup-bg-color lazyload popup-bg-image"
+        data-bg="//fashionist-ishi-2.myshopify.com/cdn/shop/files/popup_59643f01-56c3-4f9e-b7f8-713b2ebf9a20.png?v=1649744205">
+        <button id="ModalClose-newsletter" type="button" class="product-popup-modal__toggle" aria-label="Close"
+          style="color: white;" (click)="SubscribeClose()">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 16 17">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+              fill="currentColor" />
+          </svg>
+        </button>
+        <div class="product-popup-modal__content-info">
+          <div class=" image-cover">
+            <div class="col-md-12 col-sm-12 popup-text popup-text-center Pop_Content">
+              <h3 class="popup-title">SUBSCRIBE AND GET DISCOUNT!</h3>
+              <p class="popup-sub-title">Subscribe to the newsletter to receive updates about new
+                products.</p>
+              <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8"
+                class="footer__newsletter newsletter-form"><input type="hidden" name="form_type"
+                  value="customer" /><input type="hidden" name="utf8" value="✓" /><input type="hidden"
+                  name="contact[tags]" value="newsletter">
+                <div class="newsletter-form__field-wrapper">
+                  <div class="field">
+                    <input id="NewsletterForm--newsletterpopup" type="email" name="contact[email]" class="field__input"
+                      value="" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email"
+                      placeholder="Your email" required>
+                    <label class="field__label" for="NewsletterForm--newsletterpopup">
+                      Your email
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="button button--primary newsletter__button newsletter-form__button"
+                  name="commit" id="Subscribe">
+                  <span class="hidden-sm-down">Subscribe</span>
+                  <span class="hidden-sm-up">Go</span>
+                </button>
+              </form>
+
+              <div class="footer-social">
+                <ul class="footer__list-social list-unstyled list-social" role="list">
+                  <li class="list-social__item facebook">
+                    <a href="/" class="link link--text list-social__link">
+                      <i class="fa-brands fa-facebook-f"></i>
+                      <span class="icon__-text">Facebook</span>
+                    </a>
+                  </li>
+                  <li class="list-social__item instagram">
+                    <a href="/" class="link link--text list-social__link">
+                      <i class="fa-brands fa-instagram"></i>
+                      <span class="icon__-text">Instagram</span>
+                    </a>
+                  </li>
+                  <li class="list-social__item tiktok">
+                    <a href="/" class="link link--text list-social__link">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon " viewBox="0 0 18 18">
+                        <svg x="6%" y="0%">
+                          <path
+                            d="M8.02 0H11s-.17 3.82 4.13 4.1v2.95s-2.3.14-4.13-1.26l.03 6.1a5.52 5.52 0 11-5.51-5.52h.77V9.4a2.5 2.5 0 101.76 2.4L8.02 0z"
+                            fill="currentColor"></path>
+                        </svg>
+                      </svg>
+                      <span class="icon__-text">TikTok</span>
+                    </a>
+                  </li>
+                  <li class="list-social__item snapchat">
+                    <a href="/" class="link link--text list-social__link">
+                      <i class="fa-brands fa-snapchat" style="color: white;"></i>
+                      <span class="icon__-text">Snapchat</span>
+                    </a>
+                  </li>
+                  <li class="list-social__item vimeo">
+                    <a href="/" class="link link--text list-social__link">
+                      <i class="fa-brands fa-vimeo-v" style="color: white;"></i>
+                      <span class="icon__-text">Vimeo</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dont-show">
+                <label style="display: flex;gap: 10px;align-items: center;justify-content: center;">
+                  <input class="dono-show-check" type="checkbox">
+                  <span style="color: white;">Don&#39;t show again</span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-popup-modal__opener no-js-hidden hidden" data-modal="#PopupModal-newsletter">
+    <button id="PopupModal-newsletter-btn" class="ishi-popup-modal__button link" type="button" aria-haspopup="dialog"
+      data-href="#PopupModal-newsletter" data-toggle="popover" aria-expanded="false"></button>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var newsletterTimeout = $('.newsletter-popup-modal__content').data('timeout');
+      if (getTheCookie("customer_posted") != "true") {
+        setTimeout(function () {
+          document.querySelector("#PopupModal-newsletter-btn").click();
+        }, newsletterTimeout * 1000);
+      }
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('customer_posted') == "true" || urlParams.get('form_type') == "customer") {
+        setTheCookie("customer_posted", "true", 14);
+      }
+    });
+  </script>
+
+</div>

@@ -8505,8 +8505,14 @@ fieldset.product-form__input .form__label {
 
 .product-form__input.color input[type=radio]:checked+label {
     box-shadow: 2px 2px 4px #e0e0e0;
-    transform: scale(.95);
+    transform: scale(.55);
     border-color: #232323
+}
+
+.js .product-form__input .color {
+    label {
+        transform: scale(.55);
+    }
 }
 
 .product-form__input input[type=radio]:disabled+label {
@@ -9349,6 +9355,7 @@ a.product__text {
     }
 }
 
+
 .product-popup-modal__opener {
     display: block
 }
@@ -9382,7 +9389,7 @@ a.product__text {
 
 .product-popup-modal__toggle {
     background-color: #fff;
-    border: .1rem solid rgba(35, 35, 35, .1);
+    border: 0.1rem solid rgba(35, 35, 35, .1);
     border-radius: 50%;
     color: #2323238c;
     display: flex;
@@ -9390,11 +9397,11 @@ a.product__text {
     justify-content: center;
     cursor: pointer;
     position: sticky;
-    padding: 1.2rem;
+    padding: 10px;
     z-index: 2;
     top: 1.5rem;
-    width: 4rem;
-    margin: 0 0 0 auto
+    width: 2rem;
+    margin: 0 0 0 auto;
 }
 
 .product-popup-modal__toggle:hover {
@@ -10639,7 +10646,7 @@ a.product__text {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
-    margin: 60px 10px 30px;
+    margin: 10px 10px 30px;
     height: auto;
     padding: 0
 }

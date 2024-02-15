@@ -21,9 +21,18 @@ export class AppComponent {
   widthChangeInterval: Subscription | undefined;
   sub: boolean = false
   OpenSubMenu: any
+  isScrolled: any
+  subscribe: any
+
 
   ngOnInit() {
     this.authpage = 0
+    window?.addEventListener('scroll', this.onScroll.bind(this));
+    this.subscribe = sessionStorage.getItem('Subscribepopup')
+  }
+
+  onScroll() {
+    this.isScrolled = window.scrollY > 0;
   }
 
   MenuIcon() {
@@ -82,6 +91,11 @@ export class AppComponent {
     } else {
       this.OpenSubMenu = 0
     }
+  }
+
+  SubscribeClose() {
+    sessionStorage.setItem('Subscribepopup', 'true');
+    this.subscribe = true
   }
 
   ngOnDestroy() {

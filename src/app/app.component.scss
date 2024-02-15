@@ -76,3 +76,54 @@
     height: 52px;
     margin-top: -3px;
 }
+
+.SubscribePop {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .4s cubic-bezier(0, 1, .4, 1), transform .4s cubic-bezier(.18, 1.25, .4, 1), visibility .4s linear;
+    transform: scale(1);
+}
+
+.popup-title,
+.popup-sub-title {
+    color: white !important;
+}
+
+.newsletter-form__field-wrapper .field {
+    height: 40px;
+
+    input {
+        height: 40px;
+    }
+}
+
+.newsletter-popup .newsletter-popup-modal__content {
+    width: 600px !important;
+    height: 390px !important;
+}
+
+.product-popup-modal__content-info {
+    height: 400px !important;
+}
+
+.image-cover .Pop_Content {
+    padding: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-cover {
+    height: 100%;
+}
+
+.newsletter-popup-overlay {
+    width: 101.2%;
+    height: 100%;
+    padding: 0;
+    left: -8px;
+    top: -15px;
+    overflow: hidden;
+}

@@ -401,12 +401,10 @@
     overflow: hidden;
     margin-left: 0px;
     margin-top: 0px;
-    background-position: -242px -164px;
     float: left;
     cursor: crosshair;
     background-repeat: no-repeat;
     position: absolute;
-    background-image: url(//fashionist-ishi-2.myshopify.com/cdn/shop/products/19_371bf66d-f6c7-4179-90d8-d95b84375bd0.jpg?v=1649746062);
     top: -392px;
     left: 0px;
     height: 540px !important;
@@ -422,7 +420,176 @@
 }
 
 .owl-stage {
-    transform: translate3d(-2808px, 0px, 0px);
+    // transform: translate3d(0px, 0px, 0px);
     transition: all 0.5s ease 0s;
     width: 7890px;
+}
+
+#qvPopupModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-popup-modal__content {
+    width: 70% !important;
+    height: 80% !important;
+    margin: 0 !important;
+}
+
+.product-popup-modal__content-info {
+    width: 90% !important;
+    display: flex !important;
+}
+
+.testimonialsSlide {
+    width: 27% !important;
+}
+
+.BLOG {
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 1.5s ease 0s;
+    width: 2592px;
+}
+
+.slideshow__link img {
+    height: 480px !important;
+}
+
+.quantity {
+
+    button,
+    input {
+        height: 40px;
+    }
+}
+
+.select {
+    height: 40px;
+
+    select {
+        height: 40px;
+    }
+}
+
+.product-form__buttons {
+    height: 40px;
+
+    button {
+        height: 40px;
+        width: 170px;
+    }
+}
+
+.size label {
+    box-shadow: 2px 2px 4px #e0e0e0;
+    transform: scale(0.78);
+    border-color: #232323;
+}
+
+.ProductInfo {
+    width: 145.25px;
+    margin-right: 15px;
+    height: 145px;
+    margin-top: 300px;
+}
+
+.ProductNav button {
+    height: 145px;
+    // margin-top: 165px;
+    margin-top: 300px;
+}
+
+.ProductList {
+    width: 53%;
+}
+
+#ProductPopup-1649659920b235c689-4 {
+    font-size: 14px;
+}
+
+.zoom {
+    margin-top: 110px;
+}
+
+.ULDRAG {
+    margin-top: 100px;
+}
+
+.DetailPop .active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .4s cubic-bezier(0, 1, .4, 1), transform .4s cubic-bezier(.18, 1.25, .4, 1), visibility .4s linear;
+    transform: scale(1);
+}
+
+.DetailPop .cloned {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s cubic-bezier(0, 1, .4, 1), transform .4s cubic-bezier(.18, 1.25, .4, 1), visibility .4s linear;
+    transform: scale(1);
+}
+
+.product-popup-modal__content-info {
+    align-items: flex-start !important;
+}
+
+.more-description {
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+#qv-add-to-cart {
+    float: left;
+}
+
+.activeTab {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.spr-summary-actions {
+    float: right;
+}
+
+.spr-starrating,
+.spr-starratings {
+    i {
+        font-style: normal !important;
+    }
+}
+
+.spr-form-contact,
+.spr-form-review,
+.spr-form-actions {
+    border: none !important;
+}
+
+.spr-form-actions {
+    input {
+        float: right;
+    }
+}
+
+.new-review-form {
+
+    input,
+    textarea {
+        font-size: 16px;
+    }
+}
+
+.contact__fields .field {
+    input {
+        height: 40px;
+    }
+}
+
+.Comment {
+    height: 150px !important;
+
+    textarea {
+        min-height: 150px;
+        height: 150px !important;
+    }
 }

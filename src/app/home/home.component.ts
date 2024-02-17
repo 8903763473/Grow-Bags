@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-home',
@@ -33,13 +34,132 @@ export class HomeComponent implements OnInit {
   BrandTransform: any
   BrandValue: any = 0
 
-  constructor() {
+
+  ProductList: any = [
+    {
+      id: 1,
+      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory1-1.png?v=1649657703',
+      img_select: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory1.png?v=1649658232',
+      name: 'Cactus Plant'
+    },
+    {
+      id: 2,
+      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory3.png?v=1649657703',
+      img_select: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory3-1.png?v=1649658789',
+      name: 'Jade Plant'
+    },
+    {
+      id: 3,
+      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory2.png?v=1649657703',
+      img_select: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory2-1.png?v=1649658803',
+      name: 'Peace Lily'
+    },
+    {
+      id: 4,
+      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory5.png?v=1649657759',
+      img_select: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory5-1.png?v=1649658820',
+      name: 'Alovera Plant'
+    }
+  ]
+
+
+  FirstTabProducts: any = [
+    {
+      id: 1,
+      img: '../../assets/image/plant1.png',
+      size: '8 × 3 inch'
+    },
+    {
+      id: 2,
+      img: '../../assets/image/plant2.png',
+      size: '10 × 10 inch'
+    },
+    {
+      id: 3,
+      img: '../../assets/image/plant3.png',
+      size: '15 × 15 inch'
+    },
+    {
+      id: 4,
+      img: '../../assets/image/plant4.png',
+      size: '18 × 10 inch'
+    },
+    {
+      id: 5,
+      img: '../../assets/image/plant5.png',
+      size: '18 × 18 inch'
+    },
+    {
+      id: 6,
+      img: '../../assets/image/plant6.png',
+      size: '11 × 8 inch'
+    },
+    {
+      id: 7,
+      img: '../../assets/image/plant7.jpg',
+      size: '16 × 13 inch'
+    },
+    {
+      id: 8,
+      img: '../../assets/image/plant8.png',
+      size: '12 × 10 inch'
+    },
+    {
+      id: 9,
+      img: '../../assets/image/plant9.png',
+      size: '18 × 13 inch'
+    },
+  ]
+
+
+
+  SliderData: any = [
+    {
+      id: 1,
+      img: '../../assets/image/topSlider.jpeg',
+      title: 'Rubber Plant',
+      paragraph: 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text in laying out print. The passage is attributed to an unknown typesetter in the 15th century.'
+    },
+    {
+      id: 2,
+      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/slider-2_2048x_204af0c6-e02f-4050-9715-78635c134f7e.png?v=1649651633',
+      title: 'Outdoor Plant',
+      paragraph: 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text in laying out print. The passage is attributed to an unknown typesetter in the 15th century.'
+    },
+    {
+      id: 3,
+      img: '../../assets/image/topSlider.jpeg',
+      title: 'Rubber Plant',
+      paragraph: 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text in laying out print. The passage is attributed to an unknown typesetter in the 15th century.'
+    },
+    {
+      id: 4,
+      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/slider-2_2048x_204af0c6-e02f-4050-9715-78635c134f7e.png?v=1649651633',
+      title: 'Outdoor Plant',
+      paragraph: 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text in laying out print. The passage is attributed to an unknown typesetter in the 15th century.'
+    },
+    {
+      id: 5,
+      img: '../../assets/image/topSlider.jpeg',
+      title: 'Rubber Plant',
+      paragraph: 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text in laying out print. The passage is attributed to an unknown typesetter in the 15th century.'
+    },
+  ]
+
+
+
+
+
+
+  constructor(public app: AppComponent) {
     setTimeout(() => {
       this.BrandSlider();
     }, 5000);
   }
 
   ngOnInit() {
+    this.app.Headerdropdown = true
+    this.app.footer = true
     this.slideIndex = 1
     this.Testimonialsindex = 3
     this.BestProductTab = 1

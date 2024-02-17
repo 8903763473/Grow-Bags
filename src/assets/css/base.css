@@ -1848,7 +1848,7 @@
 
 .ishi-customhover-fadeinrotate:after {
     content: "";
-    background: none repeat scroll 0 0 rgba(0, 0, 0, .07);
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 16%);
     position: absolute;
     display: block;
     top: 10px;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { Subscription, interval } from 'rxjs';
 
 @Component({
@@ -23,7 +23,10 @@ export class AppComponent {
   OpenSubMenu: any
   isScrolled: any
   subscribe: any
+  Headerdropdown: boolean = false
+  footer: boolean = false
 
+  constructor(public router: Router) { }
 
   ngOnInit() {
     this.authpage = 0
@@ -96,6 +99,10 @@ export class AppComponent {
   SubscribeClose() {
     sessionStorage.setItem('Subscribepopup', 'true');
     this.subscribe = true
+  }
+
+  route(data: any) {
+    this.router.navigate(['/' + data])
   }
 
   ngOnDestroy() {

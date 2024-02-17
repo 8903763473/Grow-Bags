@@ -2030,7 +2030,7 @@ body .spr-summary-actions-newreview {
 }
 
 .col-5 .top-menu.mainmenu-dropdown {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 1199px) {

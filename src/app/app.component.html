@@ -9,7 +9,7 @@
           <div class="row">
 
             <div class="hidden-lg-down header-left col-lg-4 col-md-3 col-sm-6 col-xs-6">
-              <a class="email" href="mailto:info&#64;example.com">
+              <a class="email" href="mailto:davistraders1&#64;gmail.com">
                 <div class="ishiheadercontactblock">
                   <div class="call">
                     <div class="call-img">
@@ -22,50 +22,35 @@
                         </svg>
                       </svg>
 
-
-
-
                     </div>
                     <div class="call-text">
-                      <div class="call-num">info&#64;example.com</div>
+                      <div class="call-num">davistraders1&#64;gmail.com</div>
                     </div>
                   </div>
                 </div>
               </a>
             </div>
 
-            <div id="_desktop_logo" class="header-logo-section  col-md-4 col-sm-6 col-xs-6 ">
-
-
+            <div id="_desktop_logo" class="header-logo-section  col-md-4 col-sm-6 col-xs-6 "
+              style="width: 46.33% !important;">
               <h1 class="h2 header__logo" itemscope itemtype="http://schema.org/Organization">
-
                 <div class="hidden-lg-down">
-
                   <a class="header__logo-image ">
-
-
-                    <img class="hidden-lg-down"
-                      src="../assets/image/WhatsApp_Image_2024-01-02_at_13.30.17-removebg-preview.png"
-                      alt="Sectioned Shopify Theme" itemprop="logo" style="max-width: 100%;width: 140px;">
+                    <img class="hidden-lg-down" src="../assets/image/Grow_logo.png" alt="Sectioned Shopify Theme"
+                      itemprop="logo" style="max-width: 100%;width: 140px;">
                   </a>
-
                 </div>
                 <div class="hidden-lg-up">
-
                   <a href="/" itemprop="url" class="header__logo-image">
                     <img class="hidden-lg-up"
                       src="//fashionist-ishi-2.myshopify.com/cdn/shop/files/logo_168x44_bb51ac0f-f466-4a86-b2f5-f42befefb2ee_large.png?v=1649671234"
                       alt="Sectioned Shopify Theme" itemprop="logo" style="max-width: 100%;">
                   </a>
-
                 </div>
-
               </h1>
-
             </div>
 
-
-            <div class="hidden-lg-down header-right  col-md-4 col-sm-6 col-xs-6">
+            <!-- <div class="hidden-lg-down header-right  col-md-4 col-sm-6 col-xs-6">
               <div id="_desktop_search" class="site-header__search hidden-lg-down">
                 <div class="search-title clearfix" data-href="#search-container-full" data-toggle="popover"
                   aria-expanded="false">
@@ -81,9 +66,6 @@
                       </svg>
                     </svg>
 
-
-
-
                   </span>
                   <span class="search-toggle hidden-lg-up">
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 1200 1200">
@@ -95,9 +77,6 @@
    S377.82,467.8,257.493,467.8z"></path>
                       </svg>
                     </svg>
-
-
-
 
                   </span>
                 </div>
@@ -307,7 +286,8 @@
               </div>
 
 
-            </div>
+            </div> -->
+
           </div>
         </div>
       </div>
@@ -330,7 +310,7 @@
             <li class="category">
               <span class="float-xs-right hidden-lg-up">
               </span>
-              <a href="/blogs/sprouts" class="dropdown-item">
+              <a class="dropdown-item" (click)="route('home')">
                 <h3 class="title">Home</h3>
               </a>
             </li>
@@ -338,7 +318,7 @@
             <li class="category">
               <span class="float-xs-right hidden-lg-up">
               </span>
-              <a href="/pages/about-us" class="dropdown-item">
+              <a class="dropdown-item" (click)="route('about')">
                 <h3 class="title">About Us</h3>
               </a>
             </li>
@@ -381,49 +361,39 @@
 
                     </span>
                     <a href="/collections/scissors" class="dropdown-item dropdown-submenu">
-                      <h3 class="inner-title">Scissors</h3>
+                      <h3 class="inner-title">Our Services</h3>
                     </a>
 
                     <div class="top-menu ishi-collapse desktop-collapse" id="_n_grand-child-one1"
                       [ngStyle]="{ 'display': OpenSubMenu === 1 ? 'block' : 'none' }">
                       <ul class="top-menu">
-
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Metzenbaum</a>
+                          <a class="dropdown-item">Manufacturer of Grow Bags in All Sizes</a>
                         </li>
-
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Mayo</a>
+                          <a class="dropdown-item">Mordenized Roof Gardining</a>
                         </li>
-
                         <li class="category">
-                          <a href="/collections/new-garden" class="dropdown-item">Bandage</a>
+                          <a class="dropdown-item">Drip irrigation & Garden Designing</a>
                         </li>
-
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Applique</a>
+                          <a class="dropdown-item">Green House & Shade net Fixing</a>
                         </li>
-
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Pellets</a>
+                          <a class="dropdown-item">Plants , Nursery & Gardening Tools</a>
                         </li>
-
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Lawn</a>
+                          <a class="dropdown-item">Organic Farming & Gardening</a>
                         </li>
-
                         <li class="category">
-                          <a href="/collections/soiltesters" class="dropdown-item">Pinking</a>
+                          <a class="dropdown-item">Free Suggessions for Gardening</a>
                         </li>
-
                       </ul>
                     </div>
-
-
                   </li>
 
 
-                  <li class="sub-category panel">
+                  <!-- <li class="sub-category panel">
 
                     <span class="float-xs-right hidden-lg-up">
 
@@ -534,7 +504,7 @@
                       </ul>
                     </div>
 
-                  </li>
+                  </li> -->
 
                   <li class="sub-category img-container hidden-lg-down">
                     <a href="/collections/garden" class="link">
@@ -573,7 +543,7 @@
             <li class="category">
               <span class="float-xs-right hidden-lg-up">
               </span>
-              <a href="/blogs/sprouts" class="dropdown-item">
+              <a class="dropdown-item" (click)="route('contact')">
                 <h3 class="title">Contact</h3>
               </a>
             </li>
@@ -757,7 +727,7 @@
 </div>
 
 
-<div class="wrapper-nav hidden-lg-down">
+<div class="wrapper-nav hidden-lg-down" *ngIf="Headerdropdown">
   <div class="navfullwidth" [class.fixed-header]="isScrolled">
     <div class="page-width">
       <div id="shopify-section-Ishi_megamenu" class="shopify-section">
@@ -768,14 +738,14 @@
               <li class="category">
                 <span class="float-xs-right hidden-lg-up">
                 </span>
-                <a href="/blogs/sprouts" class="dropdown-item">
+                <a class="dropdown-item" (click)="route('home')">
                   <h3 class="title">Home</h3>
                 </a>
               </li>
               <li class="category">
                 <span class="float-xs-right hidden-lg-up">
                 </span>
-                <a href="/pages/about-us" class="dropdown-item">
+                <a class="dropdown-item" (click)="route('about')">
                   <h3 class="title">About Us</h3>
                 </a>
               </li>
@@ -800,215 +770,54 @@
                 </span>
                 <a class="dropdown-item">
                   <h3 class="title">Service</h3>
-
                   <span class="new"> NEW</span>
-
-
-
                 </a>
-
-
-
                 <div class="popover sub-menu js-sub-menu ishi-collapse desktop-collapse col-5" id="_n_child-one1">
                   <ul id="top-menu-child" class="top-menu mainmenu-dropdown panel-group">
 
                     <li class="sub-category panel">
-
                       <span class="float-xs-right hidden-lg-up">
-
                         <span data-href="#_n_grand-child-one1" data-toggle="collapse"
                           class="ishi-collapse in navbar-toggler ishi-collapsed rotate" aria-expanded="false"
                           data-parent="#top-menu-child">
-
                           <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret"
                             viewBox="0 0 10 6">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                               d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
                               fill="currentColor" />
                           </svg>
-
-
-
-
-
                         </span>
-
                       </span>
                       <a href="/collections/scissors" class="dropdown-item dropdown-submenu">
-                        <h3 class="inner-title">Scissors</h3>
+                        <h3 class="inner-title">Our Services</h3>
                       </a>
-
                       <div class="top-menu ishi-collapse desktop-collapse" id="_n_grand-child-one1">
                         <ul class="top-menu">
-
                           <li class="category">
-                            <a class="dropdown-item">Metzenbaum</a>
+                            <a class="dropdown-item">Manufacturer of Grow Bags in All Sizes</a>
                           </li>
-
                           <li class="category">
-                            <a class="dropdown-item">Mayo</a>
+                            <a class="dropdown-item">Mordenized Roof Gardining</a>
                           </li>
-
                           <li class="category">
-                            <a href="/collections/new-garden" class="dropdown-item">Bandage</a>
+                            <a class="dropdown-item">Drip irrigation & Garden Designing</a>
                           </li>
-
                           <li class="category">
-                            <a class="dropdown-item">Applique</a>
+                            <a class="dropdown-item">Green House & Shade net Fixing</a>
                           </li>
-
                           <li class="category">
-                            <a class="dropdown-item">Pellets</a>
+                            <a class="dropdown-item">Plants , Nursery & Gardening Tools</a>
                           </li>
-
                           <li class="category">
-                            <a class="dropdown-item">Lawn</a>
+                            <a class="dropdown-item">Organic Farming & Gardening</a>
                           </li>
-
                           <li class="category">
-                            <a href="/collections/soiltesters" class="dropdown-item">Pinking</a>
+                            <a class="dropdown-item">Free Suggessions for Gardening</a>
                           </li>
 
                         </ul>
                       </div>
-
-
                     </li>
-
-
-                    <li class="sub-category panel">
-
-                      <span class="float-xs-right hidden-lg-up">
-
-                        <span data-href="#_n_grand-child-two1" data-toggle="collapse"
-                          class="ishi-collapse in navbar-toggler ishi-collapsed rotate" aria-expanded="false"
-                          data-parent="#top-menu-child">
-
-                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret"
-                            viewBox="0 0 10 6">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
-                              fill="currentColor" />
-                          </svg>
-
-
-
-
-
-                        </span>
-
-                      </span>
-                      <a href="/collections/soiltesters" class="dropdown-item dropdown-submenu">
-                        <h3 class="inner-title">Soiltesters</h3>
-                      </a>
-
-                      <div class="top-menu ishi-collapse desktop-collapse" id="_n_grand-child-two1">
-                        <ul class="top-menu">
-
-                          <li class="category">
-                            <a href="/collections/new-garden" class="dropdown-item">House Plants</a>
-                          </li>
-
-                          <li class="category">
-                            <a href="/collections/new-garden" class="dropdown-item">Orchids</a>
-                          </li>
-
-                          <li class="category">
-                            <a href="/collections/soiltesters" class="dropdown-item">Grasses</a>
-                          </li>
-
-                          <li class="category">
-                            <a href="/collections/scissors" class="dropdown-item">Shrubs</a>
-                          </li>
-
-                          <li class="category">
-                            <a href="/collections/scissors" class="dropdown-item">Rose Bushes</a>
-                          </li>
-
-                          <li class="category">
-                            <a href="/collections/new-garden" class="dropdown-item">Herb Plants</a>
-                          </li>
-
-                          <li class="category">
-                            <a href="/collections/new-garden" class="dropdown-item">Fescue Grass</a>
-                          </li>
-
-                        </ul>
-                      </div>
-
-
-                    </li>
-
-
-                    <li class="sub-category panel">
-
-                      <span class="float-xs-right hidden-lg-up">
-
-                        <span data-href="#_n_grand-child-three1" data-toggle="collapse"
-                          class="ishi-collapse in navbar-toggler ishi-collapsed rotate" aria-expanded="false"
-                          data-parent="#top-menu-child">
-
-                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret"
-                            viewBox="0 0 10 6">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
-                              fill="currentColor" />
-                          </svg>
-
-
-
-
-
-                        </span>
-
-                      </span>
-                      <a href="/collections/trowels" class="dropdown-item dropdown-submenu">
-                        <h3 class="inner-title">Trowels</h3>
-                      </a>
-
-                      <div class="top-menu  ishi-collapse desktop-collapse" id="_n_grand-child-three1">
-                        <ul class="top-menu">
-
-                          <li class="category">
-                            <a class="dropdown-item">Finishing</a>
-                          </li>
-
-                          <li class="category">
-                            <a class="dropdown-item">Margin</a>
-                          </li>
-
-                          <li class="category">
-                            <a class="dropdown-item">Pool</a>
-                          </li>
-
-                          <li class="category">
-                            <a class="dropdown-item">Brick</a>
-                          </li>
-
-                          <li class="category">
-                            <a href="/collections/new-garden" class="dropdown-item">Notched</a>
-                          </li>
-
-                          <li class="category">
-                            <a class="dropdown-item">Concrete</a>
-                          </li>
-
-                          <li class="category">
-                            <a class="dropdown-item">Pointing</a>
-                          </li>
-
-                        </ul>
-                      </div>
-
-
-                    </li>
-
-
-
-
-
-
-
 
 
                     <li class="sub-category img-container hidden-lg-down">
@@ -1018,8 +827,6 @@
                           alt="Menu Banner Image">
                       </a>
                     </li>
-
-
 
 
                     <li class="sub-category img-container hidden-lg-down">
@@ -1056,7 +863,7 @@
                 <span class="float-xs-right hidden-lg-up">
 
                 </span>
-                <a href="/blogs/sprouts" class="dropdown-item">
+                <a class="dropdown-item" (click)="route('contact')">
                   <h3 class="title">Contact</h3>
 
 
@@ -1083,7 +890,7 @@
 
 <!-- ************FOOTER*********** -->
 
-<div id="shopify-section-footer" class="shopify-section">
+<div id="shopify-section-footer" class="shopify-section" *ngIf="footer">
 
   <footer class="footer footer-color">
     <div class="footer__content-top page-width">
@@ -1094,9 +901,8 @@
         <div class="footer-block grid__item block-width-28">
           <div id="_desktop_newsletter" class="center">
             <div class="footer-block__details-content store-infomation center">
-              <img class="lazyload"
-                data-src="//fashionist-ishi-2.myshopify.com/cdn/shop/files/logo_168x44_bb51ac0f-f466-4a86-b2f5-f42befefb2ee_large.png?v=1649671234"
-                alt="Sectioned Shopify Theme" itemprop="logo" style="width: 105px;">
+              <img class="lazyload" src="../assets/image/Grow_logo.png" alt="Sectioned Shopify Theme" itemprop="logo"
+                style="width: 105px;">
               <div class="store-desc">
                 <p>Lorem ipsum dolor sit amet, cons lectetur elit, do tebore et dolore</p>
               </div>
@@ -1183,9 +989,6 @@
                   d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
                   fill="currentColor" />
               </svg>
-
-
-
 
 
             </div>
@@ -1337,8 +1140,8 @@
                   <i class="fa-solid fa-location-dot"></i>
                   <div class="content">
 
-                    <p>4005, silver business point</p>
-                    <p>India</p>
+                    <p>Ground Floor,Plot No: 80A<br />Christian Nagar B Colony,<br /> KTC Nagar, Thirunelveli
+                    </p>
                   </div>
                 </li>
 
@@ -1347,9 +1150,14 @@
                   <i class="fa fa-phone" aria-hidden="true"></i>
                   <div class="content">
 
-                    <a href="tel:9988776655">
-                      9988776655
+                    <a href="tel:78712 34650">
+                      78712 34650 <span> , </span>
                     </a>
+                    <a href="tel:90870 22952">
+                      90870 22952
+                    </a>
+
+
                   </div>
                 </li>
 
@@ -1358,8 +1166,8 @@
                   <i class="fa fa-envelope" aria-hidden="true"></i>
                   <div class="content">
 
-                    <a href="mailto:info&#64;example.com">
-                      info&#64;example.com
+                    <a href="mailto:davistraders1&#64;gmail.com">
+                      davistraders1&#64;gmail.com
                     </a>
                   </div>
                 </li>
@@ -1375,7 +1183,7 @@
   </footer>
 
 </div>
-<div id="shopify-section-copyright_payment" class="shopify-section">
+<div id="shopify-section-copyright_payment" class="shopify-section" *ngIf="footer">
 
   <div class="footer-bottom">
     <div class="page-width">

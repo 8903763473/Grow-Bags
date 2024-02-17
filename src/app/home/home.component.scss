@@ -377,7 +377,7 @@
 }
 
 .rotateImgUp {
-    width: 44% !important;
+    width: 46% !important;
 }
 
 .rotateImgDown {
@@ -591,5 +591,123 @@
     textarea {
         min-height: 150px;
         height: 150px !important;
+    }
+}
+
+.story-block {
+    margin-top: 60px;
+}
+
+
+// *********************NEW**********************
+
+.container1 {
+    width: 99%;
+    height: auto;
+
+    .container1 h3 {
+        text-align: center;
+        padding-top: 6%;
+        margin-bottom: 60px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        position: relative;
+    }
+
+    .container1 h3::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 5px;
+        background-color: #518432;
+        border-radius: 20px;
+    }
+
+    .row {
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 30px;
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .row .service {
+        width: 220px;
+        height: 130px;
+        padding: 25px 15px;
+        background: transparent;
+        font-size: 15px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 1px solid #518432;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .count {
+            width: 45px;
+            height: 45px;
+            line-height: normal;
+            border-radius: 50%;
+            font-size: 40px;
+            color: #518432
+        }
+
+    }
+
+    .row .service:hover {
+        color: #fff;
+        background-color: #518432;
+        transform: scale(1.05);
+
+        .count {
+            font-size: 40px;
+            color: #518432;
+            background-color: #FFFFFF;
+        }
+
+        p {
+            color: white;
+        }
+
+    }
+
+    .row .service i {
+        color: #518432;
+        margin-bottom: 20px;
+        font-size: 40px;
+        transition: 0.5s;
+    }
+
+    .row .service:hover i {
+        color: #fff;
+    }
+
+    .row .service h3 {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+.fourth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .FourImages {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
     }
 }

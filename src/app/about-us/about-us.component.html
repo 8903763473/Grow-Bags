@@ -1,0 +1,161 @@
+<section class="section_all bg-light" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_title_all text-center">
+                    <h3 class="font-weight-bold">Welcome To <span class="text-custom">Grow Bags</span></h3>
+                    <p class="section_subtitle mx-auto text-muted">Explore the endless possibilities of gardening with
+                        our high-quality grow bags <br> designed for small spaces. Whether you're a seasoned gardener or
+                        just
+                        starting, our innovative <br> grow bags provide an ideal environment for your plants to thrive.
+                    </p>
+                    <div class="">
+                        <i class=""></i>
+                    </div>
+                </div>
+            </div><br><br><br><br>
+        </div>
+
+        <div class="row vertical_content_manage mt-5">
+            <div class="col-lg-6">
+                <div class="about_header_main mt-3">
+                    <!-- <div class="about_icon_box">
+                        <p class="text_custom font-weight-bold">Who we are..</p>
+                    </div> -->
+                    <h4 class="about_heading text-capitalize font-weight-bold mt-4">Who we are</h4><br>
+                    <p class="text-muted mt-3">We are one of the largest manufacturere of Grow bags. Which is available
+                        in Round shapes , Square Shapes in various sizes.</p>
+
+                    <p class="text-muted mt-3"> Here Vermi bags , Azolla bags , Spinach bags & 260 gsm Bags are
+                        available.</p>
+
+                    <p> Our Grow bags usually consists of a well-balanced mixture of high-quality potting soil, coconut
+                        coir, and perlite
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="img_about mt-3">
+                    <img src="../../assets/image/aboutGB.jpeg" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 AllServices">
+            <div class="col-lg-4">
+                <div class="about_content_box_all mt-3 Services">
+                    <div class="about_detail text-center">
+                        <div class="about_icon">
+                            <img src="../../assets/image/bags.png" alt="">
+                        </div>
+                        <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Grow Bags</h5>
+                        <p class="edu_desc mt-3 mb-0 text-muted">Grow bags are versatile containers designed for
+                            cultivating plants, typically made of durable, breathable fabric </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="about_content_box_all mt-3 Services">
+                    <div class="about_detail text-center">
+                        <div class="about_icon">
+                            <img src="../../assets/image/Roof.jpeg" alt="">
+                        </div>
+                        <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Roof Gardening</h5>
+                        <p class="edu_desc mb-0 mt-3 text-muted">
+                            Roof gardening, a burgeoning trend, transforms urban spaces into lush green havens </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="about_content_box_all mt-3 Services">
+                    <div class="about_detail text-center">
+                        <div class="about_icon">
+                            <img src="../../assets/image/Drip.jpg" alt="">
+                        </div>
+                        <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Drip Irrigation</h5>
+                        <p class="edu_desc mb-0 mt-3 text-muted">Drip irrigation efficiently delivers water directly to
+                            the roots of plants, conserving water and minimizing wastage </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="about_content_box_all mt-3 Services">
+                    <div class="about_detail text-center">
+                        <div class="about_icon">
+                            <img src="../../assets/image/designing.jpg" alt="">
+                        </div>
+                        <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Garden Designing</h5>
+                        <p class="edu_desc mb-0 mt-3 text-muted">Transform your outdoor space into a vibrant oasis with
+                            our expert garden designing services </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="about_content_box_all mt-3 Services">
+                    <div class="about_detail text-center">
+                        <div class="about_icon">
+                            <img src="../../assets/image/netting.jpeg" alt="">
+                        </div>
+                        <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Shade Net Fixing</h5>
+                        <p class="edu_desc mb-0 mt-3 text-muted">Enhance your outdoor space with professional shade net
+                            fixing services </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="about_content_box_all mt-3 Services">
+                    <div class="about_detail text-center">
+                        <div class="about_icon">
+                            <img src="../../assets/image/tools.jpeg" alt="">
+                        </div>
+                        <h5 class="text-dark text-capitalize mt-3 font-weight-bold">Gardening Tools</h5>
+                        <p class="edu_desc mb-0 mt-3 text-muted">Gardening Tools are essential for maintaining a
+                            thriving garden. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ********************SLIDER**************** -->
+
+    <div class="container mx-auto px-4 py-4 Slider">
+        <div class="happy-customer">
+            <h4 class="text-center text-lg text-gray-900 font-semibold tracking-wide mb-3" style="margin-left: 35px;">
+                What are the Bags We Have ?</h4>
+            <div class="rating-carousel"
+                data-flickity='{ "wrapAround": true, "autoPlay": 1500, "prevNextButtons": false }'>
+                <div class="carousel-cell" *ngFor="let testimonial of Bags">
+                    <div class="rating">
+                        <div class="rating-user">
+                            <img [src]="testimonial.avatar" alt="user" class="rating-user--avatar"><br>
+                            <h4 class="rating-user--name">{{ testimonial.name }}</h4>
+                            <p class="rating-user--position">{{ testimonial.position }}</p>
+                        </div>
+                        <div class="rating-rate">
+                            <img class="quate" src="https://i.imgur.com/gZ5HY0U.png" alt="">
+                            <p class="rating-message">{{ testimonial.message }}</p>
+                            <div class="rating-star">
+                                <i class="feather-icon" data-feather="star"></i>
+                                <i class="feather-icon" data-feather="star"></i>
+                                <i class="feather-icon" data-feather="star"></i>
+                                <i class="feather-icon" data-feather="star"></i>
+                                <i class="feather-icon" data-feather="star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889"
+        width="600" height="450" frameborder="0" style="border:0" allowfullscreen style="width: 100%;"></iframe>
+
+</section>

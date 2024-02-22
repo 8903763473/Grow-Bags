@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+
 
 @Component({
   selector: 'app-home',
@@ -33,7 +34,8 @@ export class HomeComponent implements OnInit {
   ReviewForm: boolean = false
   BrandTransform: any
   BrandValue: any = 0
-
+  sliderWidth: any
+  screenWidth: any
 
   ProductList: any = [
     {
@@ -148,13 +150,11 @@ export class HomeComponent implements OnInit {
 
 
 
-
-
-
   constructor(public app: AppComponent) {
     setTimeout(() => {
       this.BrandSlider();
     }, 5000);
+
   }
 
   ngOnInit() {
@@ -167,6 +167,17 @@ export class HomeComponent implements OnInit {
     this.BlogTransform = `translate3d(${this.BlogsValue}, 0px, 0px)`
     this.categoryTransform = `translate3d(${this.categoryValue}, 0px, 0px)`
     this.TopTransform = `translate3d(${this.TopValue}, 0px, 0px)`
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.ScreenWidth()
+    }, 2000)
+  }
+
+  ScreenWidth() {
+    this.screenWidth = window.innerWidth
+    this.ngAfterViewInit()
   }
 
   TestimonialsSlider(status: any) {
@@ -201,7 +212,6 @@ export class HomeComponent implements OnInit {
     this.BlogTransform = `translate3d(-${this.BlogsValue}px, 0px, 0px)`;
   }
 
-
   CategorySlider(status: 'Prev' | 'Next') {
     const width = window.innerWidth + 800;
     if (status === 'Prev') {
@@ -229,10 +239,9 @@ export class HomeComponent implements OnInit {
     this.BackgroundPosition = '-242px -164px';
   }
 
-  ViewProdDetail(url: any) {
+  ViewProdDetail(item: any) {
     this.ProdDetail = true
-    this.ProductDetailPic = url
-    console.log(url);
+    this.ProductDetailPic = item.img
   }
 
   Trendingtabs(id: any) {
@@ -255,5 +264,4 @@ export class HomeComponent implements OnInit {
     this.BrandTransform = `translate3d(-${this.BrandValue}px, 0px, 0px)`;
     setTimeout(() => { this.BrandSlider() }, 5000);
   }
-
 }

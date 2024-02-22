@@ -8,7 +8,7 @@
         <div class="page-width">
           <div class="row">
 
-            <div class="hidden-lg-down header-left col-lg-4 col-md-3 col-sm-6 col-xs-6">
+            <div class="hidden-lg-down header-left col-lg-4 col-md-3 col-sm-6 col-xs-6 MobLogin">
               <a class="email" href="mailto:davistraders1&#64;gmail.com">
                 <div class="ishiheadercontactblock">
                   <div class="call">
@@ -50,8 +50,8 @@
               </h1>
             </div>
 
-            <!-- <div class="hidden-lg-down header-right  col-md-4 col-sm-6 col-xs-6">
-              <div id="_desktop_search" class="site-header__search hidden-lg-down">
+            <div class="hidden-lg-down header-right  col-md-4 col-sm-6 col-xs-6">
+              <!-- <div id="_desktop_search" class="site-header__search hidden-lg-down">
                 <div class="search-title clearfix" data-href="#search-container-full" data-toggle="popover"
                   aria-expanded="false">
                   <span class="search-toggle hidden-lg-down">
@@ -91,7 +91,7 @@
                     </button>
                   </form>
                 </div>
-              </div>
+              </div> -->
 
               <div id="_desktop_user_info" class="user_info">
 
@@ -109,10 +109,6 @@
            s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
                       </svg>
                     </svg>
-
-
-
-
                   </span>
                   <span class="userinfo-toggle hidden-lg-up">
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 480 480">
@@ -125,127 +121,10 @@
            s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
                       </svg>
                     </svg>
-
-
-
-
                   </span>
-
                 </div>
 
 
-                <div id="user-notification" class="toggle-dropdown" [ngClass]="{'active':authpage!=0}">
-                  <div class="customer login ishi-panel-container">
-
-                    <div id="ishi-login-panel" class="ishi-panel-data ishi-panel-data-default"
-                      [ngClass]="{'active':authpage==1}">
-                      <h2>
-                        Login
-                      </h2>
-                      <form method="post" id="customer_login" accept-charset="UTF-8" data-login-with-shop-sign-in="true"
-                        novalidate="novalidate"><input type="hidden" name="form_type" value="customer_login" /><input
-                          type="hidden" name="utf8" value="✓" />
-                        <div class="field">
-                          <input type="email" name="customer[email]" id="CustomerEmail" autocomplete="email"
-                            autocorrect="off" autocapitalize="off" placeholder="Email">
-                          <label for="CustomerEmail">
-                            Email
-                          </label>
-                        </div>
-                        <div class="field">
-                          <input type="password" value="" name="customer[password]" id="CustomerPassword"
-                            autocomplete="current-password" placeholder="Password">
-                          <label for="CustomerPassword">
-                            Password
-                          </label>
-                        </div>
-
-                        <p data-action="ishi-panel" aria-controls="#ishi-recover-panel" class="forgot"
-                          (click)="AuthRoute(3,'forget')">Forgot your
-                          password?</p><button class="btn">
-                          Sign in
-                        </button>
-
-                        <p data-action="ishi-panel" aria-controls="#ishi-register-panel"
-                          (click)="AuthRoute(2,'create')"> Create
-                          account</p>
-                      </form>
-                    </div>
-
-
-
-                    <div id="ishi-recover-panel" class="ishi-panel-data ishi-panel-data-slide"
-                      [ngClass]="{'active':authpage==3}">
-                      <h2>
-                        Reset your password
-                      </h2>
-                      <p>
-                        We will send you an email to reset your password
-                      </p>
-                      <form method="post" accept-charset="UTF-8"><input type="hidden" name="form_type"
-                          value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
-                        <div class="field">
-                          <input type="email" value="" name="email" id="RecoverEmail" autocorrect="off"
-                            autocapitalize="off" autocomplete="email" placeholder="Email">
-                          <label for="RecoverEmail">
-                            Email
-                          </label>
-                        </div>
-                        <button>
-                          Submit
-                        </button>
-
-                        <p data-action="ishi-panel" aria-controls="#ishi-login-panel" (click)="AuthRoute(1,'cancel')">
-                          Cancel</p>
-                      </form>
-                    </div>
-
-                    <div id="ishi-register-panel" class="ishi-panel-data ishi-panel-data-slide"
-                      [ngClass]="{'active':authpage==2}">
-                      <h2>
-                        Create account
-                      </h2>
-                      <form method="post" id="create_customer" accept-charset="UTF-8"
-                        data-login-with-shop-sign-up="true" novalidate="novalidate"><input type="hidden"
-                          name="form_type" value="create_customer" /><input type="hidden" name="utf8" value="✓" />
-                        <div class="field">
-                          <input type="text" name="customer[first_name]" id="RegisterForm-FirstName"
-                            autocomplete="given-name" placeholder="First name">
-                          <label for="RegisterForm-FirstName">
-                            First name
-                          </label>
-                        </div>
-                        <div class="field">
-                          <input type="text" name="customer[last_name]" id="RegisterForm-LastName"
-                            autocomplete="family-name" placeholder="Last name">
-                          <label for="RegisterForm-LastName">
-                            Last name
-                          </label>
-                        </div>
-                        <div class="field">
-                          <input type="email" name="customer[email]" id="RegisterForm-email" spellcheck="false"
-                            autocapitalize="off" autocomplete="email" aria-required="true" placeholder="Email">
-                          <label for="RegisterForm-email">
-                            Email
-                          </label>
-                        </div>
-                        <div class="field">
-                          <input type="password" name="customer[password]" id="RegisterForm-password"
-                            aria-required="true" placeholder="Password">
-                          <label for="RegisterForm-password">
-                            Password
-                          </label>
-                        </div>
-                        <button class="btn">
-                          Create
-                        </button>
-                        <p data-action="ishi-panel" aria-controls="#ishi-login-panel" class="new-account"
-                          (click)="AuthRoute(1,'already')">Already Have
-                          an Account ?</p>
-                      </form>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <div id="_desktop_cart" class="cart_info" (click)="OpencartHistory()">
@@ -286,7 +165,7 @@
               </div>
 
 
-            </div> -->
+            </div>
 
           </div>
         </div>
@@ -302,6 +181,7 @@
               d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
               fill="currentColor" />
           </svg>
+
         </div>
         <!-- <div id="_mobile_top_menu" class="js-top-menu mobile"></div> -->
 
@@ -323,6 +203,14 @@
               </a>
             </li>
 
+            <li class="category">
+              <span class="float-xs-right hidden-lg-up">
+              </span>
+              <a class="dropdown-item" (click)="OpencartHistory()">
+                <h3 class="title">Cart</h3>
+              </a>
+            </li>
+
 
             <li class="category menularge">
               <span class="float-xs-right hidden-lg-up">
@@ -337,7 +225,7 @@
                   </svg>
                 </span>
               </span>
-              <a href="/collections/garden" class="dropdown-item">
+              <a class="dropdown-item">
                 <h3 class="title">Service</h3>
                 <span class="new"> NEW</span>
               </a>
@@ -474,19 +362,19 @@
                       <ul class="top-menu">
 
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Finishing</a>
+                          <a   class="dropdown-item">Finishing</a>
                         </li>
 
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Margin</a>
+                          <a   class="dropdown-item">Margin</a>
                         </li>
 
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Pool</a>
+                          <a   class="dropdown-item">Pool</a>
                         </li>
 
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Brick</a>
+                          <a   class="dropdown-item">Brick</a>
                         </li>
 
                         <li class="category">
@@ -494,11 +382,11 @@
                         </li>
 
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Concrete</a>
+                          <a   class="dropdown-item">Concrete</a>
                         </li>
 
                         <li class="category">
-                          <a href="/collections/garden" class="dropdown-item">Pointing</a>
+                          <a   class="dropdown-item">Pointing</a>
                         </li>
 
                       </ul>
@@ -507,7 +395,7 @@
                   </li> -->
 
                   <li class="sub-category img-container hidden-lg-down">
-                    <a href="/collections/garden" class="link">
+                    <a class="link">
                       <img class="feature-row__image lazyload"
                         data-src="//fashionist-ishi-2.myshopify.com/cdn/shop/files/2_d8900769-6315-4379-a773-8bc71e8253bf.png?v=1656589920"
                         alt="Menu Banner Image">
@@ -547,6 +435,14 @@
                 <h3 class="title">Contact</h3>
               </a>
             </li>
+
+            <li class="category">
+              <span class="float-xs-right hidden-lg-up">
+              </span>
+              <a class="dropdown-item" (click)="AuthRoute(1,'Icon');MenuOpen=false">
+                <h3 class="title">Login</h3>
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -559,7 +455,7 @@
       <div class="mobile-navmenu hidden-lg-up">
         <div class="mobile-width">
           <div class="page-width">
-            <div class="row">
+            <div class="row" style="position: relative;">
               <div class="mobile-width-left">
                 <div id="menu-icon" class="menu-icon hidden-lg-up" (click)="MenuIcon()">
 
@@ -576,14 +472,36 @@
                       </g>
                     </svg>
                   </svg>
-
-
-
-
-
                 </div>
                 <div id="_mobile_search"></div>
               </div>
+
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 480 480"
+                style="width: 40px;height: 40px;position: absolute;right: 5px;" (click)="AuthRoute(1,'Icon')">
+                <svg x="20%" y="20%">
+                  <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
+       C256.614,183.433,225.608,152.427,187.497,152.427z M241.614,246.473H19.856v-24.928c0-29.84,24.277-54.117,54.117-54.117h113.523
+       c29.84,0,54.117,24.277,54.117,54.117L241.614,246.473L241.614,246.473z"></path>
+                  <path d="M130.735,145.326c40.066,0,72.663-32.597,72.663-72.663S170.802,0,130.735,0S58.072,32.596,58.072,72.663
+       S90.669,145.326,130.735,145.326z M130.735,15c31.796,0,57.663,25.867,57.663,57.663s-25.867,57.663-57.663,57.663
+       s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
+                </svg>
+              </svg>
+
+              <svg viewBox="0 0 700 700" class="icon" style="width: 40px;height: 40px;position: absolute;right: 50px;"
+                (click)="OpencartHistory()"><svg x="15%" y="17%">
+                  <path
+                    d="m150.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
+                  </path>
+                  <path
+                    d="m446.855469 94.035156h-353.101563l-7.199218-40.300781c-4.4375-24.808594-23.882813-44.214844-48.699219-48.601563l-26.101563-4.597656c-5.441406-.96875-10.632812 2.660156-11.601562 8.097656-.964844 5.441407 2.660156 10.632813 8.101562 11.601563l26.199219 4.597656c16.53125 2.929688 29.472656 15.871094 32.402344 32.402344l35.398437 199.699219c4.179688 23.894531 24.941406 41.324218 49.199219 41.300781h210c22.0625.066406 41.546875-14.375 47.902344-35.5l47-155.800781c.871093-3.039063.320312-6.3125-1.5-8.898438-1.902344-2.503906-4.859375-3.980468-8-4zm-56.601563 162.796875c-3.773437 12.6875-15.464844 21.367188-28.699218 21.300781h-210c-14.566407.039063-27.035157-10.441406-29.5-24.800781l-24.699219-139.398437h336.097656zm0 0">
+                  </path>
+                  <path
+                    d="m360.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
+                  </path>
+                </svg></svg>
+
+
               <div id="_mobile_logo" class="header-logo-section"></div>
               <div class="mobile-width-right">
                 <div id="_mobile_user_info"></div>
@@ -885,6 +803,121 @@
 
 <!-- ************HEADER*********** -->
 
+
+
+<!-- ************LOGIN POPUP*********** -->
+
+<div id="user-notification" class="toggle-dropdown" [ngClass]="{'active':authpage!=0}">
+  <div class="customer login ishi-panel-container">
+    <div id="ishi-login-panel" class="ishi-panel-data ishi-panel-data-default"
+      [ngClass]="{'active':authpage==1,'LoginCloned':authpage!=1}">
+      <h2>
+        Login
+      </h2>
+      <i class="fa-regular fa-circle-xmark" (click)="CloseLogin()" id="CloseIcon"></i>
+      <form method="post" id="customer_login" accept-charset="UTF-8" data-login-with-shop-sign-in="true"
+        novalidate="novalidate"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden"
+          name="utf8" value="✓" />
+        <div class="field">
+          <input type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" autocorrect="off"
+            autocapitalize="off" placeholder="Email">
+          <label for="CustomerEmail">
+            Email
+          </label>
+        </div>
+        <div class="field">
+          <input type="password" value="" name="customer[password]" id="CustomerPassword"
+            autocomplete="current-password" placeholder="Password">
+          <label for="CustomerPassword">
+            Password
+          </label>
+        </div>
+        <p data-action="ishi-panel" aria-controls="#ishi-recover-panel" class="forgot" (click)="AuthRoute(3,'forget')">
+          Forgot your
+          password?</p><button class="btn">
+          Sign in
+        </button>
+        <p data-action="ishi-panel" aria-controls="#ishi-register-panel" (click)="AuthRoute(2,'create')"> Create
+          account</p>
+      </form>
+    </div>
+
+
+    <div id="ishi-recover-panel" class="ishi-panel-data ishi-panel-data-slide"
+      [ngClass]="{'active':authpage==3,'LoginCloned':authpage!=3}">
+      <h2>
+        Reset your password
+      </h2>
+      <p>
+        We will send you an email to reset your password
+      </p>
+      <form method="post" accept-charset="UTF-8"><input type="hidden" name="form_type"
+          value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
+        <div class="field">
+          <input type="email" value="" name="email" id="RecoverEmail" autocorrect="off" autocapitalize="off"
+            autocomplete="email" placeholder="Email">
+          <label for="RecoverEmail">
+            Email
+          </label>
+        </div>
+        <button>
+          Submit
+        </button>
+
+        <p data-action="ishi-panel" aria-controls="#ishi-login-panel" (click)="AuthRoute(1,'cancel')">
+          Cancel</p>
+      </form>
+    </div>
+
+    <div id="ishi-register-panel" class="ishi-panel-data ishi-panel-data-slide"
+      [ngClass]="{'active':authpage==2,'LoginCloned':authpage!=2}">
+      <h2>
+        Create account
+      </h2>
+      <i class="fa-regular fa-circle-xmark" (click)="CloseLogin()" id="CloseIcon"></i>
+      <form method="post" id="create_customer" accept-charset="UTF-8" data-login-with-shop-sign-up="true"
+        novalidate="novalidate"><input type="hidden" name="form_type" value="create_customer" /><input type="hidden"
+          name="utf8" value="✓" />
+        <div class="field">
+          <input type="text" name="customer[first_name]" id="RegisterForm-FirstName" autocomplete="given-name"
+            placeholder="First name">
+          <label for="RegisterForm-FirstName">
+            First name
+          </label>
+        </div>
+        <div class="field">
+          <input type="text" name="customer[last_name]" id="RegisterForm-LastName" autocomplete="family-name"
+            placeholder="Last name">
+          <label for="RegisterForm-LastName">
+            Last name
+          </label>
+        </div>
+        <div class="field">
+          <input type="email" name="customer[email]" id="RegisterForm-email" spellcheck="false" autocapitalize="off"
+            autocomplete="email" aria-required="true" placeholder="Email">
+          <label for="RegisterForm-email">
+            Email
+          </label>
+        </div>
+        <div class="field">
+          <input type="password" name="customer[password]" id="RegisterForm-password" aria-required="true"
+            placeholder="Password">
+          <label for="RegisterForm-password">
+            Password
+          </label>
+        </div>
+        <button class="btn">
+          Create
+        </button>
+        <p data-action="ishi-panel" aria-controls="#ishi-login-panel" class="new-account"
+          (click)="AuthRoute(1,'already')">Already Have
+          an Account ?</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
 <router-outlet></router-outlet>
 
 
@@ -904,7 +937,7 @@
               <img class="lazyload" src="../assets/image/Grow_logo.png" alt="Sectioned Shopify Theme" itemprop="logo"
                 style="width: 105px;">
               <div class="store-desc">
-                <p>Lorem ipsum dolor sit amet, cons lectetur elit, do tebore et dolore</p>
+                <p>"Planting Dreams, Growing Green: Your Garden's Best Friend – Our Grow Bags !"</p>
               </div>
             </div>
 
@@ -996,7 +1029,7 @@
           <h2 class="footer-block__heading hidden-lg-down ">Account</h2>
           <ul id="footer-toggle-2" class="footer-block__details-content list-unstyled ishi-collapse desktop-collapse">
             <li>
-              <a href="/collections/garden" class="link link--text list-menu__item list-menu__item--link">
+              <a class="link link--text list-menu__item list-menu__item--link">
                 Category
               </a>
             </li>
@@ -1088,7 +1121,7 @@
           <h2 class="footer-block__heading hidden-lg-down ">Company</h2>
           <ul id="footer-toggle-4" class="footer-block__details-content list-unstyled ishi-collapse desktop-collapse">
             <li>
-              <a href="/collections/garden" class="link link--text list-menu__item list-menu__item--link">
+              <a class="link link--text list-menu__item list-menu__item--link">
                 Specials
               </a>
             </li>
@@ -1183,6 +1216,7 @@
   </footer>
 
 </div>
+
 <div id="shopify-section-copyright_payment" class="shopify-section" *ngIf="footer">
 
   <div class="footer-bottom">
@@ -1191,7 +1225,7 @@
 
         <div class="footer-left col-lg-6 col-md-12 col-sm-12">
           <div class="footer__copyright">
-            © 2022, Sprouts Sectioned Shopify Theme
+            © 2024, Grow Bags
           </div>
         </div>
 

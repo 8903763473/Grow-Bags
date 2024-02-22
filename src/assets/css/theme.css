@@ -4600,7 +4600,7 @@ localization-form {
 .ishi-service-images-section .ishicategoryblock_content .category-left .ishicategoryblock-container:hover .service-title .text-container,
 .ishi-service-images-section .ishicategoryblock_content .category-right .ishicategoryblock-container:hover .service-title .text-container {
     -webkit-transform: rotateX(360deg);
-    transform: rotateX(360deg);
+     transform: rotateX(360deg);
 }
 
 .ishi-service-images-section .ishicategoryblock_content .banner-center {

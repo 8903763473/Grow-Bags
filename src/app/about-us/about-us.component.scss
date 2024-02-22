@@ -105,7 +105,31 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
+
+@media screen and (max-width:420px) {
+
+    .vertical_content_manage {
+        flex-direction: column-reverse;
+    }
+
+    .carousel-cell {
+        width: 370px !important;
+
+        .rating {
+            width: 370px !important;
+        }
+    }
+
+    .AllServices {
+
+        .Serv {
+            width: 100% !important;
+        }
+    }
+}
+
 
 .AllServices {
     width: 100%;
@@ -122,6 +146,23 @@ ul {
         flex-direction: column;
         text-align: center;
         gap: 10px;
+    }
+
+    .Serv {
+        width: 30%;
+    }
+}
+
+
+.section_subtitle {
+    text-align: start;
+    margin-left: 10px;
+}
+
+.about_header_main {
+    p {
+        text-align: start;
+        margin-left: 10px;
     }
 }
 
@@ -143,7 +184,7 @@ ul {
     }
 
     .rating {
-        width: 280px;
+        width: 240px;
         height: 370px;
         padding: 24px;
         text-align: center;
@@ -212,9 +253,12 @@ ul {
     .rating-carousel {
         padding: 20px 0 25px;
         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
 
         .carousel-cell {
-            width: 280px;
+            width: 240px;
             margin-right: 16px;
         }
 

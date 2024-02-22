@@ -49,11 +49,12 @@ export class AppComponent {
   }
 
   widthStyle(status: any) {
+    this.menuWidth = 0;
     if (this.widthChangeInterval) {
       this.widthChangeInterval.unsubscribe();
     }
 
-    const targetWidth = status === 'open' ? 300 : 0;
+    const targetWidth = (status === 'open' ? 300 : 0);
     const steps = 10;
     const duration = 100;
     const stepSize = (targetWidth - this.menuWidth) / steps;
@@ -74,17 +75,28 @@ export class AppComponent {
     console.log('openCart');
     this.OpenCart = false
     this.OpenCart = true
+
+    if (this.MenuOpen == true) {
+      this.MenuOpen = false
+      this.widthStyle('close')
+    }
   }
 
   AuthRoute(id: any, type: any) {
+    console.log(id, type);
     if (type == 'Icon') {
       if (this.authpage == 0) {
         this.authpage = id
+        console.log(this.authpage);
       } else {
         this.authpage = 0
       }
     } else {
       this.authpage = id
+    }
+    if (this.MenuOpen == true) {
+      this.MenuOpen = false
+      this.widthStyle('close')
     }
   }
 
@@ -103,6 +115,10 @@ export class AppComponent {
 
   route(data: any) {
     this.router.navigate(['/' + data])
+  }
+
+  CloseLogin() {
+    this.authpage = 0
   }
 
   ngOnDestroy() {

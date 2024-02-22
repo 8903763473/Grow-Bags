@@ -182,3 +182,15 @@ ul {
     // height: 320px;
     // background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url('../../assets/image/plant.jpg') center center no-repeat;
 }
+
+@media screen and (max-width:420px) {
+    .formDiv {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .get_say_form {
+        width: 100% !important;
+    }
+
+}

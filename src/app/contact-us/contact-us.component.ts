@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [FormsModule, CommonModule, NgModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss'
 })

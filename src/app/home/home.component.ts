@@ -154,10 +154,11 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.BrandSlider();
     }, 5000);
-
+    window.scrollTo(0, 0);
   }
 
   ngOnInit() {
+    this.app.MenuOpen = false
     this.app.Headerdropdown = true
     this.app.footer = true
     this.slideIndex = 1
@@ -167,17 +168,18 @@ export class HomeComponent implements OnInit {
     this.BlogTransform = `translate3d(${this.BlogsValue}, 0px, 0px)`
     this.categoryTransform = `translate3d(${this.categoryValue}, 0px, 0px)`
     this.TopTransform = `translate3d(${this.TopValue}, 0px, 0px)`
+    this.Width();
   }
 
-  ngAfterViewInit() {
+  Width() {
     setTimeout(() => {
-      this.ScreenWidth()
+      this.ScreenWidth();
     }, 2000)
   }
 
   ScreenWidth() {
-    this.screenWidth = window.innerWidth
-    this.ngAfterViewInit()
+    this.screenWidth = window.innerWidth;
+    this.Width();
   }
 
   TestimonialsSlider(status: any) {

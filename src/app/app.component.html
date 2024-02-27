@@ -13,14 +13,15 @@
                 <div class="ishiheadercontactblock">
                   <div class="call">
                     <div class="call-img">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 70 70">
+                      <i class="fa fa-envelope" aria-hidden="true" style="color: #518432;"></i>
+                      <!-- <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 70 70">
                         <svg x="7%" y="9%">
                           <path d="M0,8.5v2.291v38.418V51.5h60v-2.291V10.791V8.5H0z M36.625,30.564l-5.446,5.472c-0.662,0.615-1.698,0.614-2.332,0.026
        l-5.473-5.498l0.048-0.047L3.647,10.5h52.719L36.577,30.518L36.625,30.564z M20.524,30.533L2,48.355V11.923L20.524,30.533z
        M21.934,31.95l5.523,5.549c0.709,0.661,1.619,0.993,2.533,0.993c0.923,0,1.85-0.339,2.581-1.02l5.496-5.522L56.304,49.5H3.686
        L21.934,31.95z M39.477,30.534L58,11.922v36.433L39.477,30.534z" />
                         </svg>
-                      </svg>
+                      </svg> -->
 
                     </div>
                     <div class="call-text">
@@ -98,7 +99,7 @@
                 <div class="userinfo-title clearfix" data-toggle="popover" aria-expanded="false"
                   data-href="#user-notification">
 
-                  <span class="userinfo-toggle hidden-lg-down" (click)="AuthRoute(1,'Icon')">
+                  <!-- <span class="userinfo-toggle hidden-lg-down" (click)="AuthRoute(1,'Icon')">
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 480 480">
                       <svg x="20%" y="20%">
                         <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
@@ -109,7 +110,8 @@
            s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
                       </svg>
                     </svg>
-                  </span>
+                  </span> -->
+
                   <span class="userinfo-toggle hidden-lg-up">
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 480 480">
                       <svg x="22%" y="22%">
@@ -127,7 +129,7 @@
 
               </div>
 
-              <div id="_desktop_cart" class="cart_info" (click)="OpencartHistory()">
+              <!-- <div id="_desktop_cart" class="cart_info" (click)="OpencartHistory()">
                 <div class="cart-display cart-drawer-toggler" id="cart-icon-bubble">
                   <span class="cart-logo">
                     <span class="hidden-lg-down">
@@ -162,7 +164,7 @@
                     </span>
                   </span>
                 </div>
-              </div>
+              </div> -->
 
 
             </div>
@@ -171,8 +173,8 @@
         </div>
       </div>
 
-      <div id="mobile_top_menu_wrapper" class="hidden-lg-up leftMenu" style="display:none;"
-        [ngClass]="{'OpenmenuLeft':MenuOpen==true}" [style.width.px]="menuWidth">
+      <div id="mobile_top_menu_wrapper" class="hidden-lg-up leftMenu"
+        [ngClass]="{'OpenmenuLeft':MenuOpen==true,'ClosemenuLeft':MenuOpen!=true}">
         <div id="top_menu_closer" class="hidden-lg-up">
 
           <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 16 17"
@@ -203,13 +205,13 @@
               </a>
             </li>
 
-            <li class="category">
+            <!-- <li class="category">
               <span class="float-xs-right hidden-lg-up">
               </span>
               <a class="dropdown-item" (click)="OpencartHistory()">
                 <h3 class="title">Cart</h3>
               </a>
-            </li>
+            </li> -->
 
 
             <li class="category menularge">
@@ -255,25 +257,25 @@
                     <div class="top-menu ishi-collapse desktop-collapse" id="_n_grand-child-one1"
                       [ngStyle]="{ 'display': OpenSubMenu === 1 ? 'block' : 'none' }">
                       <ul class="top-menu">
-                        <li class="category">
+                        <li class="category" (click)="RouteToService(1)">
                           <a class="dropdown-item">Manufacturer of Grow Bags in All Sizes</a>
                         </li>
-                        <li class="category">
+                        <li class="category" (click)="RouteToService(2)">
                           <a class="dropdown-item">Mordenized Roof Gardining</a>
                         </li>
-                        <li class="category">
+                        <li class="category" (click)="RouteToService(3)">
                           <a class="dropdown-item">Drip irrigation & Garden Designing</a>
                         </li>
-                        <li class="category">
+                        <li class="category" (click)="RouteToService(4)">
                           <a class="dropdown-item">Green House & Shade net Fixing</a>
                         </li>
-                        <li class="category">
+                        <li class="category" (click)="RouteToService(5)">
                           <a class="dropdown-item">Plants , Nursery & Gardening Tools</a>
                         </li>
-                        <li class="category">
+                        <li class="category" (click)="RouteToService(6)">
                           <a class="dropdown-item">Organic Farming & Gardening</a>
                         </li>
-                        <li class="category">
+                        <li class="category" (click)="RouteToService(7)">
                           <a class="dropdown-item">Free Suggessions for Gardening</a>
                         </li>
                       </ul>
@@ -394,7 +396,9 @@
 
                   </li> -->
 
-                  <li class="sub-category img-container hidden-lg-down">
+
+
+                  <!-- <li class="sub-category img-container hidden-lg-down">
                     <a class="link">
                       <img class="feature-row__image lazyload"
                         data-src="//fashionist-ishi-2.myshopify.com/cdn/shop/files/2_d8900769-6315-4379-a773-8bc71e8253bf.png?v=1656589920"
@@ -410,24 +414,13 @@
                         data-src="//fashionist-ishi-2.myshopify.com/cdn/shop/files/1_885540bc-f953-422e-ab73-97009201270d.png?v=1656589920"
                         alt="Menu Banner Image">
                     </a>
-                  </li>
+                  </li> -->
 
                 </ul>
               </div>
-
-
             </li>
 
 
-
-
-            <li class="category">
-              <span class="float-xs-right hidden-lg-up">
-              </span>
-              <a href="/pages/faqs" class="dropdown-item">
-                <h3 class="title">FAQs</h3>
-              </a>
-            </li>
             <li class="category">
               <span class="float-xs-right hidden-lg-up">
               </span>
@@ -436,23 +429,24 @@
               </a>
             </li>
 
-            <li class="category">
+            <!-- <li class="category">
               <span class="float-xs-right hidden-lg-up">
               </span>
               <a class="dropdown-item" (click)="AuthRoute(1,'Icon');MenuOpen=false">
                 <h3 class="title">Login</h3>
               </a>
-            </li>
+            </li> -->
+
           </ul>
         </div>
 
 
         <div id="_mobile_localization" class="header__localization"></div>
       </div>
-      <div class="mobile-menu-overlay hidden-lg-up" [ngClass]="{'active menuOverlay':menuWidth!=0}"
-        (click)="widthStyle('close')">
+      <div class="mobile-menu-overlay hidden-lg-up"
+        [ngClass]="{'active menuOverlay':MenuOpen==true,'ClosemenuLeft':MenuOpen!=true}" (click)="widthStyle('close')">
       </div>
-      <div class="mobile-navmenu hidden-lg-up">
+      <div class="mobile-navmenu hidden-lg-up" [class.fixed-header]="isScrolled">
         <div class="mobile-width">
           <div class="page-width">
             <div class="row" style="position: relative;">
@@ -476,7 +470,7 @@
                 <div id="_mobile_search"></div>
               </div>
 
-              <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 480 480"
+              <!-- <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 480 480"
                 style="width: 40px;height: 40px;position: absolute;right: 5px;" (click)="AuthRoute(1,'Icon')">
                 <svg x="20%" y="20%">
                   <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
@@ -486,9 +480,9 @@
        S90.669,145.326,130.735,145.326z M130.735,15c31.796,0,57.663,25.867,57.663,57.663s-25.867,57.663-57.663,57.663
        s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
                 </svg>
-              </svg>
+              </svg> -->
 
-              <svg viewBox="0 0 700 700" class="icon" style="width: 40px;height: 40px;position: absolute;right: 50px;"
+              <!-- <svg viewBox="0 0 700 700" class="icon" style="width: 40px;height: 40px;position: absolute;right: 50px;"
                 (click)="OpencartHistory()"><svg x="15%" y="17%">
                   <path
                     d="m150.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
@@ -499,7 +493,7 @@
                   <path
                     d="m360.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
                   </path>
-                </svg></svg>
+                </svg></svg> -->
 
 
               <div id="_mobile_logo" class="header-logo-section"></div>
@@ -711,25 +705,25 @@
                       </a>
                       <div class="top-menu ishi-collapse desktop-collapse" id="_n_grand-child-one1">
                         <ul class="top-menu">
-                          <li class="category">
+                          <li class="category" (click)="RouteToService(1)">
                             <a class="dropdown-item">Manufacturer of Grow Bags in All Sizes</a>
                           </li>
-                          <li class="category">
+                          <li class="category" (click)="RouteToService(2)">
                             <a class="dropdown-item">Mordenized Roof Gardining</a>
                           </li>
-                          <li class="category">
+                          <li class="category" (click)="RouteToService(3)">
                             <a class="dropdown-item">Drip irrigation & Garden Designing</a>
                           </li>
-                          <li class="category">
+                          <li class="category" (click)="RouteToService(4)">
                             <a class="dropdown-item">Green House & Shade net Fixing</a>
                           </li>
-                          <li class="category">
+                          <li class="category" (click)="RouteToService(5)">
                             <a class="dropdown-item">Plants , Nursery & Gardening Tools</a>
                           </li>
-                          <li class="category">
+                          <li class="category" (click)="RouteToService(6)">
                             <a class="dropdown-item">Organic Farming & Gardening</a>
                           </li>
-                          <li class="category">
+                          <li class="category" (click)="RouteToService(7)">
                             <a class="dropdown-item">Free Suggessions for Gardening</a>
                           </li>
 
@@ -738,58 +732,38 @@
                     </li>
 
 
-                    <li class="sub-category img-container hidden-lg-down">
-
+                    <!-- <li class="sub-category img-container hidden-lg-down">
                       <a class="link">
                         <img class="feature-row__image lazyload" src="../assets/image/service1.jpeg"
                           alt="Menu Banner Image">
                       </a>
-                    </li>
-
+                    </li> 
 
                     <li class="sub-category img-container hidden-lg-down">
                       <a href="/collections/scissors" class="link">
                         <img class="feature-row__image lazyload" src="../assets/image/service2.jpeg"
                           alt="Menu Banner Image">
                       </a>
-                    </li>
+                    </li> -->
 
                   </ul>
                 </div>
-
-
               </li>
 
-              <li class="category">
-
+              <!-- <li class="category">
                 <span class="float-xs-right hidden-lg-up">
-
                 </span>
-                <a href="/pages/faqs" class="dropdown-item">
-                  <h3 class="title">FAQs</h3>
-
-
-
+                <a class="dropdown-item">
+                  <h3 class="title">Login</h3>
                 </a>
-
-
-
-              </li>
+              </li> -->
 
               <li class="category">
-
                 <span class="float-xs-right hidden-lg-up">
-
                 </span>
                 <a class="dropdown-item" (click)="route('contact')">
                   <h3 class="title">Contact</h3>
-
-
-
                 </a>
-
-
-
               </li>
 
             </ul>
@@ -808,24 +782,25 @@
 <!-- ************LOGIN POPUP*********** -->
 
 <div id="user-notification" class="toggle-dropdown" [ngClass]="{'active':authpage!=0}">
-  <div class="customer login ishi-panel-container">
-    <div id="ishi-login-panel" class="ishi-panel-data ishi-panel-data-default"
+  <div class="customer login ishi-panel-container "
+    [ngClass]="{'LOG_PAGE':authpage==1,'REG_PAGE':authpage==2,'RESET_PAGE':authpage==3}">
+    <div id=" ishi-login-panel" class="ishi-panel-data ishi-panel-data-default"
       [ngClass]="{'active':authpage==1,'LoginCloned':authpage!=1}">
-      <h2>
+      <h2 class="create">
         Login
-      </h2>
+      </h2><br>
       <i class="fa-regular fa-circle-xmark" (click)="CloseLogin()" id="CloseIcon"></i>
       <form method="post" id="customer_login" accept-charset="UTF-8" data-login-with-shop-sign-in="true"
         novalidate="novalidate"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden"
           name="utf8" value="✓" />
-        <div class="field">
+        <div class="field log_field">
           <input type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" autocorrect="off"
             autocapitalize="off" placeholder="Email">
           <label for="CustomerEmail">
             Email
           </label>
         </div>
-        <div class="field">
+        <div class="field log_field">
           <input type="password" value="" name="customer[password]" id="CustomerPassword"
             autocomplete="current-password" placeholder="Password">
           <label for="CustomerPassword">
@@ -845,7 +820,7 @@
 
     <div id="ishi-recover-panel" class="ishi-panel-data ishi-panel-data-slide"
       [ngClass]="{'active':authpage==3,'LoginCloned':authpage!=3}">
-      <h2>
+      <h2 class="create">
         Reset your password
       </h2>
       <p>
@@ -853,7 +828,7 @@
       </p>
       <form method="post" accept-charset="UTF-8"><input type="hidden" name="form_type"
           value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
-        <div class="field">
+        <div class="field log_field">
           <input type="email" value="" name="email" id="RecoverEmail" autocorrect="off" autocapitalize="off"
             autocomplete="email" placeholder="Email">
           <label for="RecoverEmail">
@@ -871,35 +846,35 @@
 
     <div id="ishi-register-panel" class="ishi-panel-data ishi-panel-data-slide"
       [ngClass]="{'active':authpage==2,'LoginCloned':authpage!=2}">
-      <h2>
+      <h2 class="create">
         Create account
       </h2>
       <i class="fa-regular fa-circle-xmark" (click)="CloseLogin()" id="CloseIcon"></i>
       <form method="post" id="create_customer" accept-charset="UTF-8" data-login-with-shop-sign-up="true"
         novalidate="novalidate"><input type="hidden" name="form_type" value="create_customer" /><input type="hidden"
-          name="utf8" value="✓" />
-        <div class="field">
+          name="utf8" value="✓" /><br>
+        <div class="field log_field">
           <input type="text" name="customer[first_name]" id="RegisterForm-FirstName" autocomplete="given-name"
             placeholder="First name">
           <label for="RegisterForm-FirstName">
             First name
           </label>
         </div>
-        <div class="field">
+        <div class="field log_field">
           <input type="text" name="customer[last_name]" id="RegisterForm-LastName" autocomplete="family-name"
             placeholder="Last name">
           <label for="RegisterForm-LastName">
             Last name
           </label>
         </div>
-        <div class="field">
+        <div class="field log_field">
           <input type="email" name="customer[email]" id="RegisterForm-email" spellcheck="false" autocapitalize="off"
             autocomplete="email" aria-required="true" placeholder="Email">
           <label for="RegisterForm-email">
             Email
           </label>
         </div>
-        <div class="field">
+        <div class="field log_field">
           <input type="password" name="customer[password]" id="RegisterForm-password" aria-required="true"
             placeholder="Password">
           <label for="RegisterForm-password">
@@ -947,10 +922,10 @@
                   value="customer" /><input type="hidden" name="utf8" value="✓" /><input type="hidden"
                   name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
-                  <div class="field" style="height: 49px !important;">
+                  <div class="field">
                     <input id="NewsletterForm--footer" type="email" name="contact[email]" class="field__input footInput"
                       value="" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email"
-                      placeholder="Your email" required style="height: 55px !important;">
+                      placeholder="Your email" required style="height: 55px;margin: 0 !important;">
                     <label class="field__label" for="NewsletterForm--footer">
                       Your email
                     </label>
@@ -1014,7 +989,7 @@
         </div>
         <div class="footer-block grid__item block-width-15"><span data-href="#footer-toggle-2" data-toggle="collapse"
             class="footer-title hidden-lg-up ishi-collapse in ishi-collapsed rotate" aria-expanded="false">
-            <h2 class="footer-block__heading">Account</h2>
+            <h2 class="footer-block__heading" (click)="route('home')">Home</h2>
             <div class="navbar-toggler">
 
               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -1026,38 +1001,45 @@
 
             </div>
           </span>
-          <h2 class="footer-block__heading hidden-lg-down ">Account</h2>
+
+
+
+          <!-- <h2 class="footer-block__heading hidden-lg-down ">Account</h2> -->
           <ul id="footer-toggle-2" class="footer-block__details-content list-unstyled ishi-collapse desktop-collapse">
-            <li>
+            <li (click)="route('home')">
               <a class="link link--text list-menu__item list-menu__item--link">
-                Category
+                ➤ Home
               </a>
             </li>
-            <li>
-              <a href="/pages/about-us" class="link link--text list-menu__item list-menu__item--link">
-                About Us
+            <li (click)="route('contact')">
+              <a class="link link--text list-menu__item list-menu__item--link">
+                ➤ Contact Us
               </a>
             </li>
-            <li>
-              <a href="/pages/contact" class="link link--text list-menu__item list-menu__item--link">
-                Contact Us
+            <li (click)="route('about')">
+              <a class="link link--text list-menu__item list-menu__item--link">
+                ➤ About Us
               </a>
             </li>
-            <li>
-              <a href="/pages/faqs" class="link link--text list-menu__item list-menu__item--link">
-                FAQs
+
+            <!-- <li>
+              <a class="link link--text list-menu__item list-menu__item--link">
+                Login
               </a>
             </li>
             <li>
               <a href="/collections" class="link link--text list-menu__item list-menu__item--link">
                 Products
               </a>
-            </li>
+            </li> -->
+
           </ul>
+
         </div>
-        <div class="footer-block grid__item block-width-15"><span data-href="#footer-toggle-3" data-toggle="collapse"
+
+        <!-- <div class="footer-block grid__item block-width-15"><span data-href="#footer-toggle-3" data-toggle="collapse"
             class="footer-title hidden-lg-up ishi-collapse in ishi-collapsed rotate" aria-expanded="false">
-            <h2 class="footer-block__heading">Product</h2>
+            <h2 class="footer-block__heading" (click)="route('Login')">Login</h2>
             <div class="navbar-toggler">
 
               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -1075,35 +1057,36 @@
           <h2 class="footer-block__heading hidden-lg-down ">Product</h2>
           <ul id="footer-toggle-3" class="footer-block__details-content list-unstyled ishi-collapse desktop-collapse">
             <li>
-              <a href="/search" class="link link--text list-menu__item list-menu__item--link">
+              <a class="link link--text list-menu__item list-menu__item--link">
                 Search
               </a>
             </li>
             <li>
-              <a href="/pages/about-us" class="link link--text list-menu__item list-menu__item--link">
+              <a class="link link--text list-menu__item list-menu__item--link">
                 Product
               </a>
             </li>
             <li>
-              <a href="/collections/scissors" class="link link--text list-menu__item list-menu__item--link">
+              <a class="link link--text list-menu__item list-menu__item--link">
                 Orders
               </a>
             </li>
             <li>
-              <a href="/pages/wishlist" class="link link--text list-menu__item list-menu__item--link">
+              <a class="link link--text list-menu__item list-menu__item--link">
                 Wishlist
               </a>
             </li>
             <li>
-              <a href="/collections/new-garden" class="link link--text list-menu__item list-menu__item--link">
-                FAQs
+              <a class="link link--text list-menu__item list-menu__item--link">
+                Login
               </a>
             </li>
           </ul>
-        </div>
-        <div class="footer-block grid__item block-width-15"><span data-href="#footer-toggle-4" data-toggle="collapse"
+        </div> -->
+
+        <!-- <div class="footer-block grid__item block-width-15"><span data-href="#footer-toggle-4" data-toggle="collapse"
             class="footer-title hidden-lg-up ishi-collapse in ishi-collapsed rotate" aria-expanded="false">
-            <h2 class="footer-block__heading">Company</h2>
+            <h2 class="footer-block__heading" (click)="route('contact')">Contact</h2>
             <div class="navbar-toggler">
 
               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -1146,10 +1129,12 @@
               </a>
             </li>
           </ul>
-        </div>
+          
+        </div> -->
+
         <div class="footer-block grid__item block-width-27"><span data-href="#footer-toggle-5" data-toggle="collapse"
             class="footer-title hidden-lg-up ishi-collapse in ishi-collapsed rotate" aria-expanded="false">
-            <h2 class="footer-block__heading">Store Information</h2>
+            <h2 class="footer-block__heading" (click)="route('about')">About us</h2>
             <div class="navbar-toggler">
 
               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -1157,9 +1142,6 @@
                   d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
                   fill="currentColor" />
               </svg>
-
-
-
 
 
             </div>
@@ -1394,7 +1376,7 @@
           <div class=" image-cover">
             <div class="col-md-12 col-sm-12 popup-text popup-text-center Pop_Content">
               <h3 class="popup-title">SUBSCRIBE AND GET DISCOUNT!</h3>
-              <p class="popup-sub-title">Subscribe to the newsletter to receive updates about new
+              <p class="popup-sub-title">Subscribe to the Davis Traders Grow Bags to receive updates about new
                 products.</p>
               <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8"
                 class="footer__newsletter newsletter-form"><input type="hidden" name="form_type"
@@ -1404,9 +1386,10 @@
                   <div class="field">
                     <input id="NewsletterForm--newsletterpopup" type="email" name="contact[email]" class="field__input"
                       value="" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email"
-                      placeholder="Your email" required>
-                    <label class="field__label" for="NewsletterForm--newsletterpopup">
-                      Your email
+                      placeholder="E-Mail" required>
+                    <!-- [(ngModel)]="inputValue" standalone -->
+                    <label class="field__label MailLabel" for="NewsletterForm--newsletterpopup">
+                      E-Mail
                     </label>
                   </div>
                 </div>

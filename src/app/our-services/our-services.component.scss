@@ -1,0 +1,485 @@
+.Service1 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    h2 {
+        color: #4CAF50;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .grow-bag {
+        flex: 0 0 calc(33.33% - 20px);
+        margin: 10px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out;
+
+        img {
+            width: 100%;
+            height: 200px;
+        }
+
+        h3 {
+            font-size: 1.3rem !important;
+        }
+
+        p {
+            font-size: 12px !important;
+        }
+    }
+
+    .grow-bag:hover {
+        transform: scale(1.05);
+    }
+
+    .service {
+        margin-bottom: 20px;
+        gap: 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        h3 {
+            font-size: 1.1rem !important;
+        }
+
+        p {
+            margin-left: 23px;
+        }
+    }
+}
+
+.Service2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    h2,
+    h3 {
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+    ul li span {
+        font-weight: bold;
+        color: #4CAF50;
+    }
+
+    .benefits {
+        width: 85%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        gap: 20px;
+
+        li {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            margin-left: 10px;
+        }
+
+        .benefits1 {
+            width: 46%;
+
+            p {
+                text-align: start !important;
+                margin-left: 20px !important;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .greenRoof {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .procedure {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .procedure-In {
+            width: 95%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .procedure-In1 {
+                width: 22%;
+                height: 100%;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background-color: #4CAF50;
+                padding: 10px;
+
+                h5 {
+                    color: white;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+    /* Responsive Design */
+    @media only screen and (max-width: 600px) {
+        section {
+            padding: 15px;
+        }
+
+        h2,
+        h3 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+.Service3 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        color: #006600;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    h2 {
+        color: #009900;
+        font-size: 30px;
+    }
+
+    p {
+        color: #444;
+        margin-bottom: 15px;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+        body {
+            font-size: 14px;
+        }
+    }
+
+    article {
+        .art1 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 30px;
+
+            .art1-In {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+                flex-direction: column;
+            }
+        }
+
+        .art2 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 30px;
+            flex-direction: row-reverse;
+
+            .art2-In {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.Service4 {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+
+
+    #about,
+    #benefits,
+    #services {
+        margin-bottom: 30px;
+
+        h2 {
+            color: #4CAF50;
+            // border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+                padding-left: 20px;
+                position: relative;
+
+                &::before {
+                    content: '\2022';
+                    position: absolute;
+                    left: 0;
+                    color: #4CAF50;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.Service5 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+
+    .plant {
+        width: 100%;
+        height: 100%;
+
+        h4 {
+            text-align: left;
+        }
+
+        .AboutPlant {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 30px;
+
+            p {
+                span {
+                    font-size: 25px;
+                }
+            }
+
+            img {
+                width: 400px;
+                height: 300px;
+                border-radius: 4px;
+            }
+        }
+
+        .Nursery {
+            flex-direction: row-reverse !important;
+        }
+
+    }
+}
+
+.Service6 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+
+
+    .Benefit {
+        width: 100%;
+        height: 100%;
+
+        .Benefit-In {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 40px;
+
+            p {}
+
+            .Benefit-In1 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    img {
+        border-radius: 4px;
+    }
+}
+
+.Service7 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+
+    blockquote {
+        margin: 0 0 20px;
+        padding: 10px;
+        transition: 0.3s;
+        display: flex;
+        gap: 15px;
+
+        span {
+            display: block !important;
+        }
+    }
+
+    blockquote:hover {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
+
+// ******************************************MOBILE***************************************
+
+@media screen and (max-width:480px) {
+
+    .Service1 {
+        .grow-bag {
+            flex: 0 0 calc(100% - 20px) !important;
+        }
+    }
+
+    .Service2 {
+        .benefits {
+            flex-wrap: wrap;
+
+            .benefits1 {
+                width: 100% !important;
+            }
+        }
+
+        .procedure-In1 h5 {
+            font-size: 8px !important;
+        }
+    }
+
+    .Service3 {
+
+        .art1,
+        .art2 {
+            img {
+                width: 100% !important;
+            }
+        }
+    }
+
+    .Service5 {
+        .AboutPlant {
+            flex-wrap: wrap !important;
+        }
+    }
+
+    .Service6 {
+        .Benefit-In {
+            flex-wrap: wrap !important;
+        }
+
+        .garden_ben {
+            height: 270px !important;
+        }
+    }
+
+    
+
+
+    .title {
+        font-size: 22px !important;
+    }
+}
+
+
+
+// ************ALL************
+
+
+
+.title {
+    color: #4CAF50 !important;
+}

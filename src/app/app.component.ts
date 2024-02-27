@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Directive } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterOutlet } from '@angular/router';
 import { Subscription, interval } from 'rxjs';
@@ -25,13 +25,15 @@ export class AppComponent {
   subscribe: any
   Headerdropdown: boolean = false
   footer: boolean = false
+  SubscribeMail: any
+  inputValue: any
 
   constructor(public router: Router) { }
 
   ngOnInit() {
     this.authpage = 0
     window?.addEventListener('scroll', this.onScroll.bind(this));
-    this.subscribe = sessionStorage.getItem('Subscribepopup')
+    this.subscribe = sessionStorage.getItem('Subscribepopup');
   }
 
   onScroll() {
@@ -49,26 +51,31 @@ export class AppComponent {
   }
 
   widthStyle(status: any) {
-    this.menuWidth = 0;
-    if (this.widthChangeInterval) {
-      this.widthChangeInterval.unsubscribe();
+    if (status == 'close') {
+      this.MenuOpen = false
+    } else {
+      this.MenuOpen = true
     }
+    // this.menuWidth = 0;
+    // if (this.widthChangeInterval) {
+    //   this.widthChangeInterval.unsubscribe();
+    // }
 
-    const targetWidth = (status === 'open' ? 300 : 0);
-    const steps = 10;
-    const duration = 100;
-    const stepSize = (targetWidth - this.menuWidth) / steps;
-    this.widthChangeInterval = interval(duration / steps).subscribe(() => {
-      this.menuWidth += stepSize;
-      if (
-        (status === 'open' && this.menuWidth >= targetWidth) ||
-        (status === 'close' && this.menuWidth <= targetWidth)
-      ) {
-        this.menuWidth = targetWidth;
-        console.log(this.menuWidth);
-        this.widthChangeInterval?.unsubscribe();
-      }
-    });
+    // const targetWidth = (status === 'open' ? 300 : 0);
+    // const steps = 10;
+    // const duration = 100;
+    // const stepSize = (targetWidth - this.menuWidth) / steps;
+    // this.widthChangeInterval = interval(duration / steps).subscribe(() => {
+    //   this.menuWidth += stepSize;
+    //   if (
+    //     (status === 'open' && this.menuWidth >= targetWidth) ||
+    //     (status === 'close' && this.menuWidth <= targetWidth)
+    //   ) {
+    //     this.menuWidth = targetWidth;
+    //     console.log(this.menuWidth);
+    //     this.widthChangeInterval?.unsubscribe();
+    //   }
+    // });
   }
 
   OpencartHistory() {
@@ -83,7 +90,6 @@ export class AppComponent {
   }
 
   AuthRoute(id: any, type: any) {
-    console.log(id, type);
     if (type == 'Icon') {
       if (this.authpage == 0) {
         this.authpage = id
@@ -94,10 +100,8 @@ export class AppComponent {
     } else {
       this.authpage = id
     }
-    if (this.MenuOpen == true) {
-      this.MenuOpen = false
-      this.widthStyle('close')
-    }
+    console.log(this.MenuOpen);
+    this.MenuOpen = false
   }
 
   SubMenus(id: any) {
@@ -115,6 +119,11 @@ export class AppComponent {
 
   route(data: any) {
     this.router.navigate(['/' + data])
+  }
+
+  RouteToService(id: any) {
+    console.log(id);    
+    this.router.navigate(['ourService/' + id])
   }
 
   CloseLogin() {

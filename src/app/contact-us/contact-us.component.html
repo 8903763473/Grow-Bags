@@ -11,14 +11,14 @@
                     </div>
                     <form action="#">
                         <div class="grid-50-50">
-                            <input type="text" placeholder="First Name">
-                            <input type="text" placeholder="Last Name">
-                            <input type="email" placeholder="Email">
-                            <input type="tel" placeholder="Phone">
+                            <input type="text" placeholder="First Name" [(ngModel)]="FirstName">
+                            <input type="text" placeholder="Last Name" [(ngModel)]="SecondName">
+                            <input type="email" placeholder="Email" [(ngModel)]="Email">
+                            <input type="tel" placeholder="Phone" [(ngModel)]="Mobile">
                         </div>
                         <div class="grid-full">
                             <textarea placeholder="About Your Query" cols="30" rows="10"></textarea>
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Submit" (click)="SubmitContact()">
                         </div>
                     </form>
                 </div>

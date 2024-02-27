@@ -48,6 +48,7 @@ export class AboutUsComponent implements OnInit {
   ngOnInit() {
     this.app.Headerdropdown = true;
     this.app.footer = true;
+    window.scrollTo(0, 0);
   }
 
 }

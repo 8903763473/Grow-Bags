@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   categoryValue: any = 0
   TopValue: any = 0
   TopTransform: any
-  ProductDetailPic: any
+  ProductDetailPic: any = []
   BackgroundPosition = '-242px -164px';
   TrendingTab: any = 1
   BestProductTab: any = 1
@@ -243,7 +243,7 @@ export class HomeComponent implements OnInit {
 
   ViewProdDetail(item: any) {
     this.ProdDetail = true
-    this.ProductDetailPic = item.img
+    this.ProductDetailPic = item
   }
 
   Trendingtabs(id: any) {

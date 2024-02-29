@@ -236,7 +236,13 @@
         body {
             font-size: 14px;
         }
+
+        .art1,
+        .art2 {
+            flex-direction: column !important;
+        }
     }
+
 
     article {
         .art1 {
@@ -466,7 +472,7 @@
         }
     }
 
-    
+
 
 
     .title {

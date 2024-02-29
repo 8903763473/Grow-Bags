@@ -22,7 +22,7 @@ export class AppComponent {
   sub: boolean = false
   OpenSubMenu: any
   isScrolled: any
-  subscribe: any
+  subscribe: any = 'false'
   Headerdropdown: boolean = false
   footer: boolean = false
   SubscribeMail: any
@@ -33,7 +33,7 @@ export class AppComponent {
   ngOnInit() {
     this.authpage = 0
     window?.addEventListener('scroll', this.onScroll.bind(this));
-    this.subscribe = sessionStorage.getItem('Subscribepopup');
+    // this.subscribe = sessionStorage.getItem('Subscribepopup');
   }
 
   onScroll() {
@@ -122,12 +122,18 @@ export class AppComponent {
   }
 
   RouteToService(id: any) {
-    console.log(id);    
+    console.log(id);
     this.router.navigate(['ourService/' + id])
   }
 
   CloseLogin() {
     this.authpage = 0
+  }
+
+  footerMail(mailData: any) {
+    if (mailData != undefined && mailData != "") {
+
+    }
   }
 
   ngOnDestroy() {

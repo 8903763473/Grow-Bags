@@ -49,6 +49,17 @@ input[type="tel"] {
     }
 }
 
+.selectService {
+    margin-top: 22px;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    color: #333;
+    height: 42px;
+    padding: 0 0 0 20px;
+    width: 100%;
+    outline: 0;
+}
+
 textarea {
     border: 1px solid #dbdbdb;
     border-radius: 2px;
@@ -178,11 +189,6 @@ ul {
     transition: 0.5s;
 }
 
-.topImg {
-    // height: 320px;
-    // background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url('../../assets/image/plant.jpg') center center no-repeat;
-}
-
 @media screen and (max-width:420px) {
     .formDiv {
         display: flex !important;
@@ -193,4 +199,146 @@ ul {
         width: 100% !important;
     }
 
+}
+
+
+// ***********************************ALERT POPUP*****************************
+
+.AlertPop {
+    width: -webkit-fill-available;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: #0000003d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .pop {
+        width: auto;
+        height: auto;
+    }
+
+    .alert {
+        padding: 10px !important;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .pop-title {
+        margin: 2px 5px;
+        font-size: 15px;
+    }
+
+    .btn-success {
+        font-size: 10px;
+        padding: 1px 9px !important;
+    }
+
+    .btn-link {
+        font-size: 10px;
+        padding: 1px 9px !important;
+        background-color: #ececec;
+        box-shadow: 0px 0px 2px grey;
+    }
+
+    .alert-success {
+        background-color: #A4CFBB;
+        color: #212529;
+        border: 0;
+    }
+
+    .alert-success .fa-stack-2x {
+        color: #D1E7DD;
+    }
+
+    .alert-success .fa-stack-1x {
+        color: #1A6B44;
+    }
+
+    .alert-success .btn-link {
+        color: #212529;
+        text-decoration: none;
+    }
+
+    // Alert Success Light
+    .alert-success-light {
+        background-color: #fff;
+        border-left-width: 3px;
+        border-left-color: #198754;
+        border-bottom: 1px solid #dee2e6;
+        border-right: 1px solid #dee2e6;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .alert-success-light .fa-stack-2x {
+        color: #D1E7DD;
+    }
+
+    .alert-success-light .fa-stack-1x {
+        color: #1A6B44;
+    }
+
+    .alert-success-light .btn-link {
+        color: #212529;
+        text-decoration: none;
+    }
+
+    .alert-success-light>div>div {
+        color: #6c757d;
+    }
+
+    // Alert Success Dark
+    .alert-success-dark {
+        background-color: #343a40;
+        border-left-width: 3px;
+        color: #fff;
+    }
+
+    .wrong {
+        border-left-color: red;
+    }
+
+    .correct {
+        border-left-color: #198754;
+    }
+
+    .alert-success-dark .fa-stack-2x {
+        color: #198754;
+    }
+
+    .alert-success-dark .fa-stack-1x {
+        color: #fff;
+    }
+
+    .failureIcon {
+        .fa-stack-2x {
+            color: #f5d1d1;
+        }
+
+        .fa-stack-1x {
+            color: #f92525;
+            position: absolute;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+    }
+
+
+    .alert-success-dark .btn-link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .alert-success-dark>div>div {
+        color: #6c757d;
+    }
 }

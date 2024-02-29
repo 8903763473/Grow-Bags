@@ -11,14 +11,33 @@
                     </div>
                     <form action="#">
                         <div class="grid-50-50">
-                            <input type="text" placeholder="First Name" [(ngModel)]="FirstName">
-                            <input type="text" placeholder="Last Name" [(ngModel)]="SecondName">
-                            <input type="email" placeholder="Email" [(ngModel)]="Email">
-                            <input type="tel" placeholder="Phone" [(ngModel)]="Mobile">
+                            <input type="text" placeholder="Name" #NameInput
+                                oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '');">
+                            <input type="email" placeholder="Email" #emailInput>
+                            <input type="tel" placeholder="Phone" #phoneInput
+                                oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, this.maxLength);this.value = this.value.replace(/[^0-9]/g,'');">
+                            <input type="text" placeholder="Location" #LocationInput>
+
                         </div>
+
+                        <select #serviceInput class="selectService">
+                            <option value="" disabled selected hidden style="color: grey;">Select a service...</option>
+                            <option value="Manufacturer of grow bags in All sizes">Manufacturer of grow bags in All
+                                sizes</option>
+                            <option value="Mordenized Roof Gardening">Mordenized Roof Gardening</option>
+                            <option value="Drip Irrigation & Garden designing">Drip Irrigation & Garden designing
+                            </option>
+                            <option value="Green House & Shade net fixing">Green House & Shade net fixing</option>
+                            <option value="Plants, Nursery & Gardening tools">Plants, Nursery & Gardening tools</option>
+                            <option value="Organic Farming & Gardening">Organic Farming & Gardening</option>
+                            <option value="Free Suggestions for Gardening">Free Suggestions for Gardening</option>
+                        </select>
+
+
                         <div class="grid-full">
-                            <textarea placeholder="About Your Query" cols="30" rows="10"></textarea>
-                            <input type="submit" value="Submit" (click)="SubmitContact()">
+                            <textarea placeholder="About Your Query" cols="30" rows="10" #queryInput></textarea>
+                            <input type="submit" value="Submit"
+                                (click)="SubmitContact(NameInput.value, emailInput.value, phoneInput.value, queryInput.value, LocationInput.value,serviceInput.value)">
                         </div>
                     </form>
                 </div>
@@ -40,17 +59,48 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-location-dot"></i>
-                        <a href="#">Ground Floor,Plot No: 80A,<br>Christian Nagar B Colony,<br>KTC nagar,
+                        <a>Ground Floor,Plot No: 80A,<br>Christian Nagar B Colony,<br>KTC nagar,
                             Thirunelveli</a>
                     </li>
                 </ul>
                 <ul class="get_say_social-icn">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a><i class="fa fa-facebook"></i></a></li>
+                    <li><a><i class="fa fa-instagram"></i></a></li>
+                    <li><a><i class="fa fa-twitter"></i></a></li>
+                    <li><a><i class="fa fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
     </div>
+
+
+
+    <div class="row AlertPop" *ngIf="PopupAlert">
+        <div class="col-4 pop">
+            <div class="alert alert-success-light d-flex p-4 rounded-3 shadow-sm" role="alert"
+                [class.wrong]="FailureAlert==true" [class.correct]="FailureAlert!=true">
+                <span class="fa-stack me-3" style="vertical-align: top;" *ngIf="popupdata.title=='Success'">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-check fa-stack-1x"></i>
+                </span>
+                <span class="fa-stack me-3 failureIcon" style="vertical-align: top;" *ngIf="popupdata.title!='Success'">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-xmark fa-stack-1x"></i>
+                </span>
+
+                <div class="flex-grow-1">
+                    <h6 class="mb-1 pop-title">{{popupdata.title}}</h6>
+                    <div class="mb-3">{{popupdata.message}}</div>
+                </div>
+                <i class="fa-solid fa-xmark" style="cursor: pointer;" (click)="PopupAlertClose()"></i>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
 </section><br><br><br>

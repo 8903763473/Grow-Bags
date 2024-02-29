@@ -271,9 +271,9 @@
                                 <i class="fa-solid fa-angle-right"></i>
                             </button>
                         </div>
-                        <div class="owl-dots LeftRight-dots"><button role="button"
+                        <!-- <div class="owl-dots LeftRight-dots"><button role="button"
                                 class="owl-dot active"><span></span></button><button role="button"
-                                class="owl-dot"><span></span></button></div>
+                                class="owl-dot"><span></span></button></div> -->
                     </div>
                 </div>
             </div>
@@ -2014,7 +2014,7 @@
                     </button>
                     <div class="product-popup-modal__content-info ProdDet">
                         <div id="qv-images-container" class="col-md-6">
-                            <div id="qv-product-cover"> <img src="{{ProductDetailPic}}" class="ProdImg">
+                            <div id="qv-product-cover"> <img src="{{ProductDetailPic.img}}" class="ProdImg">
                             </div>
                             <div id="qv-thumbnails"></div>
                         </div>
@@ -2032,6 +2032,9 @@
                                 <span class="close">Read Less</span>
                             </label>
                             <div id="qv-variants"></div>
+
+                            <p style="text-align: start;font-size: 20px;">SIZE : <span
+                                    style="font-size: 18px;color: #57ae22;">{{ProductDetailPic.size}}</span></p>
 
                             <div id="qv-quantity-selector" class="product-form__input product-form__quantity">
                                 <div class="quantity">

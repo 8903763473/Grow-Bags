@@ -276,6 +276,7 @@ export class AdminPanelComponent {
     this.app.Headerdropdown = false
     this.app.footer = false
     this.tab = 1
+    this.app.MenuOpen = false
   }
 
   SelectTab(id: any) {

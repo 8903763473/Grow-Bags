@@ -37,7 +37,7 @@ export class AppComponent {
   }
 
   onScroll() {
-    this.isScrolled = window.scrollY > 0;
+    this.isScrolled = window?.scrollY > 0;
   }
 
   MenuIcon() {

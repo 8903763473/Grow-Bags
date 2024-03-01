@@ -23,10 +23,10 @@ export const routes: Routes = [
         path: 'about',
         component: AboutUsComponent
     },
-    {
-        path: 'adminPanel',
-        component: AdminPanelComponent
-    },
+    // {
+    //     path: 'adminPanel',
+    //     component: AdminPanelComponent
+    // },
     {
         path: 'ourService/:id',
         component: OurServicesComponent

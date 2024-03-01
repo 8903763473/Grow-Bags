@@ -154,7 +154,7 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.BrandSlider();
     }, 5000);
-    window.scrollTo(0, 0);
+    window?.scrollTo(0, 0);
   }
 
   ngOnInit() {
@@ -178,7 +178,7 @@ export class HomeComponent implements OnInit {
   }
 
   ScreenWidth() {
-    this.screenWidth = window.innerWidth;
+    this.screenWidth = window?.innerWidth;
     this.Width();
   }
 
@@ -205,7 +205,7 @@ export class HomeComponent implements OnInit {
   }
 
   BlodSlider(status: 'Prev' | 'Next') {
-    const width = window.innerWidth - 10;
+    const width = window?.innerWidth - 10;
     if (status === 'Prev') {
       this.BlogsValue = (this.BlogsValue === 0 || this.BlogsValue == 20) ? width : this.BlogsValue - 390;
     } else if (status === 'Next') {
@@ -215,7 +215,7 @@ export class HomeComponent implements OnInit {
   }
 
   CategorySlider(status: 'Prev' | 'Next') {
-    const width = window.innerWidth + 800;
+    const width = window?.innerWidth + 800;
     if (status === 'Prev') {
       this.categoryValue = (this.categoryValue !== 0) ? this.categoryValue + 200 : -width;
     } else if (status === 'Next') {
@@ -225,7 +225,7 @@ export class HomeComponent implements OnInit {
   }
 
   TopSlider(status: 'Prev' | 'Next', Index: any) {
-    const width = window.innerWidth;
+    const width = window?.innerWidth;
     if (status === 'Prev') {
       this.slideIndex = (Index === 1) ? 6 : this.slideIndex - 1;
       this.TopValue = (Index === 1) ? -6575 : this.TopValue + 1315;
@@ -260,7 +260,7 @@ export class HomeComponent implements OnInit {
 
   BrandSlider() {
     this.BrandValue = this.BrandValue + 230;
-    if (this.BrandValue > window.innerWidth) {
+    if (this.BrandValue > window?.innerWidth) {
       this.BrandValue = 0;
     }
     this.BrandTransform = `translate3d(-${this.BrandValue}px, 0px, 0px)`;

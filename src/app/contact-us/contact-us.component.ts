@@ -27,7 +27,8 @@ export class ContactUsComponent {
   ngOnInit() {
     this.app.Headerdropdown = true
     this.app.footer = true
-    window.scrollTo(0, 0);
+    window?.scrollTo(0, 0);
+    this.app.MenuOpen = false
   }
 
   SubmitContact(Name: any, email: any, phone: any, query: any, location: any, service: any) {

@@ -19,7 +19,8 @@ export class OurServicesComponent {
   ngOnInit() {
     this.app.Headerdropdown = true
     this.app.footer = true
-    window.scrollTo(0, 0);
+    window?.scrollTo(0, 0);
+    this.app.MenuOpen = false
 
     this.route.params.subscribe(params => {
       this.urlPath();
@@ -28,7 +29,8 @@ export class OurServicesComponent {
 
   urlPath() {
     this.ServiceId = this.route.snapshot.paramMap.get('id');
-    window.scrollTo(0, 0);
+    window?.scrollTo(0, 0);
+    this.app.MenuOpen = false
   }
 
 }

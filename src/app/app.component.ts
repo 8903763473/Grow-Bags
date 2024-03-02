@@ -27,13 +27,28 @@ export class AppComponent {
   footer: boolean = false
   SubscribeMail: any
   inputValue: any
+  ScreenWidth: any
+  loader: boolean = false
 
-  constructor(public router: Router) { }
+  constructor(public router: Router) {
+    this.WidthSize()
+  }
 
   ngOnInit() {
     this.authpage = 0
     window?.addEventListener('scroll', this.onScroll.bind(this));
     // this.subscribe = sessionStorage.getItem('Subscribepopup');
+  }
+
+  WidthSize() {
+    setTimeout(() => {
+      this.ScreenWidthSize()
+    }, 3000)
+  }
+
+  ScreenWidthSize() {
+    this.ScreenWidth = window.innerWidth;
+    this.WidthSize()
   }
 
   onScroll() {
@@ -118,6 +133,7 @@ export class AppComponent {
   }
 
   route(data: any) {
+    this.MenuOpen = false
     this.router.navigate(['/' + data])
   }
 

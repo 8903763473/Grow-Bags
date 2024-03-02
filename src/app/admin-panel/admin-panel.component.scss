@@ -338,9 +338,14 @@ label .fa {
 
     .categories {
         padding: 25px;
-        background-color: #595959;
+        background-color: #FFFFFF;
         margin-bottom: 60px;
         position: relative;
+    }
+
+    .cat-container {
+        border: 1px solid #518432;
+        border-radius: 4px;
     }
 
     .CategoryList {

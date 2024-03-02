@@ -197,23 +197,6 @@
               </a>
             </li>
 
-            <li class="category">
-              <span class="float-xs-right hidden-lg-up">
-              </span>
-              <a class="dropdown-item" (click)="route('about')">
-                <h3 class="title">About Us</h3>
-              </a>
-            </li>
-
-            <!-- <li class="category">
-              <span class="float-xs-right hidden-lg-up">
-              </span>
-              <a class="dropdown-item" (click)="OpencartHistory()">
-                <h3 class="title">Cart</h3>
-              </a>
-            </li> -->
-
-
             <li class="category menularge">
               <span class="float-xs-right hidden-lg-up">
                 <span data-href="#_n_child-one1" data-toggle="collapse" class="ishi-collapse in navbar-toggler rotate"
@@ -228,7 +211,7 @@
                 </span>
               </span>
               <a class="dropdown-item">
-                <h3 class="title">Service</h3>
+                <h3 class="title">Services</h3>
                 <!-- <span class="new"> NEW</span> -->
               </a>
               <div class="popover sub-menu js-sub-menu ishi-collapse desktop-collapse col-5 in" id="_n_child-one1"
@@ -261,7 +244,7 @@
                           <a class="dropdown-item">Manufacturer of Grow Bags in All Sizes</a>
                         </li>
                         <li class="category" (click)="RouteToService(2)">
-                          <a class="dropdown-item">Mordenized Roof Gardining</a>
+                          <a class="dropdown-item">Modernized Roof Gardining</a>
                         </li>
                         <li class="category" (click)="RouteToService(3)">
                           <a class="dropdown-item">Drip irrigation & Garden Designing</a>
@@ -419,6 +402,23 @@
                 </ul>
               </div>
             </li>
+
+
+            <li class="category">
+              <span class="float-xs-right hidden-lg-up">
+              </span>
+              <a class="dropdown-item" (click)="route('about')">
+                <h3 class="title">About Us</h3>
+              </a>
+            </li>
+
+            <!-- <li class="category">
+              <span class="float-xs-right hidden-lg-up">
+              </span>
+              <a class="dropdown-item" (click)="OpencartHistory()">
+                <h3 class="title">Cart</h3>
+              </a>
+            </li> -->
 
 
             <li class="category">
@@ -654,13 +654,9 @@
                   <h3 class="title">Home</h3>
                 </a>
               </li>
-              <li class="category">
-                <span class="float-xs-right hidden-lg-up">
-                </span>
-                <a class="dropdown-item" (click)="route('about')">
-                  <h3 class="title">About Us</h3>
-                </a>
-              </li>
+
+
+
               <li class="category menularge serviceMenu">
                 <span class="float-xs-right hidden-lg-up">
                   <span data-href="#_n_child-one1" data-toggle="collapse"
@@ -681,7 +677,7 @@
 
                 </span>
                 <a class="dropdown-item">
-                  <h3 class="title">Service</h3>
+                  <h3 class="title">Services</h3>
                   <!-- <span class="new"> NEW</span> -->
                 </a>
                 <div class="popover sub-menu js-sub-menu ishi-collapse desktop-collapse col-5" id="_n_child-one1">
@@ -709,7 +705,7 @@
                             <a class="dropdown-item">Manufacturer of Grow Bags in All Sizes</a>
                           </li>
                           <li class="category" (click)="RouteToService(2)">
-                            <a class="dropdown-item">Mordenized Roof Gardining</a>
+                            <a class="dropdown-item">Modernized Roof Gardining</a>
                           </li>
                           <li class="category" (click)="RouteToService(3)">
                             <a class="dropdown-item">Drip irrigation & Garden Designing</a>
@@ -748,6 +744,15 @@
 
                   </ul>
                 </div>
+              </li>
+
+
+              <li class="category">
+                <span class="float-xs-right hidden-lg-up">
+                </span>
+                <a class="dropdown-item" (click)="route('about')">
+                  <h3 class="title">About Us</h3>
+                </a>
               </li>
 
               <!-- <li class="category">
@@ -903,8 +908,8 @@
   <footer class="footer footer-color">
     <div class="footer__content-top page-width">
       <div class="footer__blocks-wrapper grid" style="flex-wrap: nowrap !important;">
-        <div id="_mobile_storeinfo"></div>
-        <div id="_mobile_newsletter"></div>
+        <div id="_mobile_storeinfo" *ngIf="ScreenWidth<500"></div>
+        <div id="_mobile_newsletter" *ngIf="ScreenWidth<500"></div>
 
         <div class="footer-block grid__item block-width-28">
           <div id="_desktop_newsletter" class="center">
@@ -916,7 +921,7 @@
               </div>
             </div>
 
-            <div class="footer-block--newsletter">
+            <!-- <div class="footer-block--newsletter">
               <form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8"
                 class="footer__newsletter newsletter-form"><input type="hidden" name="form_type"
                   value="customer" /><input type="hidden" name="utf8" value="✓" /><input type="hidden"
@@ -984,7 +989,9 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> -->
+
+
           </div>
         </div>
         <div class="footer-block grid__item block-width-15">
@@ -1010,7 +1017,7 @@
             </li>
             <li (click)="route('contact')">
               <a class="link link--text list-menu__item list-menu__item--link">
-                ➤ Contact Us
+                ➤ Contact
               </a>
             </li>
             <li (click)="route('about')">
@@ -1197,7 +1204,7 @@
 
 
 
-        <div class="footer-right col-lg-6 col-md-12 col-sm-12">
+        <!-- <div class="footer-right col-lg-6 col-md-12 col-sm-12">
           <div class="payment-icons">
             <ul class="list list-payment" role="list">
 
@@ -1322,7 +1329,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -1330,6 +1337,11 @@
 
 
 
+</div>
+
+<div class="loaderHead"
+  *ngIf="loader">
+  <div class="loader"></div>
 </div>
 
 <!-- ***********FOOTER*********** -->

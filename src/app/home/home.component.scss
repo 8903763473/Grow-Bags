@@ -385,7 +385,7 @@
 }
 
 .downImg {
-    height: 644px !important;
+    height: auto !important;
 }
 
 .ourTestimonials {
@@ -417,6 +417,10 @@
     transform: translate3d(-2469px, 0px, 0px);
     transition: all 0.5s ease 0s;
     width: 4938px;
+}
+
+.Topcloned {
+    display: none !important;
 }
 
 .owl-stage {
@@ -604,7 +608,7 @@
 .container1 {
     width: 99%;
     height: auto;
-    margin-top: 140px !important;
+    margin-top: 60px !important;
 
     .container1 h3 {
         text-align: center;
@@ -637,6 +641,12 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    @media screen and (max-width:767px) {
+        .SlideDescription {
+            display: block !important;
+        }
     }
 
     @media screen and (max-width:420px) {
@@ -708,6 +718,10 @@
     }
 }
 
+.FourthBlock {
+    padding: 20px 0px !important;
+}
+
 .fourth {
     display: flex;
     align-items: center;
@@ -759,11 +773,11 @@
             height: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
 
             .advantage-left,
             .advantage-right {
-                width: 45%;
+                width: 400px;
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -949,9 +963,37 @@
 
 .TopStage {
     .owl-item {
-        width: 48%;
+        width: 100%;
     }
 }
+
+.firstSliderContent {
+    left: auto !important;
+    right: 0px !important;
+    width: 60% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.firstSliderContentIn,
+.firstSliderContent1In {
+    width: 70% !important;
+}
+
+.firstSliderContent1 {
+    left: 10px !important;
+    right: auto !important;
+    width: 60% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+// .maxReached {
+//     background-color: #9dc188 !important;
+// }
 
 
 // ---------------------SERVICES-------------------
@@ -1588,3 +1630,43 @@
         width: 95% !important;
     }
 }
+
+
+// *************NEW CHANGE****************
+.O-Services {
+    padding: 20px 0 !important;
+
+    .slide-contain {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .less-carousel {
+            width: 85% !important;
+            justify-content: center !important;
+        }
+    }
+}
+
+.icon-hover-img,
+.icon-img {
+    img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+.card__inner {
+    padding: 10px;
+}
+
+.Prod-Image img {
+    border-radius: 4px;
+}
+
+
+// .Prod-Image img:hover {
+//     width: 300px;
+// }

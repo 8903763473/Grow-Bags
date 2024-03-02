@@ -40,29 +40,30 @@ export class HomeComponent implements OnInit {
   ProductList: any = [
     {
       id: 1,
-      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory1-1.png?v=1649657703',
-      img_select: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory1.png?v=1649658232',
-      name: 'Cactus Plant'
+      img: '../../assets/image/grow-bags-outline.png',
+      img_select: '../../assets/image/grow-bags-outline-white.png',
+      name: 'Grow Bags'
     },
     {
       id: 2,
-      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory3.png?v=1649657703',
-      img_select: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory3-1.png?v=1649658789',
-      name: 'Jade Plant'
+      img: '../../assets/image/drip-outline.png',
+      img_select: '../../assets/image/drip-outline-white.png',
+      name: 'Drip Irrigation'
     },
     {
       id: 3,
-      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory2.png?v=1649657703',
-      img_select: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory2-1.png?v=1649658803',
-      name: 'Peace Lily'
+      img: '../../assets/image/garden-outline.png',
+      img_select: '../../assets/image/garden-outline-white.png',
+      name: 'Garden designing'
     },
     {
       id: 4,
-      img: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory5.png?v=1649657759',
-      img_select: '//fashionist-ishi-2.myshopify.com/cdn/shop/files/productcategory5-1.png?v=1649658820',
-      name: 'Alovera Plant'
+      img: '../../assets/image/organic-outline.png',
+      img_select: '../../assets/image/organic-outline-white.png',
+      name: 'Organic Farming'
     }
   ]
+
 
 
   FirstTabProducts: any = [
@@ -114,6 +115,150 @@ export class HomeComponent implements OnInit {
   ]
 
 
+  SecondTabProducts: any = [
+    {
+      id: 1,
+      img: '../../assets/image/Drip1.png',
+      size: ''
+    },
+    {
+      id: 2,
+      img: '../../assets/image/Drip2.jpg',
+      size: ''
+    },
+    {
+      id: 3,
+      img: '../../assets/image/Drip3.jpg',
+      size: ''
+    },
+    {
+      id: 4,
+      img: '../../assets/image/Drip4.png',
+      size: ''
+    },
+    {
+      id: 5,
+      img: '../../assets/image/Drip5.jpg',
+      size: ''
+    },
+    {
+      id: 6,
+      img: '../../assets/image/Drip6.jpg',
+      size: ''
+    },
+    {
+      id: 7,
+      img: '../../assets/image/Drip7.jpg',
+      size: ''
+    },
+    {
+      id: 8,
+      img: '../../assets/image/Drip8.jpg',
+      size: ''
+    },
+    {
+      id: 9,
+      img: '../../assets/image/Drip1.png',
+      size: ''
+    },
+  ]
+
+  ThirdTabProducts: any = [
+    {
+      id: 1,
+      img: '../../assets/image/Garden-Design1.jpg',
+      size: ''
+    },
+    {
+      id: 2,
+      img: '../../assets/image/Garden-Design2.jpg',
+      size: ''
+    },
+    {
+      id: 3,
+      img: '../../assets/image/Garden-Design3.jpg',
+      size: ''
+    },
+    {
+      id: 4,
+      img: '../../assets/image/Garden-Design4.jpg',
+      size: ''
+    },
+    {
+      id: 5,
+      img: '../../assets/image/Garden-Design5.jpg',
+      size: ''
+    },
+    {
+      id: 6,
+      img: '../../assets/image/Garden-Design6.jpg',
+      size: ''
+    },
+    {
+      id: 7,
+      img: '../../assets/image/Garden-Design7.jpg',
+      size: ''
+    },
+    {
+      id: 8,
+      img: '../../assets/image/Garden-Design8.jpg',
+      size: ''
+    },
+    {
+      id: 9,
+      img: '../../assets/image/Garden-Design9.jpeg',
+      size: ''
+    },
+  ]
+
+  FourthTabProducts: any = [
+    {
+      id: 1,
+      img: '../../assets/image/organic1.jpg',
+      size: ''
+    },
+    {
+      id: 2,
+      img: '../../assets/image/organic2.jpg',
+      size: ''
+    },
+    {
+      id: 3,
+      img: '../../assets/image/organic3.jpg',
+      size: ''
+    },
+    {
+      id: 4,
+      img: '../../assets/image/organic4.jpg',
+      size: ''
+    },
+    {
+      id: 5,
+      img: '../../assets/image/organic5.png',
+      size: ''
+    },
+    {
+      id: 6,
+      img: '../../assets/image/organic6.jpg',
+      size: ''
+    },
+    {
+      id: 7,
+      img: '../../assets/image/organic7.jpg',
+      size: ''
+    },
+    {
+      id: 8,
+      img: '../../assets/image/organic8.jpeg',
+      size: ''
+    },
+    {
+      id: 9,
+      img: '../../assets/image/organic9.png',
+      size: ''
+    },
+  ]
+
 
   SliderData: any = [
     {
@@ -148,13 +293,18 @@ export class HomeComponent implements OnInit {
     },
   ]
 
-
+  WidthSize: any
+  ActiveSlide: any = 1
 
   constructor(public app: AppComponent) {
     setTimeout(() => {
       this.BrandSlider();
     }, 5000);
     window?.scrollTo(0, 0);
+
+    setTimeout(() => {
+      this.ScreenWidthSize()
+    }, 500);
   }
 
   ngOnInit() {
@@ -169,6 +319,16 @@ export class HomeComponent implements OnInit {
     this.categoryTransform = `translate3d(${this.categoryValue}, 0px, 0px)`
     this.TopTransform = `translate3d(${this.TopValue}, 0px, 0px)`
     this.Width();
+    this.ActiveSlide = 1
+  }
+
+
+  ScreenWidthSize() {
+    this.WidthSize = (window.innerWidth + 115)
+    console.log(this.WidthSize, window.innerWidth);
+    setTimeout(() => {
+      this.ScreenWidthSize();
+    }, 500)
   }
 
   Width() {
@@ -225,13 +385,14 @@ export class HomeComponent implements OnInit {
   }
 
   TopSlider(status: 'Prev' | 'Next', Index: any) {
-    const width = window?.innerWidth;
-    if (status === 'Prev') {
+    const width = (this.WidthSize);
+    console.log(Index);    
+    if (status === 'Prev' && this.TopValue != 0) {
       this.slideIndex = (Index === 1) ? 6 : this.slideIndex - 1;
-      this.TopValue = (Index === 1) ? -6575 : this.TopValue + 1315;
-    } else if (status === 'Next') {
+      this.TopValue = (Index === 1) ? -(0) : this.TopValue + width;
+    } else if (status === 'Next' && Index !== 6) {
       this.slideIndex = (Index === 6) ? 1 : this.slideIndex + 1;
-      this.TopValue = (Index === 6) ? 0 : this.TopValue - 1315;
+      this.TopValue = (Index === 6) ? 0 : this.TopValue - width;
     }
     this.TopTransform = `translate3d(${this.TopValue}px, 0px, 0px)`;
   }

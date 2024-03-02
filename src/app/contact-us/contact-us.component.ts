@@ -44,6 +44,7 @@ export class ContactUsComponent {
         'service': service
       }
       console.log(post);
+      this.app.loader = true
 
       this.api.ContactUs(post).subscribe({
         next: (res => {
@@ -55,6 +56,7 @@ export class ContactUsComponent {
             title: 'Success',
             message: 'We received your query. We will contact you soon !',
           }
+          this.app.loader = false
         }),
         error: (error => {
           console.log('Error while Sent', error);
@@ -65,6 +67,7 @@ export class ContactUsComponent {
             title: 'Failed',
             message: 'Could not sent query , Try later !',
           }
+          this.app.loader = false
         })
       })
     }
@@ -80,7 +83,7 @@ export class ContactUsComponent {
 
   PopupAlertClose() {
     this.PopupAlert = false
+    this.app.loader = true
     location.reload()
   }
-
 }

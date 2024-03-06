@@ -2,6 +2,8 @@ import { Component, Directive } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterOutlet } from '@angular/router';
 import { Subscription, interval } from 'rxjs';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +37,12 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      offset: 200
+    });
+
     this.authpage = 0
     window?.addEventListener('scroll', this.onScroll.bind(this));
     // this.subscribe = sessionStorage.getItem('Subscribepopup');

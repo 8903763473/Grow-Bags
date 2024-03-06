@@ -30,10 +30,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/aos/dist/aos.js", 
               "src/assets/js/b80cd6a5fw8efabb83pbabe92ddm0cb690eem.js",
               "src/assets/js/cart-notification.js",
               "src/assets/js/elevatezoom.js",

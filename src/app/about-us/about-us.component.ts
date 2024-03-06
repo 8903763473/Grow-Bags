@@ -38,7 +38,7 @@ export class AboutUsComponent implements OnInit {
     },
     {
       id: 4,
-      avatar: '../../assets/image/spinach.jpeg',
+      avatar: '../../assets/image/spinach.png',
       name: 'Spinach Bags',
       position: '04',
       message: 'Thriving in compact grow bags, vibrant spinach plants boast nutrient-rich leaves, offering a convenient.'

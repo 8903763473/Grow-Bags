@@ -308,7 +308,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.app.MenuOpen = false
+    // this.app.MenuOpen = false
     this.app.Headerdropdown = true
     this.app.footer = true
     this.slideIndex = 1

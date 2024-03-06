@@ -3,26 +3,15 @@
 <div id="shopify-section-header" class="shopify-section">
   <div id="header" data-section-id="header" data-section-type="header-section">
     <header class="site-header">
-
       <div class="header-top site-header-inner hidden-lg-down">
         <div class="page-width">
           <div class="row">
-
             <div class="hidden-lg-down header-left col-lg-4 col-md-3 col-sm-6 col-xs-6 MobLogin">
               <a class="email" href="mailto:davistraders1&#64;gmail.com">
                 <div class="ishiheadercontactblock">
                   <div class="call">
                     <div class="call-img">
                       <i class="fa fa-envelope" aria-hidden="true" style="color: #518432;"></i>
-                      <!-- <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 70 70">
-                        <svg x="7%" y="9%">
-                          <path d="M0,8.5v2.291v38.418V51.5h60v-2.291V10.791V8.5H0z M36.625,30.564l-5.446,5.472c-0.662,0.615-1.698,0.614-2.332,0.026
-       l-5.473-5.498l0.048-0.047L3.647,10.5h52.719L36.577,30.518L36.625,30.564z M20.524,30.533L2,48.355V11.923L20.524,30.533z
-       M21.934,31.95l5.523,5.549c0.709,0.661,1.619,0.993,2.533,0.993c0.923,0,1.85-0.339,2.581-1.02l5.496-5.522L56.304,49.5H3.686
-       L21.934,31.95z M39.477,30.534L58,11.922v36.433L39.477,30.534z" />
-                        </svg>
-                      </svg> -->
-
                     </div>
                     <div class="call-text">
                       <div class="call-num">davistraders1&#64;gmail.com</div>
@@ -33,7 +22,7 @@
             </div>
 
             <div id="_desktop_logo" class="header-logo-section  col-md-4 col-sm-6 col-xs-6 "
-              style="width: 46.33% !important;">
+              style="width: 46.33% !important;margin-left: 30px;">
               <h1 class="h2 header__logo" itemscope itemtype="http://schema.org/Organization">
                 <div class="hidden-lg-down">
                   <a class="header__logo-image ">
@@ -786,7 +775,7 @@
 
 <!-- ************LOGIN POPUP*********** -->
 
-<div id="user-notification" class="toggle-dropdown" [ngClass]="{'active':authpage!=0}">
+<!-- <div id="user-notification" class="toggle-dropdown" [ngClass]="{'active':authpage!=0}">
   <div class="customer login ishi-panel-container "
     [ngClass]="{'LOG_PAGE':authpage==1,'REG_PAGE':authpage==2,'RESET_PAGE':authpage==3}">
     <div id=" ishi-login-panel" class="ishi-panel-data ishi-panel-data-default"
@@ -895,7 +884,7 @@
       </form>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <router-outlet></router-outlet>
@@ -1339,8 +1328,7 @@
 
 </div>
 
-<div class="loaderHead"
-  *ngIf="loader">
+<div class="loaderHead" *ngIf="loader">
   <div class="loader"></div>
 </div>
 

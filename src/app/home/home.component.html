@@ -922,7 +922,7 @@
                     </div>
                     <div class="row our-offer-items less-carousel">
                         <!-- Single Item -->
-                        <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="col-md-4 col-sm-6 equal-height" data-aos="fade-right">
                             <div class="item">
                                 <button (click)="app.RouteToService(1)">Read More</button>
                                 <i class="fa-solid fa-1"></i>
@@ -932,7 +932,7 @@
                         <!-- End Single Item -->
 
                         <!-- Single Item -->
-                        <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="col-md-4 col-sm-6 equal-height" data-aos="fade-up">
                             <div class="item">
                                 <button (click)="app.RouteToService(2)">Read More</button>
                                 <i class="fa-solid fa-2"></i>
@@ -942,7 +942,7 @@
                         <!-- End Single Item -->
 
                         <!-- Single Item -->
-                        <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="col-md-4 col-sm-6 equal-height" data-aos="fade-left">
                             <div class="item">
                                 <button (click)="app.RouteToService(3)">Read More</button>
                                 <i class="fa-solid fa-3"></i>
@@ -952,7 +952,7 @@
                         <!-- End Single Item -->
 
                         <!-- Single Item -->
-                        <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="col-md-4 col-sm-6 equal-height" data-aos="fade-right">
                             <div class="item">
                                 <button (click)="app.RouteToService(4)">Read More</button>
                                 <i class="fa-solid fa-4"></i>
@@ -962,7 +962,7 @@
                         <!-- End Single Item -->
 
                         <!-- Single Item -->
-                        <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="col-md-4 col-sm-6 equal-height" data-aos="fade-up">
                             <div class="item">
                                 <button (click)="app.RouteToService(5)">Read More</button>
                                 <i class="fa-solid fa-5"></i>
@@ -972,7 +972,7 @@
                         <!-- End Single Item -->
 
                         <!-- Single Item -->
-                        <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="col-md-4 col-sm-6 equal-height" data-aos="fade-left">
                             <div class="item">
                                 <button (click)="app.RouteToService(6)">Read More</button>
                                 <i class="fa-solid fa-6"></i>
@@ -997,7 +997,8 @@
         <section id="shopify-section-template--14316923879512__16496567994b538d3a" class="shopify-section story-block">
             <div class="ishistoryblock">
                 <div class="page-width story-conent">
-                    <div class="story-part banner-image-left col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="story-part banner-image-left col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                        data-aos="fade-down-right">
                         <div class="image-container singlePlant">
 
                             <a class="">
@@ -1018,11 +1019,9 @@
 
                         </div>
 
-                        <div class="list-Aboutus-info">
-
+                        <div class="list-Aboutus-info" data-aos="fade-up">
                             <p>Grow bags are a popular and versatile gardening solution that provides an alternative to
                                 traditional pots or planting directly in the ground.</p>
-
                         </div>
 
                         <!-- <div class="video-play-icon">
@@ -1034,7 +1033,7 @@
                             </a>
                         </div> -->
 
-                        <div class="list-Aboutus-info">
+                        <div class="list-Aboutus-info" data-aos="fade-up">
 
                             <p>Grow bags are suitable for a wide range of plants, including vegetables, herbs, flowers,
                                 and fruits. They come in various sizes, accommodating different plant types and growth
@@ -1083,7 +1082,7 @@
 
                         <ul class="ishi-product-tabs nav ishi-product-nav-tabs tab-id">
                             <li class="ishi-product-tab-item" [class.active]="TrendingTab==item.id"
-                                *ngFor="let item of ProductList">
+                                *ngFor="let item of ProductList" data-aos="fade-down-left">
                                 <a class="ishi-product-nav-link" (click)="Trendingtabs(item.id)">
                                     <div class="icon-img">
                                         <img class="lazyload" data-src="{{item.img}}" alt="Image">
@@ -1106,12 +1105,13 @@
                         <!-- **************TAB 1************* -->
 
                         <div id="tab-1-template--14316923879512__162935800064a32fb5"
-                            class="ishi-product-tab-pane ishi-fade" [ngClass]="{'active':TrendingTab==1}">
+                            class="ishi-product-tab-pane ishi-fade" [ngClass]="{'active':TrendingTab==1}"
+                            *ngIf="TrendingTab === 1">
                             <div class="slider-mobile-gutter">
                                 <ul class="product-list grid product-width-3 row slider slider--tablet grid--peek AllProducts"
                                     role="list">
                                     <li class="grid__item col-lg-4 col-md-6 col-sm-6 col-xs-6 slider__slide"
-                                        *ngFor="let item of FirstTabProducts">
+                                        *ngFor="let item of FirstTabProducts" data-aos="zoom-in-up">
                                         <div class="card-wrapper">
                                             <div class="card card--product" tabindex="-1">
                                                 <div class="card__inner ">
@@ -1274,13 +1274,14 @@
                         <!-- ***************TAB 2************ -->
 
                         <div id="tab-2-template--14316923879512__162935800064a32fb5"
-                            class="ishi-product-tab-pane ishi-fade" [ngClass]="{'active':TrendingTab==2}">
+                            class="ishi-product-tab-pane ishi-fade" [ngClass]="{'active':TrendingTab==2}"
+                            *ngIf="TrendingTab === 2">
                             <div class="slider-mobile-gutter">
                                 <ul class="product-list grid product-width-3 row slider slider--tablet grid--peek AllProducts"
                                     role="list">
 
                                     <li class="grid__item col-lg-4 col-md-6 col-sm-6 col-xs-6 slider__slide"
-                                        *ngFor="let item of SecondTabProducts">
+                                        *ngFor="let item of SecondTabProducts" data-aos="zoom-in-up">
 
                                         <div class="card-wrapper">
 
@@ -1514,13 +1515,14 @@
                         <!-- ***************TAB 3************ -->
 
                         <div id="tab-3-template--14316923879512__162935800064a32fb5"
-                            class="ishi-product-tab-pane ishi-fade" [ngClass]="{'active':TrendingTab==3}">
+                            class="ishi-product-tab-pane ishi-fade" [ngClass]="{'active':TrendingTab==3}"
+                            *ngIf="TrendingTab === 3">
                             <div class="slider-mobile-gutter">
                                 <ul class="product-list grid product-width-3 row slider slider--tablet grid--peek AllProducts"
                                     role="list">
 
                                     <li class="grid__item col-lg-4 col-md-6 col-sm-6 col-xs-6 slider__slide"
-                                        *ngFor="let item of ThirdTabProducts">
+                                        *ngFor="let item of ThirdTabProducts" data-aos="zoom-in-up">
 
                                         <div class="card-wrapper">
 
@@ -1767,13 +1769,14 @@
                         <!-- ***************TAB 4************ -->
 
                         <div id="tab-4-template--14316923879512__162935800064a32fb5"
-                            class="ishi-product-tab-pane ishi-fade" [ngClass]="{'active':TrendingTab==4}">
+                            class="ishi-product-tab-pane ishi-fade" [ngClass]="{'active':TrendingTab==4}"
+                            *ngIf="TrendingTab === 4">
                             <div class="slider-mobile-gutter">
                                 <ul class="product-list grid product-width-3 row slider slider--tablet grid--peek AllProducts"
                                     role="list">
 
                                     <li class="grid__item col-lg-4 col-md-6 col-sm-6 col-xs-6 slider__slide"
-                                        *ngFor="let item of FourthTabProducts">
+                                        *ngFor="let item of FourthTabProducts" data-aos="zoom-in-up">
                                         <div class="card-wrapper">
                                             <div class="card card--product" tabindex="-1">
                                                 <div class="card__inner ">
@@ -6610,37 +6613,26 @@
 
                 <div class="ishiservices-content row">
                     <div class="ishi-services">
-
-                        <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6">
-
+                        <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-out-right">
                             <a>
-
-                                <div class="service-img" style="">
-                                    <!-- <img class=" ls-is-cached lazyloaded" data-src="../../assets/image/suggession.png"
-                                        alt="service Image" src="../../assets/image/suggession.png" style=""> -->
+                                <div class="service-img">
                                     <i class="fa-regular fa-lightbulb" style="font-size: 40px;
                                         color: #7d7d7d;"></i>
-
                                 </div>
                                 <div class="service-block">
                                     <div class="service-title">FREE SUGGESSIONS</div>
                                     <div class="service-desc">Order Over Rs.1000</div>
                                 </div>
-
                             </a>
-
                         </div>
 
-                        <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6">
-
+                        <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-out-right">
                             <a>
-
                                 <div class="service-img">
                                     <img class=" ls-is-cached lazyloaded"
                                         data-src="//fashionist-ishi-2.myshopify.com/cdn/shop/files/service3_0d55360a-b78d-488b-a8a1-87520def7888.png?v=1649668285"
                                         alt="service Image"
                                         src="//fashionist-ishi-2.myshopify.com/cdn/shop/files/service3_0d55360a-b78d-488b-a8a1-87520def7888.png?v=1649668285">
-
                                 </div>
                                 <div class="service-block">
                                     <div class="service-title">ONLINE SUPPORT</div>
@@ -6648,47 +6640,35 @@
                                         <a href="tel:78712 34650">78712 34650</a>
                                     </div>
                                 </div>
-
                             </a>
-
                         </div>
 
-                        <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6">
-
+                        <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-out-right">
                             <a>
-
                                 <div class="service-img">
                                     <img class=" ls-is-cached lazyloaded"
                                         data-src="../../assets/image/grow-bag-Serv.png" alt="service Image"
                                         src="../../assets/image/grow-bag-Serv.png">
-
                                 </div>
                                 <div class="service-block">
                                     <div class="service-title">GROW BAGS IN ALL SIZES</div>
                                     <div class="service-desc">Customize your size</div>
                                 </div>
-
                             </a>
-
                         </div>
 
-                        <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6">
-
+                        <div class="services col-lg-3 col-md-6 col-sm-6 col-xs-6" data-aos="zoom-out-right">
                             <a>
-
                                 <div class="service-img">
                                     <img class=" ls-is-cached lazyloaded"
                                         data-src="../../assets/image/gardening-Serv.png" alt="service Image"
                                         src="../../assets/image/gardening-Serv.png">
-
                                 </div>
                                 <div class="service-block">
                                     <div class="service-title">GARDENING</div>
                                     <div class="service-desc">Best gardening service available</div>
                                 </div>
-
                             </a>
-
                         </div>
 
                     </div>
@@ -6719,7 +6699,8 @@
                         <div class="category-left col-lg-4 col-md-12 col-xs-12">
 
 
-                            <div class="ishicategoryblock-container item">
+                            <div class="ishicategoryblock-container item" data-aos="fade-right" data-aos-offset="100"
+                                data-aos-easing="ease-in-sine">
                                 <div class="image-container">
                                     <a>
                                         <div class="image-inner">
@@ -6749,7 +6730,8 @@
 
 
 
-                            <div class="ishicategoryblock-container item">
+                            <div class="ishicategoryblock-container item" data-aos="fade-right" data-aos-offset="100"
+                                data-aos-easing="ease-in-sine">
                                 <div class="image-container">
                                     <a>
                                         <div class="image-inner">
@@ -6776,22 +6758,17 @@
                                 </div>
 
                             </div>
-
-
-
-
-
-
                         </div>
 
-                        <div class="banner-center col-lg-4 col-md-12 col-xs-12">
+                        <div class="banner-center col-lg-4 col-md-12 col-xs-12" data-aos="fade-down">
                             <div class="banner-img">
                                 <img class="lazyload MovingImg" src="../../assets/image/bag.png" alt="Image" style="width: 300px;
                                 height: 330px;">
                             </div>
                         </div>
                         <div class="category-right col-lg-4 col-md-12 col-xs-12">
-                            <div id="ishicategoryblock_3" class="ishicategoryblock-container item">
+                            <div id="ishicategoryblock_3" class="ishicategoryblock-container item" data-aos="fade-left"
+                                data-aos-offset="100" data-aos-easing="ease-in-sine">
                                 <div class="image-container">
                                     <a>
                                         <div class="image-inner">
@@ -6812,7 +6789,8 @@
                                 </div>
                             </div>
 
-                            <div id="ishicategoryblock_4" class="ishicategoryblock-container item">
+                            <div id="ishicategoryblock_4" class="ishicategoryblock-container item" data-aos="fade-left"
+                                data-aos-offset="100" data-aos-easing="ease-in-sine">
                                 <div class="image-container">
                                     <a>
                                         <div class="image-inner">
@@ -9147,7 +9125,7 @@
                 <h3 class="title">Advantages of Plant Grow Bags</h3>
 
                 <div class="advantage-content">
-                    <div class="advantage-left">
+                    <div class="advantage-left" data-aos="fade-right">
                         <div class="advantage-left-In">
                             <img src="../../assets/image/GrowBags.png" alt="" class="topImg"><br>
                             <div class="points">
@@ -9169,7 +9147,7 @@
                     <div class="advantage-center">
                         <img src="../../assets/image/vs.png" alt="">
                     </div>
-                    <div class="advantage-right">
+                    <div class="advantage-right" data-aos="fade-left">
                         <div class="advantage-right-In">
                             <img src="../../assets/image/pot.png" alt="" class="topImg"><br>
                             <div class="points">
@@ -9198,23 +9176,23 @@
         <section class="instruction">
             <h4 class="title">Instruction to Plant</h4><br>
             <div class="instruction-In">
-                <div class="Steps">
+                <div class="Steps" data-aos="fade-down-left">
                     <img src="../../assets/image/step1.png" alt="">
                     <span>01. Choose and open the grow bag according to the proper size of you plant</span>
                 </div>
-                <div class="Steps">
+                <div class="Steps" data-aos="fade-down-right">
                     <img src="../../assets/image/step2.png" alt="">
                     <span>02. Fill the soil with 1/3 of the bag</span>
                 </div>
-                <div class="Steps">
+                <div class="Steps" data-aos="fade-down-left">
                     <img src="../../assets/image/step3.png" alt="">
                     <span>03. Place your plants in the middle of the bag and continue filling</span>
                 </div>
-                <div class="Steps">
+                <div class="Steps" data-aos="fade-down-right">
                     <img src="../../assets/image/step4.png" alt="">
                     <span>04. According to the nature of the plant adjust the distance between plants</span>
                 </div>
-                <div class="Steps">
+                <div class="Steps" data-aos="fade-down-left">
                     <img src="../../assets/image/step5.png" alt="">
                     <span>05. Filling and watering ,press the soil until the pocket at the 3-5 cm</span>
                 </div>

@@ -193,7 +193,7 @@ ul {
     height: max-content !important;
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:480px) {
     .formDiv {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -219,6 +219,10 @@ ul {
 
     .container {
         box-shadow: 0px 0px 7px grey !important;
+    }
+
+    .pop {
+        width: 80% !important;
     }
 }
 

@@ -507,6 +507,7 @@
     .Service6,
     .Service7 {
         width: 95% !important;
+        overflow-x: hidden !important;
     }
 
     .ShowQuote {
@@ -533,6 +534,10 @@
         left: 24px;
         font-size: 28px;
         // z-index: 1000;
+    }
+
+    .pop {
+        width: 80% !important;
     }
 }
 
@@ -953,6 +958,6 @@
     box-shadow: 5px;
 }
 
-option{
+option {
     width: 96%;
 }

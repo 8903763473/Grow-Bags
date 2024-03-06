@@ -376,6 +376,13 @@
     width: 45% !important;
 }
 
+.bannerblock1,
+.bannerblock2 {
+    .lazyload:hover {
+        transition: all .6s ease 0s !important;
+    }
+}
+
 .rotateImgUp {
     width: 46% !important;
 }

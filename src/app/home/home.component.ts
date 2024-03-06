@@ -339,6 +339,7 @@ export class HomeComponent implements OnInit {
 
   ScreenWidth() {
     this.screenWidth = window?.innerWidth;
+    console.log(this.screenWidth);
     this.Width();
   }
 
@@ -386,7 +387,7 @@ export class HomeComponent implements OnInit {
 
   TopSlider(status: 'Prev' | 'Next', Index: any) {
     const width = (this.WidthSize);
-    console.log(Index);    
+    console.log(Index);
     if (status === 'Prev' && this.TopValue != 0) {
       this.slideIndex = (Index === 1) ? 6 : this.slideIndex - 1;
       this.TopValue = (Index === 1) ? -(0) : this.TopValue + width;

@@ -38,9 +38,13 @@ export class AppComponent {
 
   ngOnInit() {
     AOS.init({
-      duration: 1000,
+      duration: 400,
       easing: 'ease-in-out',
-      offset: 200
+      offset: 250,
+      once: false, anchorPlacement: 'top-bottom'
+    });
+    document.addEventListener('scroll', function () {
+      AOS.refresh();
     });
 
     this.authpage = 0
@@ -147,6 +151,9 @@ export class AppComponent {
 
   RouteToService(id: any) {
     console.log(id);
+    this.OpenSubMenu = 0
+    this.sub = false
+    this.MenuOpen = false
     this.router.navigate(['ourService/' + id])
   }
 

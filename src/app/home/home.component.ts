@@ -1,6 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+
+import $ from 'jquery';
+declare var TweenMax: any;
+declare var TweenLite: any;
 
 
 @Component({
@@ -13,29 +17,6 @@ import { AppComponent } from '../app.component';
 })
 
 export class HomeComponent implements OnInit {
-  ProdDetail: boolean = false
-  slideIndex: any = 1
-  Testimonialsindex: any = 3
-  DealSlide: any = 1
-  BlogsSlide: any = 1
-  BlogsValue: any = 0
-  BlogTransform: any
-  categoryTransform: any
-  categoryValue: any = 0
-  TopValue: any = 0
-  TopTransform: any
-  ProductDetailPic: any = []
-  BackgroundPosition = '-242px -164px';
-  TrendingTab: any = 1
-  BestProductTab: any = 1
-  CustomerChoice: any = 1
-  viewDetailImg: any = '//fashionist-ishi-2.myshopify.com/cdn/shop/products/19_371bf66d-f6c7-4179-90d8-d95b84375bd0.jpg?v=1649746062'
-  backgroundStyles = `url(${this.viewDetailImg})-242px -164px`
-  ReviewForm: boolean = false
-  BrandTransform: any
-  BrandValue: any = 0
-  sliderWidth: any
-  screenWidth: any
 
   ProductList: any = [
     {
@@ -63,8 +44,6 @@ export class HomeComponent implements OnInit {
       name: 'Organic Farming'
     }
   ]
-
-
 
   FirstTabProducts: any = [
     {
@@ -113,7 +92,6 @@ export class HomeComponent implements OnInit {
       size: '18 × 13 inch'
     },
   ]
-
 
   SecondTabProducts: any = [
     {
@@ -259,7 +237,6 @@ export class HomeComponent implements OnInit {
     },
   ]
 
-
   SliderData: any = [
     {
       id: 1,
@@ -293,10 +270,82 @@ export class HomeComponent implements OnInit {
     },
   ]
 
+  Slider: any = [
+    {
+      id: 1,
+      img: "../../assets/image/Slide1.png",
+      img2: '../../assets/image/MobileSlider1.svg',
+      title: 'Our Gardening',
+      description: "Services available any where.These are the main gardenings Terrace Gardening, Home Gardening, Balcony Gardening, Kitchen Gardening, Shopping malls, Schools and Hotel.We will do our work best",
+    },
+    {
+      id: 2,
+      img: "../../assets/image/Slide2.png",
+      img2: '../../assets/image/MobileSlider2.svg',
+      title: 'Our Grow Bags',
+      description: "Our Grow bags are light weight, reusable , UV stablized , Durable,Washable & the main thing is Suitable for all type of plants & suitable for all wheather condition.We have lots of grow bags with different sizes. We assure that it was long lasting ( 5-6 years of use)",
+    },
+    {
+      id: 3,
+      img: "../../assets/image/Slide1.png",
+      img2: '../../assets/image/MobileSlider1.svg',
+      title: 'Our Gardening',
+      description: "Services available any where.These are the main gardenings Terrace Gardening, Home Gardening, Balcony Gardening, Kitchen Gardening, Shopping malls, Schools and Hotel.We will do our work best",
+    },
+    {
+      id: 4,
+      img: "../../assets/image/Slide2.png",
+      img2: '../../assets/image/MobileSlider2.svg',
+      title: 'Our Grow Bags',
+      description: "Our Grow bags are light weight, reusable , UV stablized , Durable,Washable & the main thing is Suitable for all type of plants & suitable for all wheather condition.We have lots of grow bags with different sizes. We assure that it was long lasting ( 5-6 years of use)",
+    },
+    {
+      id: 5,
+      img: "../../assets/image/Slide1.png",
+      img2: '../../assets/image/MobileSlider1.svg',
+      title: 'Our Gardening',
+      description: "Services available any where.These are the main gardenings Terrace Gardening, Home Gardening, Balcony Gardening, Kitchen Gardening, Shopping malls, Schools and Hotel.We will do our work best",
+    },
+    {
+      id: 6,
+      img: "../../assets/image/Slide2.png",
+      img2: '../../assets/image/MobileSlider2.svg',
+      title: 'Our Grow Bags',
+      description: "Our Grow bags are light weight, reusable , UV stablized , Durable,Washable & the main thing is Suitable for all type of plants & suitable for all wheather condition.We have lots of grow bags with different sizes. We assure that it was long lasting ( 5-6 years of use)",
+    },
+  ]
+
+
   WidthSize: any
   ActiveSlide: any = 1
+  autoSlide: any
+  autoSlideInterval: number = 5000;
+  ProdDetail: boolean = false
+  slideIndex: any = 1
+  Testimonialsindex: any = 3
+  DealSlide: any = 1
+  BlogsSlide: any = 1
+  BlogsValue: any = 0
+  BlogTransform: any
+  categoryTransform: any
+  categoryValue: any = 0
+  TopValue: any = 0
+  TopTransform: any
+  ProductDetailPic: any = []
+  BackgroundPosition = '-242px -164px';
+  TrendingTab: any = 1
+  BestProductTab: any = 1
+  CustomerChoice: any = 1
+  viewDetailImg: any = '//fashionist-ishi-2.myshopify.com/cdn/shop/products/19_371bf66d-f6c7-4179-90d8-d95b84375bd0.jpg?v=1649746062'
+  backgroundStyles = `url(${this.viewDetailImg})-242px -164px`
+  ReviewForm: boolean = false
+  BrandTransform: any
+  BrandValue: any = 0
+  sliderWidth: any
+  screenWidth: any
 
-  constructor(public app: AppComponent) {
+
+  constructor(public app: AppComponent, private el: ElementRef) {
     setTimeout(() => {
       this.BrandSlider();
     }, 5000);
@@ -308,7 +357,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.app.MenuOpen = false
+    this.app.MenuOpen = false
     this.app.Headerdropdown = true
     this.app.footer = true
     this.slideIndex = 1
@@ -320,27 +369,41 @@ export class HomeComponent implements OnInit {
     this.TopTransform = `translate3d(${this.TopValue}, 0px, 0px)`
     this.Width();
     this.ActiveSlide = 1
+    this.startAutoSlide()
   }
 
 
+  startAutoSlide(): void {
+    this.stopAutoSlide();
+    this.autoSlide = setInterval(() => {
+      this.changeSlide(1);
+    }, this.autoSlideInterval);
+  }
+
+  stopAutoSlide(): void {
+    clearInterval(this.autoSlide); // Clear the interval to stop auto-sliding
+  }
+
+  changeSlide(direction: number): void {
+    const currentIndex = this.Slider.findIndex((item: any) => item.id === this.ActiveSlide);
+    let newIndex = (currentIndex + direction + this.Slider.length) % this.Slider.length;
+    newIndex = newIndex === -1 ? this.Slider.length - 1 : newIndex;
+    this.ActiveSlide = this.Slider[newIndex].id;
+    console.log(this.ActiveSlide);
+  }
+
   ScreenWidthSize() {
     this.WidthSize = (window.innerWidth + 115)
-    console.log(this.WidthSize, window.innerWidth);
     setTimeout(() => {
       this.ScreenWidthSize();
     }, 500)
   }
 
   Width() {
-    setTimeout(() => {
-      this.ScreenWidth();
-    }, 2000)
-  }
-
-  ScreenWidth() {
     this.screenWidth = window?.innerWidth;
-    console.log(this.screenWidth);
-    this.Width();
+    setTimeout(() => {
+      this.Width();
+    }, 2000)
   }
 
   TestimonialsSlider(status: any) {

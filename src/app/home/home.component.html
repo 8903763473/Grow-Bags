@@ -8,274 +8,22 @@
 
         <section id="shopify-section-template--14316923879512__16289212707c98911d"
             class="shopify-section ishi-slider-section">
-            <div class="ishislider">
-                <div class="slideshow-block">
+            <section id="shopify-section-template--14316923879512__16289212707c98911d"
+                class="shopify-section ishi-slider-section VK" style="position: relative;">
+                <i style="width: 100%;z-index: 1;">
+                    <div *ngFor="let item of Slider">
+                        <input [checked]="ActiveSlide==item.id" type="radio" name="s"
+                            [style.background-image]="'url(' + item.img + ')'" title="Our Gardening"
+                            style="background-size: 75% 310px;" *ngIf="screenWidth>580">
 
-                    <div class="ishislideshow-carousel ishislideshow-carousel-template--14316923879512__16289212707c98911d owl-carousel slider-with-options owl-theme logo-bar owl-loaded owl-drag"
-                        data-small="1" data-mobile="1" data-tablet="1" data-laptop="1" data-desktop="1"
-                        data-autoplaytimeout="5000" data-autoplay="true" data-nav="true" data-dots="true"
-                        data-loop="true">
-
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage TopStage" style="transition: all 0.5s ease 0s;width: 100%;">
-
-                                <div class="owl-item" [ngClass]="{'active':slideIndex==1,'Topcloned':slideIndex!=1}">
-                                    <div class="desktop-slider">
-                                        <div class="slideshow__item">
-                                            <a>
-                                                <div class="slideshow__link">
-                                                    <div class="hidden-xs-down" style="width:100%;">
-                                                        <img src="../../assets/image/Slider1.png"
-                                                            alt="Desktop Slider Image" style="width: 100% !important;">
-                                                    </div>
-                                                    <div class="hidden-xs-up" style="width:100% !important;">
-                                                        <img src="../../assets/image/MobileSlider1.svg"
-                                                            alt="Mobile Slider Image">
-                                                    </div>
-
-                                                    <div class="page-width page-width-right mobile-page-width-right firstSliderContent"
-                                                        style="margin: 0;" *ngIf="screenWidth>580">
-                                                        <div class="slider-content col-md-6 col-sm-6 col-xs-6 slider-content-right mobile-slider-content-right
-                     text-align-left mobile-text-align-left firstSliderContentIn">
-                                                            <div class="main-title" style="color:#232323">Our Gardening
-                                                            </div>
-                                                            <div class="desc SlideDescription" style="color:#666666">Our
-                                                                Gardening
-                                                                Services available any where.These are the main
-                                                                gardenings Terrace Gardening , Home Gardening , Balcony
-                                                                Gardening , Kitchen Gardening , Shopping malls , Schools
-                                                                & Hotel . We will do our work best.</div>
-                                                            <!-- <div class="slider-btn btn">SHOP NOW</div> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="owl-item" [ngClass]="{'active':slideIndex==2,'Topcloned':slideIndex!=2}">
-                                    <div class="desktop-slider">
-                                        <div class="slideshow__item">
-                                            <a>
-                                                <div class="slideshow__link">
-                                                    <div class="hidden-xs-down" style="width:100%;">
-                                                        <img src="../../assets/image/Slider2.jpg"
-                                                            alt="Desktop Slider Image" style="width:100% !important;">
-                                                    </div>
-                                                    <div class="hidden-xs-up" style="width:100% !important;">
-                                                        <img src="../../assets/image/MobileSlider2.svg"
-                                                            alt="Mobile Slider Image">
-                                                    </div>
-
-                                                    <div class="page-width page-width-left mobile-page-width-left firstSliderContent1"
-                                                        *ngIf="screenWidth>580">
-                                                        <div class="slider-content col-md-6 col-sm-6 col-xs-6 slider-content-left mobile-slider-content-left
-                     text-align-left mobile-text-align-left firstSliderContent1In">
-                                                            <!-- <div class="sub-title" style="color:#666666"> Get 20%
-                                                                Discount</div> -->
-                                                            <div class="main-title" style="color:#232323">Our Grow Bags
-                                                            </div>
-                                                            <div class="desc SlideDescription" style="color:#666666">Our
-                                                                Grow bags are
-                                                                light weight, reusable , UV stablized , Durable
-                                                                ,Washable & the main thing is Suitable for all type of
-                                                                plants & suitable for all wheather condition.
-                                                                We have lots of grow bags with different sizes. We
-                                                                assure that it was long lasting ( 5-6 years of use)
-                                                            </div>
-                                                            <!-- <div class="slider-btn btn">SHOP NOW</div> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="owl-item" [ngClass]="{'active':slideIndex==3,'Topcloned':slideIndex!=3}">
-                                    <div class="desktop-slider">
-
-                                        <div class="slideshow__item">
-                                            <a>
-                                                <div class="slideshow__link">
-
-                                                    <div class="hidden-xs-down" style="width:100%;">
-
-                                                        <img src="../../assets/image/Slider1.png"
-                                                            alt="Desktop Slider Image" style="width: 100% !important;">
-
-                                                    </div>
-                                                    <div class="hidden-xs-up" style="width:100% !important;">
-                                                        <img src="../../assets/image/MobileSlider1.svg"
-                                                            alt="Mobile Slider Image">
-                                                    </div>
-
-                                                    <div class="page-width page-width-right mobile-page-width-right  firstSliderContent"
-                                                        style="margin: 0;" *ngIf="screenWidth>580">
-                                                        <div class="slider-content col-md-6 col-sm-6 col-xs-6 slider-content-right mobile-slider-content-right
-                     text-align-left mobile-text-align-left firstSliderContentIn">
-
-                                                            <!-- <div class="sub-title" style="color:#666666"> Get 30%
-                                                                Discount</div> -->
-
-
-                                                            <div class="main-title" style="color:#232323">Our Gardening
-                                                            </div>
-
-                                                            <div class="desc SlideDescription" style="color:#666666">Our
-                                                                Gardening
-                                                                Services available any where.These are the main
-                                                                gardenings Terrace Gardening , Home Gardening , Balcony
-                                                                Gardening , Kitchen Gardening , Shopping malls , Schools
-                                                                & Hotel . We will do our work best.</div>
-                                                            <!-- <div class="slider-btn btn">SHOP NOW</div> -->
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="owl-item" [ngClass]="{'active':slideIndex==4,'Topcloned':slideIndex!=4}">
-                                    <div class="desktop-slider">
-                                        <div class="slideshow__item">
-                                            <a>
-                                                <div class="slideshow__link">
-                                                    <div class="hidden-xs-down" style="width:100%;">
-                                                        <img src="../../assets/image/Slider2.jpg"
-                                                            alt="Desktop Slider Image" style="width:100% !important;">
-                                                    </div>
-
-                                                    <div class="hidden-xs-up" style="width:100% !important;">
-                                                        <img src="../../assets/image/MobileSlider2.svg"
-                                                            alt="Mobile Slider Image">
-                                                    </div>
-
-                                                    <div class="page-width page-width-left mobile-page-width-left firstSliderContent1"
-                                                        *ngIf="screenWidth>580">
-                                                        <div class="slider-content col-md-6 col-sm-6 col-xs-6 slider-content-left mobile-slider-content-left
-                 text-align-left mobile-text-align-left firstSliderContent1In">
-                                                            <!-- <div class="sub-title" style="color:#666666"> Get 20%
-                                                            Discount</div> -->
-                                                            <div class="main-title" style="color:#232323">Our Grow Bags
-                                                            </div>
-                                                            <div class="desc SlideDescription" style="color:#666666">Our
-                                                                Grow bags are
-                                                                light weight, reusable , UV stablized , Durable
-                                                                ,Washable & the main thing is Suitable for all type of
-                                                                plants & suitable for all wheather condition.
-                                                                We have lots of grow bags with different sizes. We
-                                                                assure that it was long lasting ( 5-6 years of use)
-                                                            </div>
-                                                            <!-- <div class="slider-btn btn">SHOP NOW</div> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="owl-item" [ngClass]="{'active':slideIndex==5,'Topcloned':slideIndex!=5}">
-                                    <div class="desktop-slider">
-                                        <div class="slideshow__item"> <a>
-                                                <div class="slideshow__link">
-                                                    <div class="hidden-xs-down" style="width:100%;">
-                                                        <img src="../../assets/image/Slider1.png"
-                                                            alt="Desktop Slider Image" style="width: 100% !important;">
-                                                    </div>
-                                                    <div class="hidden-xs-up" style="width:100% !important;">
-                                                        <img src="../../assets/image/MobileSlider1.svg"
-                                                            alt="Mobile Slider Image">
-                                                    </div>
-                                                    <div class="page-width page-width-right mobile-page-width-right  firstSliderContent"
-                                                        style="margin: 0;" *ngIf="screenWidth>580">
-                                                        <div class="slider-content col-md-6 col-sm-6 col-xs-6 slider-content-right mobile-slider-content-right
-                     text-align-left mobile-text-align-left firstSliderContentIn">
-                                                            <!-- <div class="sub-title" style="color:#666666"> Get 30%
-                                                                Discount</div> -->
-                                                            <div class="main-title" style="color:#232323">Our Gardening
-                                                            </div>
-                                                            <div class="desc SlideDescription" style="color:#666666">Our
-                                                                Gardening
-                                                                Services available any where.These are the main
-                                                                gardenings Terrace Gardening , Home Gardening , Balcony
-                                                                Gardening , Kitchen Gardening , Shopping malls , Schools
-                                                                & Hotel . We will do our work best.</div>
-                                                            <!-- <div class="slider-btn btn">SHOP NOW</div> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="owl-item" [ngClass]="{'active':slideIndex==6,'Topcloned':slideIndex!=6}">
-                                    <div class="desktop-slider">
-                                        <div class="slideshow__item">
-                                            <a>
-                                                <div class="slideshow__link">
-                                                    <div class="hidden-xs-down" style="width:100%;">
-                                                        <img src="../../assets/image/Slider2.jpg"
-                                                            alt="Desktop Slider Image" style="width:100% !important;">
-                                                    </div>
-
-                                                    <div class="hidden-xs-up" style="width:100% !important;">
-                                                        <img src="../../assets/image/MobileSlider2.svg"
-                                                            alt="Mobile Slider Image">
-                                                    </div>
-                                                    <div class="page-width page-width-left mobile-page-width-left firstSliderContent1"
-                                                        *ngIf="screenWidth>580">
-                                                        <div class="slider-content col-md-6 col-sm-6 col-xs-6 slider-content-left mobile-slider-content-left
-                 text-align-left mobile-text-align-left firstSliderContent1In">
-                                                            <!-- <div class="sub-title" style="color:#666666"> Get 20%
-                                                            Discount</div> -->
-                                                            <div class="main-title" style="color:#232323">Our Grow Bags
-                                                            </div>
-                                                            <div class="desc SlideDescription" style="color:#666666">Our
-                                                                Grow bags are
-                                                                light weight, reusable , UV stablized , Durable
-                                                                ,Washable & the main thing is Suitable for all type of
-                                                                plants & suitable for all wheather condition.
-                                                                We have lots of grow bags with different sizes. We
-                                                                assure that it was long lasting ( 5-6 years of use)
-                                                            </div>
-                                                            <!-- <div class="slider-btn btn">SHOP NOW</div> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="owl-nav LeftRight">
-                            <button type="button" role="presentation" class="owl-prev"
-                                (click)="TopSlider('Prev',slideIndex)">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-                            <button type="button" role="presentation" class="owl-next"
-                                (click)="TopSlider('Next',slideIndex)">
-                                <i class="fa-solid fa-angle-right"></i>
-                            </button>
-                        </div>
-                        <!-- <div class="owl-dots LeftRight-dots"><button role="button"
-                                class="owl-dot active"><span></span></button><button role="button"
-                                class="owl-dot"><span></span></button></div> -->
+                        <input [checked]="ActiveSlide==item.id" type="radio" name="s"
+                            [style.background-image]="'url(' + item.img2 + ')'" title="Our Gardening"
+                            style="background-size: 100% 306px;" *ngIf="screenWidth<580">
                     </div>
-                </div>
-            </div>
+                </i>
+                <span class="arrow left" (click)="changeSlide(-1)" style="opacity: 0;position: absolute;">&#9665;</span>
+                <span class="arrow right" (click)="changeSlide(1)" style="opacity: 0;position: absolute;">&#9655;</span>
+            </section>
         </section>
 
 
@@ -850,10 +598,6 @@
         </section> -->
 
 
-
-
-
-
         <!-- *******************SERVICES**************** -->
 
         <section class="container1">
@@ -985,12 +729,6 @@
             </section>
 
         </section>
-
-
-
-
-
-
 
         <!-- ***********************************03******************************* -->
 

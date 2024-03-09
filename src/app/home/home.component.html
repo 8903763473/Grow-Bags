@@ -13,12 +13,12 @@
                 <i style="width: 100%;z-index: 1;">
                     <div *ngFor="let item of Slider">
                         <input [checked]="ActiveSlide==item.id" type="radio" name="s"
-                            [style.background-image]="'url(' + item.img + ')'" title="Our Gardening"
-                            style="background-size: 75% 310px;" *ngIf="screenWidth>580">
+                            [style.background-image]="'url(' + item.img + ')'" style="background-size: 75% 310px;"
+                            *ngIf="screenWidth>580">
 
                         <input [checked]="ActiveSlide==item.id" type="radio" name="s"
-                            [style.background-image]="'url(' + item.img2 + ')'" title="Our Gardening"
-                            style="background-size: 100% 306px;" *ngIf="screenWidth<580">
+                            [style.background-image]="'url(' + item.img2 + ')'" style="background-size: 100% 306px;"
+                            *ngIf="screenWidth<580">
                     </div>
                 </i>
                 <span class="arrow left" (click)="changeSlide(-1)" style="opacity: 0;position: absolute;">&#9665;</span>
@@ -655,7 +655,7 @@
                 </div>
             </div> -->
 
-            <section class="we-offer-area text-center bg-gray O-Services">
+            <section class="we-offer-area text-center bg-gray O-Services" style="min-height: auto !important;">
                 <div class="container slide-contain">
                     <div class="row">
                         <div class="col-md-12">

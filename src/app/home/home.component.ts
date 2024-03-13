@@ -227,7 +227,7 @@ export class HomeComponent implements OnInit {
     },
     {
       id: 8,
-      img: '../../assets/image/organic8.jpeg',
+      img: '../../assets/image/organic8.jpg',
       size: ''
     },
     {
@@ -274,44 +274,42 @@ export class HomeComponent implements OnInit {
     {
       id: 1,
       img: "../../assets/image/Slide1.png",
-      img2: '../../assets/image/MobileSlider1.svg',
+      img2: '../../assets/image/MobileSlider1.png',
       title: 'Our Gardening',
       description: "Services available any where.These are the main gardenings Terrace Gardening, Home Gardening, Balcony Gardening, Kitchen Gardening, Shopping malls, Schools and Hotel.We will do our work best",
     },
     {
       id: 2,
       img: "../../assets/image/Slide2.png",
-      img2: '../../assets/image/MobileSlider2.svg',
+      img2: '../../assets/image/MobileSlider2.png',
       title: 'Our Grow Bags',
       description: "Our Grow bags are light weight, reusable , UV stablized , Durable,Washable & the main thing is Suitable for all type of plants & suitable for all wheather condition.We have lots of grow bags with different sizes. We assure that it was long lasting ( 5-6 years of use)",
     },
     {
       id: 3,
-      img: "../../assets/image/Slide1.png",
-      img2: '../../assets/image/MobileSlider1.svg',
-      title: 'Our Gardening',
-      description: "Services available any where.These are the main gardenings Terrace Gardening, Home Gardening, Balcony Gardening, Kitchen Gardening, Shopping malls, Schools and Hotel.We will do our work best",
+      img: "../../assets/image/Slide3.png",
+      img2: '../../assets/image/MobileSlider3.png',
+      title: 'Multiple types of Bags'
     },
     {
       id: 4,
-      img: "../../assets/image/Slide2.png",
-      img2: '../../assets/image/MobileSlider2.svg',
-      title: 'Our Grow Bags',
-      description: "Our Grow bags are light weight, reusable , UV stablized , Durable,Washable & the main thing is Suitable for all type of plants & suitable for all wheather condition.We have lots of grow bags with different sizes. We assure that it was long lasting ( 5-6 years of use)",
-    },
-    {
-      id: 5,
       img: "../../assets/image/Slide1.png",
-      img2: '../../assets/image/MobileSlider1.svg',
+      img2: '../../assets/image/MobileSlider1.png',
       title: 'Our Gardening',
       description: "Services available any where.These are the main gardenings Terrace Gardening, Home Gardening, Balcony Gardening, Kitchen Gardening, Shopping malls, Schools and Hotel.We will do our work best",
     },
     {
-      id: 6,
+      id: 5,
       img: "../../assets/image/Slide2.png",
-      img2: '../../assets/image/MobileSlider2.svg',
+      img2: '../../assets/image/MobileSlider2.png',
       title: 'Our Grow Bags',
       description: "Our Grow bags are light weight, reusable , UV stablized , Durable,Washable & the main thing is Suitable for all type of plants & suitable for all wheather condition.We have lots of grow bags with different sizes. We assure that it was long lasting ( 5-6 years of use)",
+    },
+    {
+      id: 6,
+      img: "../../assets/image/Slide3.png",
+      img2: '../../assets/image/MobileSlider3.png',
+      title: 'Multiple types of Bags'
     },
   ]
 
@@ -369,7 +367,7 @@ export class HomeComponent implements OnInit {
     this.TopTransform = `translate3d(${this.TopValue}, 0px, 0px)`
     this.Width();
     this.ActiveSlide = 1
-    this.startAutoSlide()
+    // this.startAutoSlide()
   }
 
 

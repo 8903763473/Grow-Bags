@@ -13,11 +13,11 @@
                 <i style="width: 100%;z-index: 1;">
                     <div *ngFor="let item of Slider">
                         <input [checked]="ActiveSlide==item.id" type="radio" name="s"
-                            [style.background-image]="'url(' + item.img + ')'" style="background-size: 75% 310px;"
+                            [style.background-image]="'url(' + item.img + ')'" style="background-size: 75% 360px;"
                             *ngIf="screenWidth>580">
 
                         <input [checked]="ActiveSlide==item.id" type="radio" name="s"
-                            [style.background-image]="'url(' + item.img2 + ')'" style="background-size: 100% 306px;"
+                            [style.background-image]="'url(' + item.img2 + ')'" style="background-size: 100% 360px;"
                             *ngIf="screenWidth<580">
                     </div>
                 </i>
@@ -1516,7 +1516,6 @@
                             <div class="slider-mobile-gutter">
                                 <ul class="product-list grid product-width-3 row slider slider--tablet grid--peek AllProducts"
                                     role="list">
-
                                     <li class="grid__item col-lg-4 col-md-6 col-sm-6 col-xs-6 slider__slide"
                                         *ngFor="let item of FourthTabProducts" data-aos="zoom-in-up"
                                         data-aos-offset="100">

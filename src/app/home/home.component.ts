@@ -367,7 +367,7 @@ export class HomeComponent implements OnInit {
     this.TopTransform = `translate3d(${this.TopValue}, 0px, 0px)`
     this.Width();
     this.ActiveSlide = 1
-    // this.startAutoSlide()
+    this.startAutoSlide()
   }
 
 

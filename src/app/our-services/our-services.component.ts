@@ -26,6 +26,7 @@ export class OurServicesComponent {
   constructor(public app: AppComponent, public router: Router, private route: ActivatedRoute, public api: ApiService) { }
 
   ngOnInit() {
+    this.app.Header = true
     this.app.Headerdropdown = true
     this.app.footer = true
     window?.scrollTo(0, 0);

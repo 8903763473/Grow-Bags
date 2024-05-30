@@ -31,7 +31,7 @@ export class AppComponent {
   inputValue: any
   ScreenWidth: any
   loader: boolean = false
-
+  Header: boolean = false;
   constructor(public router: Router) {
     this.WidthSize()
   }

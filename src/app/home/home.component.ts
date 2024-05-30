@@ -358,6 +358,7 @@ export class HomeComponent implements OnInit {
     this.app.MenuOpen = false
     this.app.Headerdropdown = true
     this.app.footer = true
+    this.app.Header = true
     this.slideIndex = 1
     this.Testimonialsindex = 3
     this.BestProductTab = 1

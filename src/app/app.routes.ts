@@ -4,11 +4,13 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { OurServicesComponent } from './our-services/our-services.component';
+import { LoginComponent } from './login/login.component';
+import { CartComponent } from './cart/cart.component';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'login',
         pathMatch: 'full'
     },
     {
@@ -30,5 +32,13 @@ export const routes: Routes = [
     {
         path: 'ourService/:id',
         component: OurServicesComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'cart',
+        component: CartComponent
     },
 ];

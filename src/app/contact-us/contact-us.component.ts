@@ -25,6 +25,7 @@ export class ContactUsComponent {
   constructor(public app: AppComponent, public api: ApiService, public handler: HandlerService) { }
 
   ngOnInit() {
+    this.app.Header = true
     this.app.Headerdropdown = true
     this.app.footer = true
     window?.scrollTo(0, 0);

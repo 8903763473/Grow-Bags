@@ -1,41 +1,42 @@
-<div class="container pt-4 pb-4">
+<div class="container pt-4 pb-4 CartComponent">
   <h2 class="text-center">Shopping Cart</h2>
   <div class="row mt-5 gap-3 gap-md-0 gap-lg-0">
     <div class="col-lg-8 col-md-7">
       <div class="card">
-        <h4>Cart (2 items)</h4>
-        <div class="mt-2 store-item bottom-line pb-3">
+        <h4>Cart ({{myCartItems.length}} items)</h4>
+        <div class="mt-2 store-item bottom-line pb-3" *ngFor="let item of myCartItems">
           <div class="row">
             <div class="col-lg-3">
-              <img class="image-store" src="../../assets/image/cactus.png" alt="Blue Hoodie">
+              <img class="image-store" src="data:image/png;base64,{{item.product_img}}" alt="Blue Hoodie">
             </div>
             <div class="col-lg-9">
               <div class="mt-3 mt-lg-0 d-flex align-items-center justify-content-between">
-                <h4>Miniature Barrel Cactus</h4>
+                <h4>{{item?.productName}}</h4>
                 <div>
                   <div class="btn-quantity-container d-flex align-items-center justify-content-center"
                     style="gap: .5rem;">
                     <button class="btn-quantity btn btn-secondary" style="background-color: #51843285 !important;
-                    border-color: #518432 !important;">&minus;</button>
-                    <span class="p-quantity">1</span>
+                    border-color: #518432 !important;" (click)="decreaseQuantity(item)"
+                      [disabled]="item.quantity==1">&minus;</button>
+                    <span class="p-quantity">{{item.quantity}}</span>
                     <button class="btn-quantity btn btn-secondary" style="background-color: #51843285 !important;
-                    border-color: #518432 !important;">+</button>
+                    border-color: #518432 !important;" (click)="increaseQuantity(item)">+</button>
                   </div>
                 </div>
               </div>
               <div class="mt-2 list-store d-flex align-items-center justify-content-between">
-                <p>Cactus</p>
+                <p>{{item.category}}</p>
                 <!-- <p class="p-note">(Note, 1 piece)</p> -->
               </div>
               <!-- <div class="list-store d-flex align-items-center justify-content-between">
                               <p>Color : Blue</p>
                           </div> -->
               <div class="mt-2 list-store d-flex align-items-center justify-content-between" style="padding: 10px 0px">
-                <p>Size : M</p>
+                <p>Size : {{item.product_size}}</p>
               </div>
               <div class="mt-2 list-store d-flex align-items-center justify-content-between">
                 <div class="d-flex gap-2">
-                  <button class="btn-list btn btn-danger btn-xs">
+                  <button class="btn-list btn btn-danger btn-xs" (click)="RemoveItem(item)">
                     <i class="fa fa-trash"></i>
                     <span> Remove Item</span>
                   </button>
@@ -45,58 +46,16 @@
                   </button>
                 </div>
                 <div class="d-flex">
-                  <h5>₹ 350.00</h5>
+                  <h5>₹ {{item.price}}.00</h5>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="mt-2 store-item">
-          <div class="row">
-            <div class="col-lg-3">
-              <img class="image-store" src="../../assets/image/secculent.png" alt="White Hoodie">
-            </div>
-            <div class="col-lg-9">
-              <div class="mt-3 mt-lg-0 d-flex align-items-center justify-content-between">
-                <h4>Haworthia Coarctata</h4>
-                <div>
-                  <div class="btn-quantity-container d-flex align-items-center justify-content-center"
-                    style="gap: .5rem;">
-                    <button class="btn-quantity btn btn-secondary" style="background-color: #51843285 !important;
-                    border-color: #518432 !important;">&minus;</button>
-                    <span class="p-quantity">2</span>
-                    <button class="btn-quantity btn btn-secondary" style="background-color: #51843285 !important;
-                    border-color: #518432 !important;">+</button>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-2 list-store d-flex align-items-center justify-content-between">
-                <p>Succulent</p>
-              </div>
-              <!-- <div class="list-store d-flex align-items-center justify-content-between">
-                              <p>Color : White</p>
-                          </div> -->
-              <div class="mt-2 list-store d-flex align-items-center justify-content-between" style="padding: 10px 0px">
-                <p>Size : M</p>
-              </div>
-              <div class="mt-2 list-store d-flex align-items-center justify-content-between">
-                <div class="d-flex gap-2">
-                  <button class="btn-list btn btn-danger btn-xs">
-                    <i class="fa fa-trash"></i>
-                    <span> Remove Item</span>
-                  </button>
-                  <button class="btn-list btn btn-secondary btn-xs">
-                    <i class="fa fa-heart"></i>
-                    <!-- <span> Move To Wish List</span> -->
-                  </button>
-                </div>
-                <div class="d-flex">
-                  <h5>₹ 450.00</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+
+
       </div>
     </div>
     <div class="col-lg-4 col-md-5">
@@ -109,7 +68,11 @@
                 <div class="col">
                   <div class="list-store d-flex align-items-center justify-content-between">
                     <p style="margin: 0;">Temporary amount</p>
-                    <p style="margin: 0;">₹ 800.00</p>
+                    <p style="margin: 0;">₹ {{TotalAmount}}.00</p>
+                  </div>
+                  <div class="mt-4 list-store d-flex align-items-center justify-content-between">
+                    <p style="margin: 0;">Tax</p>
+                    <p style="margin: 0;">₹ 90.00</p>
                   </div>
                   <div class="mt-4 list-store d-flex align-items-center justify-content-between">
                     <p style="margin: 0;">Shipping</p>
@@ -123,13 +86,14 @@
                   <p class="p-total-label">The total amount of (Including TAX)</p>
                 </div>
                 <div class="col-6">
-                  <p class="p-total">₹ 890.00</p>
+                  <p class="p-total">₹ {{TotalAmount}}.00</p>
                 </div>
               </div>
               <div class="row mt-4">
                 <div class="col">
                   <button class="w-100 btn btn-primary"
-                    style="background-color: #518432 !important;border-color: #518432 !important">Go To
+                    style="background-color: #518432 !important;border-color: #518432 !important"
+                    (click)="goToCheckOut()">Go To
                     Checkout</button>
                 </div>
               </div>

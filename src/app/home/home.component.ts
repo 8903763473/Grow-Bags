@@ -3,6 +3,8 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
 
 import $ from 'jquery';
+import { Router } from '@angular/router';
+import { ApiService } from '../service/api.service';
 declare var TweenMax: any;
 declare var TweenLite: any;
 
@@ -341,9 +343,15 @@ export class HomeComponent implements OnInit {
   BrandValue: any = 0
   sliderWidth: any
   screenWidth: any
+  AllProducts: any = []
+  AllProductsCopy: any = []
+  UserId: any
+  SelectedCategory: any
+  uniqueCategories: any = [];
+  TabInd: any
+  AllCategory: any = []
 
-
-  constructor(public app: AppComponent, private el: ElementRef) {
+  constructor(public app: AppComponent, private el: ElementRef, public router: Router, public api: ApiService) {
     setTimeout(() => {
       this.BrandSlider();
     }, 5000);
@@ -352,9 +360,12 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.ScreenWidthSize()
     }, 500);
+    const Token: any = localStorage.getItem('token');
+    Token ? null : this.router.navigate(['/login']);
   }
 
   ngOnInit() {
+    this.UserId = localStorage.getItem('UserId');
     this.app.MenuOpen = false
     this.app.Headerdropdown = true
     this.app.footer = true
@@ -368,9 +379,52 @@ export class HomeComponent implements OnInit {
     this.TopTransform = `translate3d(${this.TopValue}, 0px, 0px)`
     this.Width();
     this.ActiveSlide = 1
-    this.startAutoSlide()
+    this.startAutoSlide();
+    this.getAllcategory()
   }
 
+  getAllcategory() {
+    this.api.getAllcategory().subscribe({
+      next: ((res: any) => {
+        console.log(res);
+        this.AllCategory = res;
+        this.getAllProduct();
+      }),
+      error: ((err: any) => {
+        console.log(err);
+      })
+    })
+  }
+
+  getAllProduct() {
+    this.api.getAllProducts().subscribe({
+      next: ((res: any) => {
+        this.AllProductsCopy = res;
+        this.uniqueCategories = [];
+        this.uniqueCategories = [...new Set(this.AllProductsCopy.map((item: any) => (item.category)?.trim()))];
+        this.SelectedCategory = this.uniqueCategories[0];
+        console.log(this.uniqueCategories);
+        this.TrendingTab = 1;
+        this.TabInd = 1;
+        this.FilterData(this.SelectedCategory);
+      }), error: (err => {
+        console.log(err);
+      })
+    })
+  }
+
+  FilterData(category: any) {
+    this.ProductList.map((res: any, index: any) => {
+      this.uniqueCategories.map((res1: any, index1: any) => {
+        index == index1 ? Object.assign(res, { name: res1 }) : null;
+      })
+    })
+    this.AllProducts = [];
+    this.AllProducts = this.AllProductsCopy.filter((res: any) => {
+      return res.category == category;
+    })
+    console.log(this.AllProducts);
+  }
 
   startAutoSlide(): void {
     this.stopAutoSlide();
@@ -388,7 +442,7 @@ export class HomeComponent implements OnInit {
     let newIndex = (currentIndex + direction + this.Slider.length) % this.Slider.length;
     newIndex = newIndex === -1 ? this.Slider.length - 1 : newIndex;
     this.ActiveSlide = this.Slider[newIndex].id;
-    console.log(this.ActiveSlide);
+    // console.log(this.ActiveSlide);
   }
 
   ScreenWidthSize() {
@@ -470,8 +524,10 @@ export class HomeComponent implements OnInit {
     this.ProductDetailPic = item
   }
 
-  Trendingtabs(id: any) {
-    this.TrendingTab = id
+  Trendingtabs(item: any) {
+    this.TrendingTab = item.id;
+    this.TabInd = item.id;
+    this.FilterData(item.name);
   }
 
   BestProd(id: any) {
@@ -490,4 +546,26 @@ export class HomeComponent implements OnInit {
     this.BrandTransform = `translate3d(-${this.BrandValue}px, 0px, 0px)`;
     setTimeout(() => { this.BrandSlider() }, 5000);
   }
+
+  addCart(data: any) {
+    console.log(data);
+
+    let post = {
+      "user_id": this.UserId,
+      "product_id": data._id,
+      "quantity": 1,
+      "unit": data.unit
+    }
+
+    this.api.AddCart(post).subscribe({
+      next: ((res: any) => {
+        console.log(res);
+        this.app.showAlert('Added in cart', 'success', 'home');
+      }), error: (err => {
+        console.log(err);
+        this.app.showAlert('Error while adding cart', 'error', 'home');
+      })
+    })
+  }
+
 }

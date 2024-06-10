@@ -8,12 +8,12 @@
                 <span class="login100-form-title">
                     Sign In
                 </span>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-                    <input class="input100" type="text" name="username" placeholder="Username">
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email">
+                    <input class="input100" type="text" name="username" placeholder="Email" id="loginEmail">
                     <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Please enter password">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                    <input class="input100" type="password" name="pass" placeholder="Password" id="loginPassword">
                     <span class="focus-input100"></span>
                 </div>
                 <div class="text-right p-t-13 p-b-23">
@@ -24,7 +24,7 @@
                         Password ?
                     </a>
                 </div>
-                <div class="container-login100-form-btn">
+                <div class="container-login100-form-btn" (click)="doLogin($event)">
                     <button class="login100-form-btn">
                         Sign in
                     </button>
@@ -33,7 +33,7 @@
                     <span class="txt1 p-b-9">
                         Don’t have an account?
                     </span>
-                    <a class="txt3" (click)="SignUp()">
+                    <a class="txt3">
                         Sign up now
                     </a>
                 </div>
@@ -47,30 +47,31 @@
                 <span class="login100-form-title">
                     Sign Up
                 </span>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter name"
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username"
                     *ngIf="SignInpageId==1">
-                    <input class="input100" type="text" name="username" placeholder="Name">
+                    <input class="input100" type="text" name="username" placeholder="Username" id="RegisterUserName">
                     <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter mail"
                     *ngIf="SignInpageId==1">
-                    <input class="input100" type="text" name="username" placeholder="Mail">
+                    <input class="input100" type="text" name="username" placeholder="Mail" id="RegisterEmail">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter mobile"
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter phone_number"
                     *ngIf="SignInpageId==1">
-                    <input class="input100" type="tel" name="username" placeholder="Mobile">
+                    <input class="input100" type="tel" name="username" placeholder="Phone_number"
+                        id="RegisterPhonenumber">
                     <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Please enter password" *ngIf="SignInpageId==1">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                    <input class="input100" type="password" name="pass" placeholder="Password" id="RegisterPassword">
                     <span class="focus-input100"></span>
                 </div>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username"
+                <!-- <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username"
                     *ngIf="SignInpageId==1" style="margin-top: 16px">
-                    <input class="input100" type="text" name="username" placeholder="Username">
+                    <input class="input100" type="text" name="username" placeholder="Username" id="RegisterUsername">
                     <span class="focus-input100"></span>
-                </div>
+                </div> -->
 
                 <!-- ************************************SECOND PAGE**************************** -->
 
@@ -81,42 +82,48 @@
 
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter street"
                     *ngIf="SignInpageId==2" style="margin-top: 16px">
-                    <input class="input100" type="text" name="username" placeholder="Door no / Street">
+                    <input class="input100" type="text" name="username" placeholder="Street" id="RegisterStreet">
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter city"
                     *ngIf="SignInpageId==2" style="margin-top: 16px">
-                    <input class="input100" type="text" name="username" placeholder="City">
+                    <input class="input100" type="text" name="username" placeholder="City" id="RegisterCity">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter district"
+                    *ngIf="SignInpageId==2" style="margin-top: 16px">
+                    <input class="input100" type="text" name="username" placeholder="District" id="RegisterDistrict">
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter state"
                     *ngIf="SignInpageId==2" style="margin-top: 16px">
-                    <input class="input100" type="text" name="username" placeholder="State">
+                    <input class="input100" type="text" name="username" placeholder="State" id="RegisterState">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter country"
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter zipcode"
                     *ngIf="SignInpageId==2" style="margin-top: 16px">
-                    <input class="input100" type="text" name="username" placeholder="Country">
+                    <input class="input100" type="text" name="username" placeholder="Zipcode" id="RegisterZipcode">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter pincode"
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Country"
                     *ngIf="SignInpageId==2" style="margin-top: 16px">
-                    <input class="input100" type="text" name="username" placeholder="Pincode">
+                    <input class="input100" type="text" name="username" placeholder="Country" id="RegisterCountry">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="container-login100-form-btn" *ngIf="SignInpageId==1" (click)="Next()">
+                <div class="container-login100-form-btn" *ngIf="SignInpageId==1" (click)="Next($event)">
                     <button class="login100-form-btn" style="margin-top: 16px;margin-bottom: 35px;">
                         Next
                     </button>
                 </div>
-                <div class="container-login100-form-btn" *ngIf="SignInpageId==2">
+                <div class="container-login100-form-btn" *ngIf="SignInpageId==2" (click)="doRegister($event)">
                     <button class="login100-form-btn" style="margin-top: 16px;">
-                        Sign In
+                        Sign Up
                     </button>
                 </div>
                 <div class="flex-col-c p-t-30 p-b-40">
@@ -132,3 +139,28 @@
 
     </div>
 </div>
+
+
+<!-- ************************************************ALERT POPUP************************************ -->
+
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="background: #00000054;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-20" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Login Successfull !
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Let's go</button>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -5,7 +5,7 @@
     <header class="site-header">
       <div class="header-top site-header-inner hidden-lg-down">
         <div class="page-width">
-          <div class="row">
+          <div class="row" style="justify-content: center !important;">
             <div class="hidden-lg-down header-left col-lg-4 col-md-3 col-sm-6 col-xs-6 MobLogin">
               <a class="email" href="mailto:davistraders1&#64;gmail.com">
                 <div class="ishiheadercontactblock">
@@ -22,7 +22,7 @@
             </div>
 
             <div id="_desktop_logo" class="header-logo-section  col-md-4 col-sm-6 col-xs-6 "
-              style="width: 46.33% !important;margin-left: 30px;">
+              style="width: 33% !important;">
               <h1 class="h2 header__logo" itemscope itemtype="http://schema.org/Organization">
                 <div class="hidden-lg-down">
                   <a class="header__logo-image ">
@@ -83,81 +83,40 @@
                 </div>
               </div> -->
 
-              <div id="_desktop_user_info" class="user_info">
-
-                <div class="userinfo-title clearfix" data-toggle="popover" aria-expanded="false"
-                  data-href="#user-notification">
-
-                  <!-- <span class="userinfo-toggle hidden-lg-down" (click)="AuthRoute(1,'Icon')">
-                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 480 480">
-                      <svg x="20%" y="20%">
-                        <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
-           C256.614,183.433,225.608,152.427,187.497,152.427z M241.614,246.473H19.856v-24.928c0-29.84,24.277-54.117,54.117-54.117h113.523
-           c29.84,0,54.117,24.277,54.117,54.117L241.614,246.473L241.614,246.473z"></path>
-                        <path d="M130.735,145.326c40.066,0,72.663-32.597,72.663-72.663S170.802,0,130.735,0S58.072,32.596,58.072,72.663
-           S90.669,145.326,130.735,145.326z M130.735,15c31.796,0,57.663,25.867,57.663,57.663s-25.867,57.663-57.663,57.663
-           s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
-                      </svg>
-                    </svg>
-                  </span> -->
-
-                  <span class="userinfo-toggle hidden-lg-up">
-                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 480 480">
-                      <svg x="22%" y="22%">
-                        <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
-           C256.614,183.433,225.608,152.427,187.497,152.427z M241.614,246.473H19.856v-24.928c0-29.84,24.277-54.117,54.117-54.117h113.523
-           c29.84,0,54.117,24.277,54.117,54.117L241.614,246.473L241.614,246.473z"></path>
-                        <path d="M130.735,145.326c40.066,0,72.663-32.597,72.663-72.663S170.802,0,130.735,0S58.072,32.596,58.072,72.663
-           S90.669,145.326,130.735,145.326z M130.735,15c31.796,0,57.663,25.867,57.663,57.663s-25.867,57.663-57.663,57.663
-           s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
-                      </svg>
-                    </svg>
-                  </span>
-                </div>
+              <!-- ***************************************************** (click)="OpencartHistory()" ****************ITS HOLD NOW ? -->
 
 
-              </div>
-
-              <!-- <div id="_desktop_cart" class="cart_info" (click)="OpencartHistory()">
+              <div id="_desktop_cart" class="cart_info" style="margin-right: 10px;" (click)="cart()">
                 <div class="cart-display cart-drawer-toggler" id="cart-icon-bubble">
                   <span class="cart-logo">
                     <span class="hidden-lg-down">
-                      <svg aria-hidden="" focusable="" role="" class="icon" viewBox="0 0 700 700">
-                        <svg x="15%" y="17%">
-                          <path
-                            d="m150.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
-                          </path>
-                          <path
-                            d="m446.855469 94.035156h-353.101563l-7.199218-40.300781c-4.4375-24.808594-23.882813-44.214844-48.699219-48.601563l-26.101563-4.597656c-5.441406-.96875-10.632812 2.660156-11.601562 8.097656-.964844 5.441407 2.660156 10.632813 8.101562 11.601563l26.199219 4.597656c16.53125 2.929688 29.472656 15.871094 32.402344 32.402344l35.398437 199.699219c4.179688 23.894531 24.941406 41.324218 49.199219 41.300781h210c22.0625.066406 41.546875-14.375 47.902344-35.5l47-155.800781c.871093-3.039063.320312-6.3125-1.5-8.898438-1.902344-2.503906-4.859375-3.980468-8-4zm-56.601563 162.796875c-3.773437 12.6875-15.464844 21.367188-28.699218 21.300781h-210c-14.566407.039063-27.035157-10.441406-29.5-24.800781l-24.699219-139.398437h336.097656zm0 0">
-                          </path>
-                          <path
-                            d="m360.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0">
-                          </path>
-                        </svg>
-                      </svg>
-                    </span>
-                    <span class="hidden-lg-up">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon" viewBox="0 0 550 550">
-                        <svg x="20%" y="20%">
-                          <path d="M306.4,313.2l-24-223.6c-0.4-3.6-3.6-6.4-7.2-6.4h-44.4V69.6c0-38.4-31.2-69.6-69.6-69.6c-38.4,0-69.6,31.2-69.6,69.6
-               v13.6H46c-3.6,0-6.8,2.8-7.2,6.4l-24,223.6c-0.4,2,0.4,4,1.6,5.6c1.2,1.6,3.2,2.4,5.2,2.4h278c2,0,4-0.8,5.2-2.4
-               C306,317.2,306.8,315.2,306.4,313.2z M223.6,123.6c3.6,0,6.4,2.8,6.4,6.4c0,3.6-2.8,6.4-6.4,6.4c-3.6,0-6.4-2.8-6.4-6.4
-               C217.2,126.4,220,123.6,223.6,123.6z M106,69.6c0-30.4,24.8-55.2,55.2-55.2c30.4,0,55.2,24.8,55.2,55.2v13.6H106V69.6z
-               M98.8,123.6c3.6,0,6.4,2.8,6.4,6.4c0,3.6-2.8,6.4-6.4,6.4c-3.6,0-6.4-2.8-6.4-6.4C92.4,126.4,95.2,123.6,98.8,123.6z M30,306.4
-               L52.4,97.2h39.2v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2
-               V97.2h110.4v13.2c-8,2.8-13.6,10.4-13.6,19.2c0,11.2,9.2,20.4,20.4,20.4c11.2,0,20.4-9.2,20.4-20.4c0-8.8-5.6-16.4-13.6-19.2V97.2
-               H270l22.4,209.2H30z">
-                          </path>
-                        </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart3" viewBox="0 0 16 16" style="width: 24px !important;height: 24px !important;">
+                        <path
+                          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                       </svg>
                     </span>
                   </span>
                 </div>
-              </div> -->
+              </div>
 
+              <div id="_desktop_user_info" class="user_info">
+                <div class="userinfo-title clearfix" data-toggle="popover" aria-expanded="false"
+                  data-href="#user-notification">
+                  <span class="userinfo-toggle hidden-lg-down" (click)="route('logout')" style="padding: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-box-arrow-right" viewBox="0 0 16 16"
+                      style="width: 24px !important;height: 24px !important;">
+                      <path fill-rule="evenodd"
+                        d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                      <path fill-rule="evenodd"
+                        d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
 
             </div>
-
           </div>
         </div>
       </div>
@@ -223,7 +182,7 @@
 
                     </span>
                     <a href="/collections/scissors" class="dropdown-item dropdown-submenu">
-                      <h3 class="inner-title">Our Services1</h3>
+                      <h3 class="inner-title">Our Services</h3>
                     </a>
 
                     <div class="top-menu ishi-collapse desktop-collapse" id="_n_grand-child-one1"
@@ -418,6 +377,23 @@
               </a>
             </li>
 
+            <li class="category">
+              <span class="float-xs-right hidden-lg-up">
+              </span>
+              <a class="dropdown-item" (click)="route('cart')">
+                <h3 class="title">Cart</h3>
+              </a>
+            </li>
+
+            <li class="category">
+              <span class="float-xs-right hidden-lg-up">
+              </span>
+              <a class="dropdown-item" (click)="route('logout')">
+                <h3 class="title">Logout</h3>
+              </a>
+            </li>
+
+
             <!-- <li class="category">
               <span class="float-xs-right hidden-lg-up">
               </span>
@@ -568,7 +544,7 @@
                     </div>
                     <div class="reassurance-text">
                       <div class="reassurance-title">Free Delivery</div>
-                      <div class="reassurance-desc">Lorem Ipsum dummy</div>
+                      <div class="reassurance-desc">available now !</div>
                     </div>
                   </div>
                 </div>
@@ -577,10 +553,10 @@
             <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i
                   class="fa fa-arrow-left"></i></button><button type="button" role="presentation" class="owl-next"><i
                   class="fa fa-arrow-right"></i></button></div>
-            <div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button"
+            <!-- <div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button"
                 class="owl-dot"><span></span></button><button role="button"
                 class="owl-dot"><span></span></button><button role="button"
-                class="owl-dot active"><span></span></button></div>
+                class="owl-dot active"><span></span></button></div> -->
           </div>
 
           <div class="slimScrollDiv cart-empty-notification">
@@ -591,7 +567,7 @@
                 <div class="shipping_amount_html">
                   <span class="cart_empty_shipping_text">
                     <h2 class="cart-notification__heading caption-large free-shipping-success">
-                      <svg viewBox="0 0 381.000000 318.000000">
+                      <!-- <svg viewBox="0 0 381.000000 318.000000">
                         <g transform="translate(0.000000,318.000000) scale(0.100000,-0.100000)">
                           <path d="M1770 2924 c-14 -2 -56 -9 -95 -15 -171 -27 -388 -120 -534 -229
 -256 -191 -428 -462 -497 -782 -25 -116 -25 -380 0 -496 111 -516 491 -897
@@ -606,8 +582,8 @@
                           <path d="M1844 1306 c-71 -31 -100 -140 -53 -200 82 -104 239 -54 239 76 0
 103 -93 164 -186 124z"></path>
                         </g>
-                      </svg>
-                      Spend $80.00 more and get free shipping!
+                      </svg> -->
+                      We assure that , quality products and service available here !
                     </h2>
                   </span>
                 </div>
@@ -635,7 +611,7 @@
         <div data-section-id="Ishi_megamenu" data-section-type="megamenu-header">
           <div id="_desktop_top_menu" class="menu js-top-menu hidden-sm-down" role="navigation">
 
-            <ul class="top-menu" id="top-menu">
+            <ul class="top-menu" id="top-menu" style="margin: 0 !important;">
               <li class="category">
                 <span class="float-xs-right hidden-lg-up">
                 </span>
@@ -644,26 +620,17 @@
                 </a>
               </li>
 
-
-
               <li class="category menularge serviceMenu">
                 <span class="float-xs-right hidden-lg-up">
                   <span data-href="#_n_child-one1" data-toggle="collapse"
                     class="ishi-collapse in navbar-toggler ishi-collapsed rotate" aria-expanded="false">
-
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret"
                       viewBox="0 0 10 6">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z"
                         fill="currentColor" />
                     </svg>
-
-
-
-
-
                   </span>
-
                 </span>
                 <a class="dropdown-item">
                   <h3 class="title">Services</h3>
@@ -671,7 +638,7 @@
                 </a>
                 <div class="popover sub-menu js-sub-menu ishi-collapse desktop-collapse col-5" id="_n_child-one1"
                   style="padding: 10px !important;">
-                  <ul id="top-menu-child" class="top-menu mainmenu-dropdown panel-group">
+                  <ul id="top-menu-child" class="top-menu mainmenu-dropdown panel-group" style="padding: 0 !important;">
 
                     <li class="sub-category panel">
                       <span class="float-xs-right hidden-lg-up">
@@ -690,7 +657,7 @@
                         <h3 class="inner-title">Our Services</h3>
                       </a>
                       <div class="top-menu ishi-collapse desktop-collapse" id="_n_grand-child-one1">
-                        <ul class="top-menu">
+                        <ul class="top-menu" style="padding: 0 !important;">
                           <li class="category" (click)="RouteToService(1)">
                             <a class="dropdown-item">Grow Bags in All Sizes</a>
                           </li>

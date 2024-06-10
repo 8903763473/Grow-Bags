@@ -6,6 +6,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 export const routes: Routes = [
     {
@@ -41,4 +42,8 @@ export const routes: Routes = [
         path: 'cart',
         component: CartComponent
     },
+    {
+        path: 'checkout',
+        component: CheckoutComponent
+    }
 ];
